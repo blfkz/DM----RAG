@@ -22,16 +22,18 @@ _cache_lock = threading.Lock()
 
 
 def _get_bm25(kb_id):
-    """取 BM25 索引;文档版本变了自动重建。"""
-    with get_db() as db:
-        if kb_id is None:
-            version = 0
-        else:
+    """取 BM25 索引;文档版本变了自动重建。
+    全局索引(kb_id=None)不参与版本比较:构建一次后常驻,
+    靠增删文档时 invalidate_bm25(None) 手动失效(修复:之前每次检索都误判过期重建)。"""
+    if kb_id is None:
+        version = 0  # 仅占位,命中判断单独放行
+    else:
+        with get_db() as db:
             kb = db.get(KnowledgeBase, kb_id)
             version = kb.doc_version if kb else 0
     with _cache_lock:
         cached = _bm25_cache.get(kb_id)
-        if cached and cached[0] == version:
+        if cached and (kb_id is None or cached[0] == version):
             return cached[1]
         items = all_chunks(kb_id)
         if kb_id is None:

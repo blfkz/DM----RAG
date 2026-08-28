@@ -10,6 +10,7 @@ from pathlib import Path
 from core.database import Document, KnowledgeBase, get_db
 from core.embedding import embed_documents
 from core.loader import load_file
+from core.retriever import invalidate_bm25
 from core.splitter import clean_text, split_document
 from core.vectorstore import add_chunks
 from utils import log_utils
@@ -49,6 +50,7 @@ def _process_document(doc_id: int):
             if kb:
                 kb.doc_version += 1  # 文档变了,让 BM25 关键词索引缓存失效重建
             db.commit()
+            invalidate_bm25(None)  # 全局索引(全部知识库检索)也要失效
             log_utils.add_log(db, doc.uploaded_by, "upload_done", "document", doc_id,
                               f"文档入库成功:{doc.file_name}({len(chunks)} 个知识片段)")
         except Exception as e:  # noqa: BLE001

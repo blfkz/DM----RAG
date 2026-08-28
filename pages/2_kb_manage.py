@@ -72,6 +72,7 @@ with col_left:
                         log_utils.add_log(db, st.session_state.get("user_id"), "delete_kb",
                                           "knowledge_base", sel_kb.id, f"删除知识库:{sel_kb.name}")
                 invalidate_bm25(sel_kb.id)
+                invalidate_bm25(None)  # 全局索引(全部知识库检索)也要失效
                 st.success("知识库已删除")
                 st.rerun()
 
@@ -150,6 +151,7 @@ with col_right:
                         log_utils.add_log(db, st.session_state.get("user_id"), "delete_doc",
                                           "document", doc.id, f"删除文档:{d.file_name}")
                 invalidate_bm25(sel_kb.id)
+                invalidate_bm25(None)  # 全局索引(全部知识库检索)也要失效
                 st.rerun()
             if doc.status == "failed" and doc.error_msg:
                 st.caption(f"失败原因:{doc.error_msg}")

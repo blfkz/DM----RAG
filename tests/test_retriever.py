@@ -37,3 +37,23 @@ class TestRRF融合:
         a = [_hit("第一名", 1, 0), _hit("第二名", 1, 1), _hit("第三名", 1, 2)]
         fused = _rrf_fuse(a, [], top_n=10)
         assert [x["text"] for x in fused] == ["第一名", "第二名", "第三名"]
+
+
+class TestBM25缓存:
+    def test_全局索引只构建一次(self, monkeypatch):
+        """回归测试:修复前"全部知识库"检索每次都误判过期、反复重建索引。"""
+        from core import retriever
+        calls = []
+
+        def fake_all_chunks(kb_id):
+            calls.append(kb_id)
+            return [("片段一", {"doc_id": 1, "chunk_index": 0}),
+                    ("片段二", {"doc_id": 1, "chunk_index": 1})]
+
+        monkeypatch.setattr(retriever, "all_chunks", fake_all_chunks)
+        retriever._bm25_cache.clear()
+        retriever._get_bm25(None)
+        retriever._get_bm25(None)
+        retriever._get_bm25(None)
+        assert len(calls) == 1  # 连续 3 次检索,索引只应构建 1 次
+        retriever._bm25_cache.clear()
