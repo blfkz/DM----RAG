@@ -2,6 +2,8 @@
 
 面向电商商品知识库的企业级 RAG 问答系统:上传商品资料 → 自动入库 → 带引用来源的精准问答,支持多用户、多会话、权限管理与数据统计。校招 AI 应用方向实战项目。
 
+> 📂 代码仓库:[GitHub](https://github.com/blfkz/DM----RAG) | [Gitee 码云](https://gitee.com/blfkz/langchain-rag)
+
 ## 项目亮点(实测数据)
 
 | 指标 | 数据 | 说明 |
@@ -151,9 +153,10 @@ docker run -p 8501:8501 -v %cd%\data:/app/data rag-shop
 提供 `deploy.sh` 一键部署脚本:自动安装 Python 环境、拉取代码、装依赖、注册开机自启服务(崩溃自动重启)。**上线只需三步**(面试前 10 分钟即可完成):
 
 1. 购买阿里云轻量应用服务器(系统镜像选 Ubuntu 22.04;2 核 2G 足够;可选按量计费,用完释放零续费),防火墙放行 8501 端口(TCP)
-2. 打开服务器网页终端(Workbench),粘贴执行:
+2. 打开服务器网页终端(Workbench),粘贴执行(国内服务器用码云地址,海外服务器用 GitHub 地址):
    ```bash
    curl -fsSL https://gitee.com/blfkz/langchain-rag/raw/main/deploy.sh | bash
+   # 或:curl -fsSL https://raw.githubusercontent.com/blfkz/DM----RAG/main/deploy.sh | bash
    ```
 3. 按提示粘贴百炼 API Key,脚本自动完成全部部署 → 浏览器访问 `http://服务器公网IP:8501`
 
