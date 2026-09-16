@@ -19,7 +19,7 @@ init_db()  # 建表 + 首次启动自动建管理员(重复调用无害)
 # ==================== 未登录:登录 / 注册 ====================
 if "user_id" not in st.session_state:
     st.title("🛒 电商知识库智能问答系统")
-    st.caption("基于 LangChain + RAG 的企业级商品知识库问答 · 毕设项目")
+    st.caption("基于 LangChain + RAG 的企业级知识库问答系统")
 
     tab_login, tab_register = st.tabs(["🔑 登录", "📝 注册"])
 
