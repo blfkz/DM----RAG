@@ -184,7 +184,10 @@ def make_pdf(blocks):
             for ri, row in enumerate(content):
                 style = st_cell_head if ri == 0 else st_cell
                 data.append([Paragraph(esc(c), style) for c in row])
-            t = Table(data, colWidths=[6.5 * cm if len(content[0]) > 3 else None] * len(content[0]))
+            # 列宽均分页面可用宽度(A4 21cm - 左右边距各 2.2cm = 16.6cm),避免宽表格超出页面被截断
+            n_cols = len(content[0])
+            col_w = 16.6 / n_cols
+            t = Table(data, colWidths=[col_w * cm] * n_cols)
             t.setStyle(TableStyle([
                 ("GRID", (0, 0), (-1, -1), 0.5, colors.HexColor("#bbbbbb")),
                 ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#eef2f7")),
