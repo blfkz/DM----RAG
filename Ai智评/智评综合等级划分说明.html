@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智评综合等级划分说明</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            outline: 0;
+        }
+
+        body {
+            font-family: Microsoft YaHei, Helvetica, Arial, sans-serif;
+        }
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        ul,
+        dl,
+        ol,
+        a {
+            list-style-type: none;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        ul,
+        dl,
+        dd,
+        ol {
+            list-style: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        a,
+        a:visited,
+        a:hover,
+        a:active {
+            text-decoration: none;
+            /* color: #333; */
+        }
+
+        img {
+            border: 0;
+            max-width: 100%;
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        body {
+            overflow-x: auto;
+            min-width: 1200px;
+            background-color: #f3f3fd;
+            /* max-width: 1920px;
+        margin: 0 auto; */
+            font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+        }
+
+        a,
+        button,
+        input {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: transparent;
+            border: 0 none;
+            background-color: transparent;
+        }
+
+        .color-blue {
+            color: #4b58ff;
+        }
+
+        .color-gray {
+            color: #818181;
+        }
+
+        .color-red {
+            color: #ff2727;
+        }
+
+        .color-green {
+            color: rgb(18, 214, 101);
+        }
+
+        .color-yellow {
+            color: #cf7c11;
+        }
+
+        .bg-green {
+            background: rgb(18, 214, 101);
+        }
+
+        .bg-blue {
+            background: #4b58ff;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .mb-2 {
+            margin-bottom: 15px;
+        }
+
+        .wrap-container {
+            max-width: 1530px;
+            /* width: 100%; */
+            /* max-width: 1300px; */
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* left: -115px; */
+        }
+
+        .iframe-container {
+            padding: 40px 0px;
+            max-width: 1530px;
+            /* width: 100%; */
+            /* max-width: 1300px; */
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* left: -115px; */
+        }
+
+        .container {
+            width: 100%;
+            flex: 1;
+            max-width: 1300px;
+            position: relative;
+            /* margin: 0 auto; */
+        }
+
+        .section-area {
+            width: 100%;
+            background-color: #fff;
+            padding: 30px 50px 30px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .banner-area {
+            width: 100%;
+            background-color: #fff;
+            padding: 30px 0px 0px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .banner-check-result {
+            padding: 0px 50px;
+        }
+
+        .banner-check-result-flex {
+            padding: 20px 0px;
+            display: flex;
+            border-top: 1px solid #eee;
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background: #eee;
+        }
+
+        .banner-check-result-l {
+            width: 100%;
+            /* margin-right: 10%; */
+        }
+
+        .banner-check-result-r {
+            width: 30%;
+            padding-left: 40px;
+        }
+
+        .banner-check-result-r-title {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .banner-title-img {
+            padding: 0 50px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .banner-info-row {
+            padding: 0 50px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .section-mark-title {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .banner-tip {
+            border-top: 1px solid #ccc;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 50px;
+        }
+
+        .section-point-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ebf3fe;
+            font-size: 16px;
+            height: 40px;
+            padding: 0px 24px;
+            margin: 15px 0px;
+        }
+
+        .section-point-title-l {
+            color: #4b58ff;
+        }
+
+        .common-pha {
+            line-height: 25px;
+            padding-bottom: 10px;
+        }
+
+        .footer-area {
+            padding: 30px 0px;
+        }
+
+        .footer-tip {
+            text-align: center;
+        }
+
+        .logo-area {
+            width: 100%;
+            height: 60px;
+            background-color: #fff;
+            margin-bottom: 35px;
+            min-width: 1530px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            max-width: 1530px;
+            position: relative;
+            margin: 0 auto;
+            height: 100%;
+            padding-left: 10px;
+            /* left: -115px; */
+        }
+
+            .logo-container > img {
+                width: 80px;
+            }
+
+        .logo-text {
+            color: #4b58ff;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 5px;
+            letter-spacing: 1px;
+        }
+
+        .nav-bar-list {
+            width: 180px;
+            background: #fff;
+            margin-right: 50px;
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-bar-item {
+            height: 50px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+            .nav-bar-item > a {
+                width: 100%;
+                height: 100%;
+                display: block;
+                line-height: 50px;
+                padding: 0 15px;
+            }
+
+            .nav-bar-item:hover {
+                background: #edeeff;
+            }
+
+                .nav-bar-item:hover > a {
+                    color: #4b58ff;
+                }
+
+            .nav-bar-item.active {
+                background: #4b58ff;
+                width: 110%;
+            }
+
+                .nav-bar-item.active > a {
+                    color: #fff;
+                }
+
+        .toggle-list {
+            width: 180px;
+            background: #fff;
+            margin-right: 30px;
+            position: sticky;
+            top: 0;
+        }
+
+        .toggle-item {
+            height: 50px;
+            cursor: pointer;
+            width: 100%;
+            padding: 0 15px;
+            line-height: 50px;
+            font-size: 16px;
+        }
+
+            .toggle-item.active {
+                background: #4b58ff;
+                color: #fff;
+            }
+
+        .yaosu-level-title {
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .yaosu-level-sub-title {
+            color: #2f39ec;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .table-container {
+            width: 100%;
+            /* max-width: 1200px; */
+            margin: 10px auto 0px;
+            margin-bottom: 40px;
+            padding: 12px 15px;
+            border: 1px solid #a0afe9;
+            border-radius: 10px;
+        }
+
+            .table-container table {
+                width: 100%;
+                border-collapse: collapse;
+                table-layout: fixed;
+                border: 0;
+                /* border: 1px solid #ddd; */
+            }
+
+        .main-tr {
+            background-color: #e6f2ff;
+        }
+
+        .table-container thead tr {
+            text-align: center;
+        }
+
+        .table-container th {
+            padding: 10px;
+            vertical-align: top;
+            font-weight: 400;
+            color: #fff;
+            background: #4b58ff;
+            border: 2px solid #fff;
+            text-align: left;
+        }
+
+        .table-container td {
+            border: 2px solid #fff;
+            padding: 15px;
+            vertical-align: middle;
+            color: #333;
+        }
+
+        .table-container .center {
+            text-align: center;
+        }
+
+        .table-container p {
+            margin: 0 0 5px;
+        }
+
+        .table-container strong {
+            color: #000;
+        }
+
+        .table-container ol {
+            margin: 10px 0;
+            padding-left: 0px;
+        }
+
+            .table-container ol li {
+                margin: 5px 0;
+            }
+
+        .odd-row {
+            background: #f8f8f8;
+        }
+
+        .even-row {
+            background: #edeeff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .yaosu-tip {
+            font-style: italic;
+            margin-top: -30px;
+            margin-bottom: 40px;
+        }
+
+        .text-lg {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .yaosu-main-title {
+            font-size: 24px;
+            color: #4b58ff;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: -75px;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        .yaosu-level-container {
+            padding: 100px 0px 40px;
+            max-width: 1530px;
+            position: relative;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .new-flex-box {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid #fff;
+        }
+
+            .new-flex-box:last-child {
+                border-bottom: 0;
+            }
+    </style>
+</head>
+
+<body>
+    <div class="yaosu-level-container">
+        <div class="toggle-list" style="display: none">
+            <div class="toggle-item active">
+                <div>综合评阅等级说明</div>
+
+            </div>
+            <div class="toggle-item">评议要素子项说明</div>
+        </div>
+        <div class="container">
+            <div class="yaosu-main-title">
+                <div>智评综合等级划分说明</div>
+                <div style="font-size: 18px;color: #000;">期刊版</div>
+            </div>
+            <div class="section-area yaosu-level-box">
+                <div class="yaosu-level-title" style="margin-bottom: 0px">
+                    综合评阅等级说明
+                </div>
+                <div style="color: #ff852d; font-size: 14px; font-weight: bold;display: none;">
+                    (综合评阅等级由“研究方法评级”、“研究内容评级”、“研究结论评级”和“要素总分评级”四个方面的评级构成，通过对各评议进行加权整合，最终确定其评级层次。)
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <div style="color: #2f39ec; font-weight: bold; font-size: 16px">
+                            综合评阅等级由四项维度构成
+                        </div>
+                        <div style="font-size: 14px">
+                            综合评阅等级由四项维度构成，分别是“研究方法评级”、“研究内容评级”、“研究结论评级”和“要素总分评级”四个方面的评级构成，通过对各评议进行加权整合，最终确定其评级层次。
+                        </div>
+                        <thead>
+                            <tr class="main-tr">
+                                <th style="width: 14%" class="center">综合等级</th>
+                                <th style="width: 12%" class="center">分数范围</th>
+                                <th style="width: 42%">评定标准</th>
+                                <th>指标公式介绍</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd-row">
+                                <td class="center">
+                                    <span class="color-green"> A级 （优秀良好） </span>
+                                </td>
+
+                                <td class="center" style="position: relative; padding: 0">
+                    <div style="position: absolute; inset: 0; display: flex; flex-direction: column; gap: 5px; width: 100%; height: 100%;">
+                      <div class="new-flex-box"><span class="color-green">  A+（96-100分） </span></div>
+                      <div class="new-flex-box"><span class="color-green"> A（90-95分） </span></div>
+                      <div class="new-flex-box"><span class="color-green"> A-（85-89分） </span></div>
+                    </div>
+                  </td>
+
+                                <td>
+                                    <p>
+                                        论文在四个评阅维度中均表现优异，研究设计科学严谨，研究问题明确且切入得当，内容深入细致、逻辑自洽，结论清晰可靠；各质量要素得分均处于高位，体现出扎实的专业能力与学术素养，具有明显创新性或较高应用价值。
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        ● 研究方法评级中方法设计严密、数据完整，具备较高可复现性。
+                                    </p>
+                                    <p>
+                                        ● 研究内容评级显示论文结构完整、引用充分、文献质量高。
+                                    </p>
+                                    <p>
+                                        ●
+                                        研究结论评级反映结论基于充分论证，具备理论深度或实践指导意义。
+                                    </p>
+                                    <p>
+                                        ●
+                                        要素总分评级中，选题、写作、逻辑、专业性、规范性等子项均达到优级区间。
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr class="even-row">
+                                <td class="center">
+                                    <span class="color-blue"> B级 （合格中等） </span>
+                                </td>
+                                
+                                <td class="center" style="position: relative; padding: 0">
+                    <div style="position: absolute; inset: 0; display: flex; flex-direction: column; gap: 5px; width: 100%; height: 100%;">
+                      <div class="new-flex-box"><span class="color-blue">  B+（80-84分） </span></div>
+                      <div class="new-flex-box"><span class="color-blue"> B（70-79分） </span></div>
+                      <div class="new-flex-box"><span class="color-blue"> B-（60-69分） </span></div>
+                    </div>
+                  </td>
+
+                                <td>
+                                    <p style="display: none;">
+                                        论文在四个评阅维度中整体表现良好，研究设计基本合理，内容完整，结论明确；存在轻微逻辑跳跃、论证不足或部分章节展开不充分，但总体达到本科毕业论文质量要求，具备一定创新或分析能力。
+                                    </p>
+                                    <p style="">
+                                        论文在四个评阅维度中整体表现良好，研究设计基本合理，内容完整，结论明确；存在轻微逻辑跳跃、论证不足或部分章节展开不充分，但总体达到期刊论文质量要求，具备一定创新或分析能力。
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        ●
+                                        研究方法评级中基本满足设计要求，使用常规方法处理问题，有效性中等偏上。
+                                    </p>
+                                    <p>
+                                        ● 研究内容评级显示引用较规范，文献有支撑但质量略有不均。
+                                    </p>
+                                    <p>
+                                        ● 研究结论评级显示结论较清楚，紧扣主题但深度或拓展性略弱。
+                                    </p>
+                                    <p>● 要素总分评级中部分项得分较高，其余稳定在合格以上。</p>
+                                </td>
+                            </tr>
+
+                            <tr class="odd-row">
+                                <td class="center">
+                                    <span class="color-yellow"> C级 （建议修改） </span>
+                                </td>
+                                
+                                <td class="center" style="position: relative; padding: 0">
+                    <span class="color-yellow"> 41-59分 </span>
+                  </td>
+
+                                <td>
+                                    <p style="display: none;">
+                                        论文勉强满足毕业要求，在研究方法、内容或结论方面存在明显瑕疵，如选题平庸、论证粗浅、方法不够严谨、文献支持不足等，但基本完成论文写作任务，具备最低限度的学术表达与专业认知。
+                                    </p>
+                                    <p style="">
+                                        论文勉强满足期刊论文要求，在研究方法、内容或结论方面存在明显瑕疵，如选题平庸、论证粗浅、方法不够严谨、文献支持不足等，但基本完成论文写作任务，具备最低限度的学术表达与专业认知。
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>
+                                        ●
+                                        研究方法评级中方法设计较弱、数据支撑不足，实验或论证流程粗略。
+                                    </p>
+                                    <p>● 研究内容评级显示结构不均衡、部分文献缺失或不匹配。</p>
+                                    <p>● 研究结论评级中结论偏空泛、与研究问题衔接不紧密。</p>
+                                    <p>
+                                        ● 要素总分评级中仅有少部分要素表现良好，多数接近及格线。
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr class="even-row">
+                                <td class="center">
+                                    <span class="color-red"> D级 （高危不及格） </span>
+                                </td>
+                                
+                                <td class="center">
+                    <span class="color-red"> 0-40分 </span>
+                  </td> 
+
+                                <td>
+                                    <p style="display: none;">
+                                        论文严重不符合毕业标准，研究方法存在逻辑错误或缺失，内容空泛或无实质成果，结构混乱、缺乏基本文献支撑，结论无实质意义；整体学术规范缺失，未展现出合格的专业能力或研究素养。
+                                    </p>
+                                    <p style="">
+                                        论文严重不符合期刊论文标准，研究方法存在逻辑错误或缺失，内容空泛或无实质成果，结构混乱、缺乏基本文献支撑，结论无实质意义；整体学术规范缺失，未展现出合格的专业能力或研究素养。
+                                    </p>
+                                </td>
+                                <td>
+                                    <p>● 研究方法评级显示设计混乱或基本无方法论支持。</p>
+                                    <p>● 研究内容评级显示内容碎片化或严重引用不当。</p>
+                                    <p>● 研究结论评级缺乏结论性论述或内容脱节。</p>
+                                    <p>
+                                        ●
+                                        要素总分评级中多个子项评分远低于标准线，整体表现严重不足。
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <div style="color: #2f39ec; font-weight: bold; font-size: 16px">
+                            底线合规性评审说明
+                        </div>
+                        <div style="font-size: 14px; display: none;">
+                            综合评阅等级设有 3 个“必须通过”的独立维度，如有一项不通过，可能导致毕业论文整体评定为“建议修改”或“不合格”，建议及时修改。该机制旨在确保论文的意识导向合规性、培养目标适配性、题文一致性与事实准确性。
+                        </div>
+                        <div style="font-size: 14px; ">
+                            综合评阅等级设有 3 个“必须通过”的独立维度，如有一项不通过，可能导致期刊论文整体评定为“建议修改”或“不合格”，需要及时修改。该机制旨在确保论文的意识导向合规性、题文一致性与事实准确性。
+                        </div>
+                        <thead>
+                            <tr class="main-tr">
+                                <th class="center">意识导向合规性</th>
+                                <th class="center" style="display: none;">培养目标适配性</th>
+                                <th class="center">题文一致性</th>
+                                <th class="center">事实准确性</th>
+                                <th class="center" style="display: none;">论文查重</th>
+                                <th class="center" style="display: none;">AIGC痕迹检测</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd-row">
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #f6f6ff; padding: 50px 25px">
+                                    <span>
+                                        论文必须坚持正确的意识方向、价值导向与舆论导向，不得存在违反宪法法律、贬损民族文化、宣扬不当观点等内容。此项重点审查论文是否符合高等教育育人导向，确保导向正、立场稳、用语审慎。
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #f6f6ff; padding: 50px 25px; display: none; ">
+                                    <span>
+                                        论文应紧密结合本专业的培养目标和毕业要求，能够体现学生对所学知识、技能和思维方式的理解与运用。若选题内容完全偏离专业要求，或论文未展现应有的专业能力与成果产出，视为不适配。
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #f6f6ff; padding: 50px 25px">
+                                    <span>
+                                        论文题目应与内容保持一致性，研究问题、论证逻辑与研究目标应围绕选题展开。若论文内容与标题严重脱节、空泛套写、逻辑错乱，或更换题目后未同步修改正文内容，视为题文不符。
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #f6f6ff; padding: 50px 25px">
+                                    <span>
+                                        论文引用数据、案例、文献必须真实可靠，不得虚构、伪造、随意剪裁事实信息。对已有研究成果须如实引用并加以分析，不得张冠李戴、误引错引，更不得出现造假、抄袭、杜撰数据等学术不端行为。
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #f6f6ff; padding: 50px 25px; display: none;">
+                                    <span>
+                                        论文依托检测系统，检测论文与已有文献重复率，判定内容原创性，防控抄袭剽窃，确保符合学术诚信与规范底线的必要审查。。
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #f6f6ff; padding: 50px 25px; display: none;">
+                                    <span>
+                                        分析论文文本语言特征、逻辑结构，识别论文中AI生成内容痕迹。用于筛查代笔或过度依赖AI创作，防范非原创成果，保障学术研究真实性与诚信底线。。
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="odd-row"></tr>
+                            <tr class="even-row">
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #edffe3">
+                                    <span style="font-size: 16px" class="color-green">
+                                        通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #edffe3; display: none;"
+                                    style="background-color: #fff">
+                                    <span style="font-size: 16px" class="color-green">
+                                        通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #edffe3"
+                                    style="background-color: #fff">
+                                    <span style="font-size: 16px" class="color-green">
+                                        通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #edffe3"
+                                    style="background-color: #fff">
+                                    <span style="font-size: 16px" class="color-green">
+                                        通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #edffe3;display: none;"
+                                    style="background-color: #fff">
+                                    <span style="font-size: 16px" class="color-green">
+                                        通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #edffe3;display: none;"
+                                    style="background-color: #fff">
+                                    <span style="font-size: 16px" class="color-green">
+                                        通过
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="even-row"></tr>
+                            <tr class="odd-row">
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #ebebeb">
+                                    <span style="font-size: 16px" class="color-red">
+                                        不通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #ebebeb; display: none;">
+                                    <span style="font-size: 16px" class="color-red">
+                                        不通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #ebebeb">
+                                    <span style="font-size: 16px" class="color-red">
+                                        不通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #ebebeb">
+                                    <span style="font-size: 16px" class="color-red">
+                                        不通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #ebebeb; display: none;">
+                                    <span style="font-size: 16px" class="color-red">
+                                        不通过
+                                    </span>
+                                </td>
+                                <td rowspan="2"
+                                    class="center"
+                                    style="background-color: #ebebeb; display: none;">
+                                    <span style="font-size: 16px" class="color-red">
+                                        不通过
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="odd-row"></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="yaosu-level-title">研究质量评审</div>
+                <div class="table-container">
+                    <table>
+                        <div style="color: #2f39ec; font-weight: bold; font-size: 16px">
+                            研究方法评级说明
+                            <span style="color: #000; display: none">
+                                （综合权重占比<span class="color-red">15%</span>）
+                            </span>
+                        </div>
+                        <div style="font-size: 14px">
+                            评估研究方法的科学性、合理性与实施过程的规范性，重点考察方法选择是否恰当、实施步骤是否严谨，能否有效支撑研究目标的实现。
+                        </div>
+                        <thead>
+                            <tr class="main-tr">
+                                <th style="width: 18%">等级划分</th>
+                                <th style="width: 12%">分数范围</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd-row">
+                                <td rowspan="1">
+                                    <span class="color-green"> A级 （优秀良好） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-green"> 85-100分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>研究方法科学合理，执行严谨，数据分析准确，结论可信。</p>
+                                </td>
+                            </tr>
+                            <tr class="odd-row"></tr>
+                            <tr class="odd-row"></tr>
+                            <tr class="even-row">
+                                <td rowspan="1">
+                                    <span class="color-blue"> B级 （合格中等） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-blue"> 60-84分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>方法选择合理，但执行或数据分析有不足。</p>
+                                </td>
+                            </tr>
+                            <tr class="odd-row">
+                                <td rowspan="1">
+                                    <span class="color-yellow"> C级 （建议修改） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-yellow"> 41-59分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>方法存在明显缺陷，影响研究可信度。</p>
+                                </td>
+                            </tr>
+                            <tr class="even-row">
+                                <td rowspan="1">
+                                    <span class="color-red"> D级 （高危不及格） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-red"> 0-40分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>研究方法严重不当，研究结论缺乏支撑。</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <div style="color: #2f39ec; font-weight: bold; font-size: 16px">
+                            研究内容评级说明
+                            <span style="color: #000; display: none">
+                                （综合权重占比<span class="color-red">15%</span>）
+                            </span>
+                        </div>
+                        <div style="font-size: 14px">
+                            评估研究选题的创新性、研究目的的明确性以及研究内容的全面性与深度，重点考察研究内容是否具有学术价值、实践意义，并符合相关学科的研究前沿与需求。
+                        </div>
+                        <thead>
+                            <tr class="main-tr">
+                                <th style="width: 18%">等级划分</th>
+                                <th style="width: 12%">分数范围</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd-row">
+                                <td rowspan="1">
+                                    <span class="color-green"> A级 （优秀良好） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-green"> 85-100分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        研究内容全面，理论扎实，论据充分，推理严密，分析深入，结论可靠。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="odd-row"></tr>
+                            <tr class="odd-row"></tr>
+                            <tr class="even-row">
+                                <td rowspan="1">
+                                    <span class="color-blue"> B级 （合格中等） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-blue"> 60-84分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        研究内容较完整，但在论据支持或逻辑推理方面存在一定不足，部分结论有待深入。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="odd-row">
+                                <td rowspan="1">
+                                    <span class="color-yellow"> C级 （建议修改） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-yellow"> 41-59分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        研究内容较薄弱，论据支撑不足，逻辑不够严密，结论可信度较低。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="even-row">
+                                <td rowspan="1">
+                                    <span class="color-red"> D级 （高危不及格） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-red"> 0-40分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        研究内容严重不足，缺乏基本的学术逻辑，结论缺乏依据，学术价值有限。
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <div style="color: #2f39ec; font-weight: bold; font-size: 16px">
+                            研究结论评级说明
+                            <span style="color: #000; display: none">
+                                （综合权重占比<span class="color-red">15%</span>）
+                            </span>
+                        </div>
+                        <div style="font-size: 14px">
+                            评估研究结论的科学性、可靠性与客观性，主要考察结论与研究内容、方法之间的逻辑一致性及充分性，确保研究成果的准确性与可信度。
+                        </div>
+                        <thead>
+                            <tr class="main-tr">
+                                <th style="width: 18%">等级划分</th>
+                                <th style="width: 12%">分数范围</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd-row">
+                                <td rowspan="1">
+                                    <span class="color-green"> A级 （优秀良好） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-green"> 85-100分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        结论逻辑清晰，充分回应研究问题，研究数据强力支撑，价值突出，创新性较强。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="odd-row"></tr>
+                            <tr class="odd-row"></tr>
+                            <tr class="even-row">
+                                <td rowspan="1">
+                                    <span class="color-blue"> B级 （合格中等） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-blue"> 60-84分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        结论合理清晰，有研究数据支撑，与研究问题一致，价值较高，但可能缺乏较强创新性。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="odd-row">
+                                <td rowspan="1">
+                                    <span class="color-yellow"> C级 （建议修改） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-yellow"> 41-59分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        结论部分基本合理，但表达较笼统，研究支撑力度有限，或价值贡献一般。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="even-row">
+                                <td rowspan="1">
+                                    <span class="color-red"> D级 （高危不及格） </span>
+                                </td>
+                                <td rowspan="1">
+                                    <span class="color-red"> 0-40分 </span>
+                                </td>
+                                <td rowspan="1">
+                                    <p>
+                                        结论存在较大缺陷，缺乏数据支撑，与研究问题联系较弱，与研究问题脱节或完全缺乏研究支撑。
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="table-container" style="display: none">
+                    <table>
+                        <div style="color: #2f39ec; font-weight: bold; font-size: 16px">
+                            要素总分评级说明
+                            <span style="color: #000; display: none">
+                                （综合权重占比<span class="color-red">55%</span>）
+                            </span>
+                        </div>
+                        <div>
+                            基于五个评议要素的等级评定，计算论文质量综合指数(TQI)：
+                            <b class="color-blue">
+                                TQI = 选题意义 × 15% + 写作安排 × 15% + 逻辑构建 × 20% +
+                                专业能力 × 30% + 学术规范 × 20%
+                            </b>
+                        </div>
+                        <thead>
+                            <tr class="main-tr">
+                                <th style="width: 18%">综合等级</th>
+                                <th style="width: 12%">分数范围</th>
+                                <th>说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd-row">
+                                <td>
+                                    <span class="color-green"> A级 （优秀良好） </span>
+                                </td>
+                                <td>
+                                    <span class="color-green"> 85-100分 </span>
+                                </td>
+                                <td>
+                                    <p>
+                                        论文整体质量优秀，各评议要素均达到较高水平，具有一定的学术价值。选题紧密结合热点研究领域，结构完整，逻辑严密，专业能力突出，学术规范严格。可以直接通过答辩。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="even-row">
+                                <td>
+                                    <span class="color-blue"> B级 （合格中等） </span>
+                                </td>
+                                <td>
+                                    <span class="color-blue"> 60-84分 </span>
+                                </td>
+                                <td>
+                                    <p style="display: none;">
+                                        论文整体质量达到中等水平，基本符合本科毕业论文要求，但部分方面有不足。选题具有一定价值，结构基本完整，逻辑基本合理，专业能力基本合格，学术规范基本遵守。经过小幅修改后可以参加答辩。
+                                    </p>
+                                    <p style="">
+                                        论文整体质量达到中等水平，基本符合期刊论文要求，但部分方面有不足。选题具有一定价值，结构基本完整，逻辑基本合理，专业能力基本合格，学术规范基本遵守。经过小幅修改后可以参加答辩。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="odd-row">
+                                <td>
+                                    <span class="color-yellow"> C级 （建议修改） </span>
+                                </td>
+                                <td>
+                                    <span class="color-yellow"> 41-59分 </span>
+                                </td>
+                                <td>
+                                    <p style="display: none;">
+                                        论文整体质量不足，未达到本科毕业论文的基本要求，多个方面存在明显不足。选题价值有限，结构不完整，逻辑混乱，专业能力不足，学术规范意识薄弱。需要进行较大幅度修改后才能参加答辩。
+                                    </p>
+                                    <p style="">
+                                        论文整体质量不足，未达到期刊论文的基本要求，多个方面存在明显不足。选题价值有限，结构不完整，逻辑混乱，专业能力不足，学术规范意识薄弱。需要进行较大幅度修改后才能参加答辩。
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr class="even-row">
+                                <td>
+                                    <span class="color-red"> D级 （高危不及格） </span>
+                                </td>
+                                <td>
+                                    <span class="color-red"> 0-40分 </span>
+                                </td>
+                                <td>
+                                    <p style="display: none;">
+                                        论文整体质量极差，远未达到本科毕业论文的基本要求。选题几乎无价值，结构混乱，逻辑严重不足，专业能力极差，学术规范意识极度缺乏。需要重做论文，否则无法通过毕业要求。
+                                    </p>
+                                    <p style="">
+                                        论文整体质量极差，远未达到期刊论文的基本要求。选题几乎无价值，结构混乱，逻辑严重不足，专业能力极差，学术规范意识极度缺乏。需要重做论文，否则无法通过毕业要求。
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="yaosu-tip" style="display: none">
+                    注：本评价体系基于客观数据指标，可通过学术大数据中台的对象化数据进行计算，为本科毕业论文评价提供科学、客观的依据。各评议要素的整体权重分配为：选题意义15%、写作安排15%、逻辑构建20%、专业能力30%、学术规范20%。
+                </div>
+                <div class="yaosu-level-title" style="">评议要素子项说明</div>
+
+                <div class="table-container"><div style="color: #2f39ec; font-weight: bold; font-size: 16px;margin-bottom: 10px;">
+                                      创新性（原创性）
+                                  </div>
+                                  <table>
+                                    <thead>
+                                      <tr class="main-tr">
+                                        <th style = "width: 14%" class="center">综合等级</th>
+                                        <th style = "width: 12%" class="center">分数范围</th>
+                                        <th style = "width: 42%">评定标准</th>
+                                        <th>子指标及权重</th>
+                                      </tr>
+                                    </thead><tbody><tr class="odd-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-green"> A级 （优秀良好） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-green"> 85-100分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>论文在理论、方法或应用层面具有显著原创贡献，能够提出清晰的新问题、新概念或新框架，对本领域或相关交叉领域有明显的推进作用；整体选题与研究思路与现有文献相比差异度高、辨识度强，不会被归入&ldquo;已有工作的小改小补&rdquo;；从标题、摘要到正文，都能清晰呈现&ldquo;这篇论文在做一件之前没人（或极少人）做过的事&rdquo;。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>关键词罕见度：</b>
+                                          </p>
+                                          <p>
+                                            核心关键词在本领域文献中属于明显稀缺或新兴词汇，常出现新术语、跨学科组合词或对既有概念的全新命名；标题和摘要中的高权重词与主流文献相比有显著差异，一眼就能看出“问题不一样”“切入点不一样”；关键词分布远离领域的常规频率分布，呈现出“高不常见、高辨识度”的特征。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>参考文献组合新颖性:</b>
+                                          </p>
+                                          <p>
+                                            参考文献列表中存在大量此前极少被同时引用的文献搭配，能够把不同子领域、不同理论传统或不同方法学流派有机组合起来；引文网络呈现出高度异质性的路径结构，不再简单沿用成熟路线，而是搭建起新的“知识桥梁”“组合方式”；从共引关系看，这篇论文的引文模式在同领域语料中属于明显的“非典型组合”，体现出高强度的整合创新。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-blue"> B级 （合格中等） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-blue"> 60-84分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>论文整体具有较为明确的创新点，在既有理论或方法框架内做出了实质性改进、扩展或更系统的应用验证；选题和思路与已有工作相比有一定区别，但多属于&ldquo;在主流路线上的深化和优化&rdquo;，突破幅度略逊于A级；创新点可以被清楚识别和说明，但在颠覆性或跨度上稍弱，更多体现为&ldquo;做得更好&rdquo;&ldquo;做得更精细&rdquo;。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>关键词罕见度：</b>
+                                          </p>
+                                          <p>
+                                            论文整体具有较为明确的创新点，在既有理论或方法框架内做出了实质性改进、扩展或更系统的应用验证；选题和思路与已有工作相比有一定区别，但多属于“在主流路线上的深化和优化”，突破幅度略逊于A级；创新点可以被清楚识别和说明，但在颠覆性或跨度上稍弱，更多体现为“做得更好”“做得更精细”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>参考文献组合新颖性:</b>
+                                          </p>
+                                          <p>
+                                            参考文献中出现部分较少被共同引用的文献搭配，在既有研究脉络上做“新的组合与延伸”；引文网络整体结构与主流工作仍较相似，但在若干关键节点上出现了跨子领域或跨方法的连接；整体而言，论文的引文组合模式在本领域中属于“有一定新意，但仍可归入常见范式的变体”，体现出稳健而非激进的创新。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-yellow"> C级 （建议修改） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-yellow"> 41-59分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>论文创新性有限或偏弱，更多是在已有结论基础上的小幅改进、参数调整、换数据/换场景验证，或对已知问题做常规性补充；选题与问题设定与现有文献高度同质化，创新点描述不够集中、也不够有说服力；整体处于&ldquo;有一点变化，但很难说是真正意义上的新东西&rdquo;的状态，多数只能被视为增量性工作。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>关键词罕见度：</b>
+                                          </p>
+                                          <p>
+                                            论文创新性有限或偏弱，更多是在已有结论基础上的小幅改进、参数调整、换数据/换场景验证，或对已知问题做常规性补充；选题与问题设定与现有文献高度同质化，创新点描述不够集中、也不够有说服力；整体处于“有一点变化，但很难说是真正意义上的新东西”的状态，多数只能被视为增量性工作。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>参考文献组合新颖性:</b>
+                                          </p>
+                                          <p>
+                                            参考文献之间的共引关系以各种常见、成熟的搭配为主，文献组合路径与大量现有论文几乎完全一致；偶尔会有个别不太常见的文献加入，但不会形成系统性的“新组合模式”；引文网络结构整体属于“跟随现成路线”：持续依赖经典文献和主流路径，对跨领域、跨范式的整合尝试有限，因此难以体现引文层面上的结构性创新。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-red"> D级 （高危不及格） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-red"> 0-40分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>论文基本缺乏实质创新，主要为简单重复前人工作、平行对照或仅将既有方法机械套用到类似场景；选题和问题表述与已有研究高度雷同，几乎没有新的视角、概念或方法；即便全文结构完善，在&ldquo;做了什么新东西&rdquo;这一核心问题上也难以给出有说服力的说明，通常会被编辑部归入&ldquo;创新性不足，不建议送外审&rdquo;的类别。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>关键词罕见度：</b>
+                                          </p>
+                                          <p>
+                                            论文基本缺乏实质创新，主要为简单重复前人工作、平行对照或仅将既有方法机械套用到类似场景；选题和问题表述与已有研究高度雷同，几乎没有新的视角、概念或方法；即便全文结构完善，在“做了什么新东西”这一核心问题上也难以给出有说服力的说明，通常会被编辑部归入“创新性不足，不建议送外审”的类别。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>参考文献组合新颖性:</b>
+                                          </p>
+                                          <p>
+                                            参考文献列表大量沿用最常见的经典搭配模式，引文路径与领域内标准模板论文几乎重合；几乎不出现任何跨子领域、跨方法、跨学派的非典型组合，也不尝试连接彼此原本不常被共同引用的文献群；在引文网络视角下，该论文的引用结构完全嵌入既有主流线路，没有形成新的桥接或重构，体现为“纯粹跟随式引用”，基本不具备引文层面的组合创新。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tbody></table></div><div class="table-container"><div style="color: #2f39ec; font-weight: bold; font-size: 16px;margin-bottom: 10px;">
+                                      研究方法与设计
+                                  </div>
+                                  <table>
+                                    <thead>
+                                      <tr class="main-tr">
+                                        <th style = "width: 14%" class="center">综合等级</th>
+                                        <th style = "width: 12%" class="center">分数范围</th>
+                                        <th style = "width: 42%">评定标准</th>
+                                        <th>子指标及权重</th>
+                                      </tr>
+                                    </thead><tbody><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> A级 （优秀良好） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> 85-100分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>研究方法与设计整体达到高度规范、严谨、透明的水准。研究问题与方法高度匹配，整体方案经过充分论证；方法部分结构清晰、层次分明，足以支持同行在只依赖文中信息的前提下完整复现研究；实验或研究设计考虑了对照组、混杂因素控制、样本量合理性、统计分析路径等关键要素，并做了系统说明；同时，对数据、代码或材料等复现资源有明确的公开或可获取安排。此等级的论文通常体现出&ldquo;可复核、可质疑、可重做&rdquo;的高标准。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>方法描述完整度：</b>
+                                          </p>
+                                          <p>
+                                            方法部分结构完备，包含研究对象/数据来源、具体操作步骤、变量定义、工具与仪器、评价指标与统计方法等关键信息；各关键环节均有清晰、连贯的文字阐述，不存在明显的“跳步”；阅读方法章节即可形成清晰的“操作流程图”，对同领域研究者而言几乎无需额外解释即可理解并照做。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>实验设计严谨性:</b>
+                                          </p>
+                                          <p>
+                                            实验或研究方案中多维度设置对照与验证：通常包括多个实验场景或子研究、多种对比基线或方案、合理的样本量估计与统计功效考虑，并设置了必要的消融实验或敏感性分析；设计过程显然经过事先规划而非临时堆砌，变量控制充分，结果解释与设计逻辑高度一致，给人以“结构性强、逻辑严密”的整体印象。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>研究可复现性支持度:</b>
+                                          </p>
+                                          <p>
+                                            论文对复现实验所需的信息提供极为充分：明确给出数据集或样本来源及获取方式、主要参数设置、模型或算法关键实现细节，常附有伪代码、流程图或附录说明；同时，通常提供公开代码、数据或至少给出可验证的获取途径，并标明运行环境、软件版本等技术细节，使得不同团队在不同环境中重复研究结果的可能性非常高。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> B级 （合格中等） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> 60-84分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>研究方法与设计整体上规范、可靠、基本严谨，能够支撑研究结论，但在细节完整性、设计丰富度或复现支持方面尚有一定提升空间。方法部分主体信息齐备，但个别环节略显简略或说明不足；实验或研究设计具备主要对照和统计分析，但在样本量论证、多场景验证、消融分析等方面不如A级全面；复现信息基本可用，但尚未达到&ldquo;一看就能重做&rdquo;的理想程度。整体属于&ldquo;合格且较好，但未臻极致&rdquo;的档次。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>方法描述完整度：</b>
+                                          </p>
+                                          <p>
+                                            方法章节对研究流程有相对完整的描述，关键步骤基本都被提及，能够让同行大致把握研究是如何开展的；但在部分细节上存在“写了但不够细”的情况，例如对某些参数设定、操作条件、工具配置只作了概括性说明，未展开到完全可复制作业的层级；整体阅读不会产生重大困惑，但若要严格复现，尚需研究者根据经验进行一定程度的补足或推断。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>实验设计严谨性:</b>
+                                          </p>
+                                          <p>
+                                            实验或研究设计中，主体思路合理清晰，通常包含至少一种对照条件，并采用了常规的评价指标与统计分析方法；设计中考虑了一些潜在干扰因素，但未做到全方位覆盖，例如在样本量、随机化、盲法或多场景验证上未做充分展开；整体上能有效支撑论文结论，但在“多维验证”“冗余验证”和“极端情形测试”等方面略显不足，更像是规范的标准实验设计而非高度精雕细琢的方案。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>研究可复现性支持度:</b>
+                                          </p>
+                                          <p>
+                                            文中提供了足以让同行在投入一定努力后实现重做的主要信息：包括数据来源说明、关键步骤描述及核心参数的大致范围；但对细粒度参数、部分预处理细节、完整代码实现等并未完全展开或未提供公开资源；有时仅提供示意性伪代码、片段式代码截图，或仅说明“可按常规设置进行”，这使得复现成本较A级略高，但在认真研读后仍具可操作性。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> C级 （建议修改） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> 41-59分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>研究方法与设计基本可见，但明显偏粗糙或不够系统。方法描述存在较大空缺或不均衡：少数环节写得较详细，但整体链条不完整；实验或研究设计侧重&ldquo;有做&rdquo;而非&ldquo;做得多好&rdquo;，对照设置有限、统计分析浅尝辄止，对样本量、混杂因素等核心问题关注不足；复现支撑较弱，若他人尝试重做，需做大量猜测和自行补充。整体体现为&ldquo;能看出大方向，但缺乏严格的设计意识&rdquo;。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>方法描述完整度：</b>
+                                          </p>
+                                          <p>
+                                            方法部分仅给出了研究大致做法的“框架式说明”，例如简单列出“收集数据—处理—分析—得出结果”的步骤，但对每一步的操作细节、使用何种工具、参数如何设定、样本如何筛选等说明不足；部分关键环节甚至只出现一两句概括性语句，无法形成可执行的操作路径；整体给人的感觉是“知道你大概做了什么，但不知道你具体是怎么做的”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>实验设计严谨性:</b>
+                                          </p>
+                                          <p>
+                                            实验或研究设计中，常见情况是只进行了一种条件或极少数对比，且对照选择缺乏充分理由（例如仅与最基础方法对比，缺少与当前主流方法的比较）；在样本量安排、随机化、误差控制、重复试验等方面几乎未体现出系统思考；统计分析多停留在简单描述层面，缺乏严谨的检验设计。整体上，设计更多是“能跑起来的实验”，而非经过周密设计的科学方案。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>研究可复现性支持度:</b>
+                                          </p>
+                                          <p>
+                                            复现方面的信息明显不足：常见表现为只笼统说明使用了某类数据或某个工具平台，但未给出准确的数据版本、来源地址、预处理规则和关键参数；本文中不提供代码或数据链接，附录中也缺乏详细流程；即便是同领域研究者，若尝试复现，往往需要做大量假设与试错才可能接近原结果，复现成本和不确定性都非常高。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> D级 （高危不及格） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> 0-40分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>研究方法与设计处于明显不合格或不可接受的状态。方法部分严重缺失或极端粗陋，以致难以判断研究是如何具体实施的；实验或研究设计存在根本性缺陷，比如没有任何对照、样本极不合理、统计分析严重缺位，甚至设计本身与研究问题不匹配；几乎不具备可复现性，外部读者无法据此重复研究或验证结果。此类论文通常会在编辑初筛阶段直接被退稿。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>方法描述完整度：</b>
+                                          </p>
+                                          <p>
+                                            方法章节要么非常短，要么基本停留在“空洞口号式”的描述，比如只写“采用某某经典方法”“按照常规流程操作”，缺乏任何可操作细节；关键变量、操作步骤、评价过程均未说明，甚至无法判断实验到底在什么条件下进行；整体上，文本无法承担“方法说明”的职责，处于“几乎相当于未写”的水平。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>实验设计严谨性:</b>
+                                          </p>
+                                          <p>
+                                            实验或研究设计中存在致命性问题：例如完全没有对照组或比较对象、样本选择随机性和代表性完全不明、未考虑任何潜在干扰变量、没有任何形式的统计检验；有时甚至出现“用错方法”“设计与问题明显不匹配”的情况，使得研究结论从设计层面就已经站不住脚；整体印象是“想法或许有，但设计几乎不构成科学意义上的研究”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>研究可复现性支持度:</b>
+                                          </p>
+                                          <p>
+                                            论文几乎不提供任何复现支撑：没有数据来源说明，没有参数信息，没有实现细节，也缺少代码或附加材料；即使是经验丰富的同行，亦难以凭文中信息重建实验环境或推断操作细节；在极端情况下，甚至连基本的数据规模、采集方式或处理手段都未提及，外部读者无法判断结果是否真实可验证。整体上该类论文在复现性上可视为接近于零，严重违背当前学术界对透明性和可检验性的基本要求。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tbody></table></div><div class="table-container"><div style="color: #2f39ec; font-weight: bold; font-size: 16px;margin-bottom: 10px;">
+                                      逻辑结构与文章组织
+                                  </div>
+                                  <table>
+                                    <thead>
+                                      <tr class="main-tr">
+                                        <th style = "width: 14%" class="center">综合等级</th>
+                                        <th style = "width: 12%" class="center">分数范围</th>
+                                        <th style = "width: 42%">评定标准</th>
+                                        <th>子指标及权重</th>
+                                      </tr>
+                                    </thead><tbody><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> A级 （优秀良好） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> 85-100分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文整体结构高度清晰、层次分明，严格符合学术论文的规范化结构要求。各章节功能界定明确，内容分布均衡，没有缺失或堆叠现象；从题目、摘要到引言、方法、结果、讨论与结论，形成一条逻辑主线，读者可以顺着&ldquo;提出问题&mdash;分析问题&mdash;解决问题&mdash;总结提升&rdquo;的路径自然阅读下来。全文主题聚焦，论证步骤紧密衔接，几乎不存在结构性跳跃或逻辑断层，整体呈现出&ldquo;结构完整、逻辑严密、组织精炼&rdquo;的专业水准。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>章节结构完整性：</b>
+                                          </p>
+                                          <p>
+                                            论文严格按照规范学术结构展开，核心章节（引言/背景、相关工作或文献综述、研究方法、实验/结果、讨论、结论等）均有清晰独立的呈现和合理篇幅分配；章节命名准确，功能边界清楚，不存在一个章节“什么都装”、另一些应有章节完全缺失的情况；整篇文章在目录或标题层级上就能清晰看出研究思路的展开次序。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>内容连贯与一致性:</b>
+                                          </p>
+                                          <p>
+                                            各章节内部以及章节之间的内容在语义与论证上高度一致：引言提出的问题在方法中得到正面回应，方法产生的数据在结果中系统报告，结果中出现的关键现象在讨论和结论中得到充分解释和回扣；全文主要概念和核心变量在不同部分的表述保持稳定，不出现前后矛盾或自我否定的情况；段落之间话题推进自然，几乎没有读者“突然被拉到另一个话题”的割裂感。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>逻辑过渡与衔接:</b>
+                                          </p>
+                                          <p>
+                                            文中广泛且恰当地使用逻辑连接词和过渡句来引导读者：在从背景转向问题、从理论转向方法、从结果转向讨论等关键转换处，都能看到清晰的“承上启下”语句；论证结构有明确的因果、对比、递进等逻辑标记，读者可轻松判断每一部分在整体论证链条中的位置；逻辑跳跃极少，作者在可能引起疑问的节点上主动补充说明，使全文逻辑流畅而自然。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> B级 （合格中等） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> 60-84分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文整体结构较为清晰，基本遵循常见学术论文的章节设置，主干逻辑明确，但在部分章节安排、内容分配或层次划分上仍略显粗糙。文章主线是清楚的，读者能顺利跟随作者的论证路径，但某些段落间过渡稍显生硬，个别地方存在轻微的内容重复或先后顺序不够理想。总体属于&ldquo;结构规范、逻辑可理解&rdquo;，虽未达到高度凝练与严密，但不存在严重影响理解的结构性问题。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>章节结构完整性：</b>
+                                          </p>
+                                          <p>
+                                            绝大多数学术必备章节都已具备，但可能存在个别模块未单独成章（例如“讨论”与“结果”合并，或“文献综述”混杂在引言中）；章节划分基本合理，少数部分略显冗长或过于简略，章节之间在功能分工上偶有交叉或重复，但整体仍能看出作者企图按照规范结构组织内容的努力，不会给编辑和评审造成“结构混乱”的直观印象。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>内容连贯与一致性:</b>
+                                          </p>
+                                          <p>
+                                            论文大体上做到了“前后呼应”：引言提出的主要研究问题在后文有所回答，方法中给出的路径与结果报告基本对应；但局部存在轻微的“信息对不齐”的现象，如引言提及的某一子问题在结果中着墨不多，或部分结果在讨论里没有被充分解释；段落与段落之间主题衔接较为自然，但偶尔有内容跳跃或冗余说明，需要读者稍加调整思路才能顺利跟上。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>逻辑过渡与衔接:</b>
+                                          </p>
+                                          <p>
+                                            全文整体逻辑衔接良好，在关键位置使用了一定数量的过渡词和连接句，能帮助读者理解论证流程；然而，有些章节内的段落转换略显直接，对新引入的观点或结论缺乏过渡性铺垫；局部出现“上一个论点刚提完，下一个论点立即展开”而未做清晰过渡的情况，使得阅读时在少数位置会感到略微“跳”的感觉，但不至于严重打断理解。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> C级 （建议修改） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> 41-59分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文的逻辑结构与文章组织存在明显不足：整体虽能勉强看出基本的研究流程，但章节设置不规范、内容堆叠或缺失较为突出；主线逻辑模糊，部分关键内容分散在不同章节，读者需要反复跳读才能拼出完整故事。全文给人的感觉是&ldquo;有材料，但组织不好&rdquo;，结构缺陷已经开始影响对研究价值和结论的理解。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>章节结构完整性：</b>
+                                          </p>
+                                          <p>
+                                            章节设置不够规范，常见现象包括：多个本应拆分的功能被混在一个章节里（如背景、文献综述、方法大量交叉）、某些关键部分（如结果或讨论）极为简略甚至未形成独立小节，或者附录性质的内容（长表格、次要细节）与主体内容混杂；章节标题与内容匹配度不高，标题看似严谨，实际内容分布不均，存在“标题有、内容弱”或“内容多、标题笼统”的情况。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>内容连贯与一致性:</b>
+                                          </p>
+                                          <p>
+                                            各章节之间在内容上缺乏稳定的呼应关系，经常出现：引言提到的问题在后文未得到系统回应，方法部分描述的设计在结果中呈现不完整，讨论中又引入新的问题而未回到原始研究问题；同一概念在不同部分用词不统一，甚至存在轻度矛盾的表述；段落内部话题跳跃明显，一个段落中承载多个不相干点，读者难以抓住当前论述焦点。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>逻辑过渡与衔接:</b>
+                                          </p>
+                                          <p>
+                                            全文过渡句和逻辑连接整体偏少，段落之间常常是“硬切换”，缺少承接前文、预告下文的衔接语句；从一个主题跳到另一个主题时，没有清楚说明二者关系，导致阅读过程中频繁出现“为什么突然说这个”的困惑；即便使用了部分过渡词，也多为形式化、机械式地堆叠，未真正承担引导逻辑的功能，使得逻辑链条呈现碎片化状态。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> D级 （高危不及格） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> 0-40分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文在逻辑结构与文章组织方面存在严重问题，已经对研究内容的理解和可信度造成实质性影响。整体缺乏基本的学术文章结构常识，章节混乱或大量缺失，研究流程无法从文本中清晰辨认；全文没有形成连贯的论证主线，内容堆砌严重，读者难以判断作者到底在回答什么问题、按什么顺序展开。此类稿件通常会在初筛阶段直接被判定为结构性不合格。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>章节结构完整性：</b>
+                                          </p>
+                                          <p>
+                                            几乎看不到与规范学术论文结构相匹配的章节布局：可能只有零散的大标题，或干脆以类似“随笔式”结构展开；引言、方法、结果、讨论等部分要么严重缺失，要么完全混杂在一起无法分辨；章节标题与内容严重不符，标题只是形式化标签，实际内容没有条理分布，致使读者甚至无法判断文章当前处于研究过程的哪一个阶段。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>内容连贯与一致性:</b>
+                                          </p>
+                                          <p>
+                                            内容之间高度脱节，前后文在主题、论点和信息上频繁自相矛盾或互不呼应；引言提出的研究问题可能在全文再未出现，结果部分呈现的数据与方法描述对不上号，结论中给出的判断与前文证据联系极弱；同一概念在不同段落有多种不兼容的定义，文本整体呈现割裂状态，读者很难构建出一个完整、连续的理解框架。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>逻辑过渡与衔接:</b>
+                                          </p>
+                                          <p>
+                                            逻辑过渡和衔接几乎缺位，段落和句子之间呈现“随机拼贴”式连接，缺少任何逻辑连接词或过渡段的组织；内容突然从一个话题跳到另一个话题，中间没有说明缘由或逻辑联系，论证过程难以追踪；阅读体验类似浏览未经编辑的笔记或材料堆积，逻辑链条支离破碎，以至于很难基于当前文本标准来进行学术性评审。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tbody></table></div><div class="table-container"><div style="color: #2f39ec; font-weight: bold; font-size: 16px;margin-bottom: 10px;">
+                                      数据支撑与结果可靠性
+                                  </div>
+                                  <table>
+                                    <thead>
+                                      <tr class="main-tr">
+                                        <th style = "width: 14%" class="center">综合等级</th>
+                                        <th style = "width: 12%" class="center">分数范围</th>
+                                        <th style = "width: 42%">评定标准</th>
+                                        <th>子指标及权重</th>
+                                      </tr>
+                                    </thead><tbody><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> A级 （优秀良好） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> 85-100分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文在数据量、数据质量以及结果论证上达到高度扎实与严谨的水准。数据来源清晰可信、采集过程规范，样本量或数据规模对于所研究的问题而言是充分且经过论证的；核心结论都有明确的数据证据支撑，而非停留在描述性陈述。统计分析设计合理，关键结果均进行了恰当的假设检验、置信区间或误差分析，报告完整透明；不同实验、不同指标之间相互印证，几乎不出现明显自相矛盾之处。整体给人的印象是：结论&ldquo;站得住&rdquo;，数据&ldquo;撑得起&rdquo;，即便在严格审查下也具备较高的可信度和可重复性。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>数据支撑充分性：</b>
+                                          </p>
+                                          <p>
+                                            所有核心结论后均能找到数量充足、维度丰富的数据支撑；样本量或数据规模显然经过事先规划和合理论证，不属于“凭感觉取值”；数据覆盖了主要分析维度和关键变量，必要的子组分析、敏感性分析也有呈现；图表和数据展示清晰、完整、不选择性呈现，读者可以从中直接看到结论的来源和力度。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>结果统计可靠性:</b>
+                                          </p>
+                                          <p>
+                                            对主要比较和关键结论均使用了合适且标准的统计方法进行检验，例如报告显著性水平、效应量、置信区间和误差范围等；统计假设、检验前提（如正态性、方差齐性等）得到充分考虑或说明，针对不满足条件的情况采用了合理的替代方法；结果报告不过度夸大“显著”，没有“只给p值、不给效应量”的粗糙做法，整体统计处理透明、可追踪、无明显方法学硬伤。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>结果复核与一致性:</b>
+                                          </p>
+                                          <p>
+                                            关键发现经过多重验证和交叉印证：例如在不同数据集、不同任务场景、不同评价指标下均得到一致方向或相近大小的效果；重复实验之间结果波动在合理范围内，未出现大幅度且无法解释的偏离；文中不同部分（结果、讨论、结论）对同一现象的表述前后一致，没有“数据如此、结论却说反方向”的情况。整体上，结果呈现出高度稳定性和一致性，经受得住横向对比与纵向复核。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> B级 （合格中等） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> 60-84分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文的数据支撑和结果可靠性整体稳健可靠，足以支撑所提出的主要结论，但与A级相比在数据全面性、统计深度或多重验证程度上略有欠缺。样本量或数据量基本合理，主要结论都有相应的数据依据，但部分次要结论或扩展性的推论支持略显薄弱；统计分析方法规范、常规，关键地方有显著性或置信区间的报告，但少数结果的统计处理相对粗略；重复实验或多场景验证的覆盖度尚可，但侧重&ldquo;关键点验证&rdquo;，尚未在所有边界条件下做到充分复核。整体水平可被视为&ldquo;可靠可用、略有遗憾&rdquo;。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>数据支撑充分性：</b>
+                                          </p>
+                                          <p>
+                                            主体数据量与研究问题基本匹配，对主要假设都有比较扎实的定量或定性证据；部分次要分析或扩展讨论的数据呈现略为简略，例如仅给出总体趋势而缺乏详细分层分析；个别图表或指标虽已呈现，但在维度覆盖上尚有“可以更丰富”的空间。整体来看，读者能接受“结论有数据支持”，但会认为若进一步增加样本、增加细化分析，论文说服力还可再上一个台阶。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>结果统计可靠性:</b>
+                                          </p>
+                                          <p>
+                                            论文针对主要结论使用了标准的统计方法进行检验，并给出了常规水平的统计报告，例如显著性水平或部分误差指标；某些结果可能只给出p值而未报告效应量，部分变量间关系只做了简单相关或对比，缺少更深入的建模或稳健性检验；整体统计处理无明显错误，重大结论在统计意义上是可靠的，但在严谨程度和信息丰富度上尚未达到“非常完备”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>结果复核与一致性:</b>
+                                          </p>
+                                          <p>
+                                            核心结果通常通过一次以上的重复实验或在至少两个数据集/场景中进行验证，趋势基本一致；少数指标在不同实验中的波动较大，作者虽有所说明，但解释深度略显不足；结果的文本表述与图表数据大体一致，只有个别地方存在措辞偏乐观或略超出数据支持范围的情况。总体为：关键方向一致、局部有波动但不至于动摇总体结论。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> C级 （建议修改） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> 41-59分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文的数据支撑和结果可靠性存在较为明显的不足。数据量偏少或分布不均，使得部分结论站得并不稳固；主要结果多停留在描述层面，统计分析较为简单或缺失，对&ldquo;不显著&rdquo;&ldquo;不一致&rdquo;结果缺乏系统解释；重复实验或交叉验证有限，结论在不同场景下的稳定性难以确认。整体让人感到&ldquo;有一些数据，但离扎实还有很大距离&rdquo;，对重要结论的信心有限。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>数据支撑充分性：</b>
+                                          </p>
+                                          <p>
+                                            论文中虽提供了一定量的数据和图表，但相对于研究问题的复杂度和作者所作的推断而言显得不足；多数结论依赖单一数据集、单一次实验或少量样本，缺少充分的分组、分层或敏感性分析；部分图表仅展示“有/无差异”的粗略对比，缺乏精细刻画。读者可以看到“数据痕迹”，但会担心这些数据尚不足以支撑作者所给出的全部论断。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>结果统计可靠性:</b>
+                                          </p>
+                                          <p>
+                                            统计处理多为基础性的描述统计或少量显著性检验，有时只报告均值差异而缺乏正式检验；对假设前提的检验、误差结构、置信区间等信息呈现不足，很多结果只能以“看上去有差异”来理解；某些关键结果甚至完全无统计解释，只是给出表格或曲线。统计方法本身可能无明显致命错误，但在深度与广度上远未达到期刊期望的科学严谨度。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>结果复核与一致性:</b>
+                                          </p>
+                                          <p>
+                                            重复实验次数有限，常见情况是仅单次实验或单数据集结果即被用来支持较强的结论；不同实验或不同指标之间出现了不小的不一致现象，例如一个指标上提升明显、另一个指标变化不大甚至下降，而文中未充分分析其原因；在结果、讨论和结论部分，对同一现象的表述存在语气或判断力度上的差异，有时给人“数据比较弱，但文字写得很强”的印象。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> D级 （高危不及格） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> 0-40分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>论文在数据支撑与结果可靠性方面严重不达标，已经影响到整篇论文的可信度。数据量过少或数据来源不明，样本选择存在严重偏倚且无控制或说明；大量结论几乎建立在零散、极少或未经验证的数据之上，甚至存在用个别案例替代系统数据分析的情况；统计分析要么完全缺失，要么明显错误或不适用；结果前后矛盾严重且无解释。此类稿件往往在编辑初筛阶段就因&ldquo;缺乏必要数据支撑/结果不可靠&rdquo;被直接退稿。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>数据支撑充分性：</b>
+                                          </p>
+                                          <p>
+                                            数据呈现明显不足，核心结论往往只基于极少量样本或少数观察值，甚至仅凭个案、示意图或主观描述；数据来源模糊不清，采集方式、筛选标准、缺失处理等信息严重缺失，使人无法判断数据是否具有代表性；在若干关键论断处，读者完全找不到与之对应的量化或系统性证据，属于“结论先行，数据缺位”的状态。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>结果统计可靠性:</b>
+                                          </p>
+                                          <p>
+                                            统计分析基本缺乏或严重不当：可能完全没有显著性检验、误差分析或任何量化的置信评估，也可能使用了错误的统计方法（如样本量极小却使用复杂模型、违反检验前提却未说明）；结果报告只停留在主观语句层面，如“明显提高”“大幅下降”，却没有任何严谨的统计依据；整体表现为“没有统计支撑的数值叙述”，读者对结果可信度几乎无法形成判断。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>结果复核与一致性:</b>
+                                          </p>
+                                          <p>
+                                            没有系统的重复实验或交叉验证，关键结果往往只出现一次且缺乏独立复核；不同部分给出的结果彼此矛盾，例如图表中的趋势与文字描述方向相反，或者摘要中的改善幅度与正文中的具体数据不相符；对这些不一致现象作者既未察觉也未给出合理解释。整体看起来，结果体系松散、缺乏内在自洽性，既难以重现，也难以信任。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tbody></table></div><div class="table-container"><div style="color: #2f39ec; font-weight: bold; font-size: 16px;margin-bottom: 10px;">
+                                      文献综述与参考文献质量
+                                  </div>
+                                  <table>
+                                    <thead>
+                                      <tr class="main-tr">
+                                        <th style = "width: 14%" class="center">综合等级</th>
+                                        <th style = "width: 12%" class="center">分数范围</th>
+                                        <th style = "width: 42%">评定标准</th>
+                                        <th>子指标及权重</th>
+                                      </tr>
+                                    </thead><tbody><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> A级 （优秀良好） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-green"> 85-100分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>文献综述整体达到系统、全面、深入的水准。能够清晰梳理本研究主题在国内外的发展脉络，区分不同理论流派、方法路线和应用方向，准确指出已有研究的边界与不足，并在此基础上合理定位本研究的切入点和贡献。参考文献数量充足且结构合理，不是简单堆砌；既覆盖&ldquo;基础经典文献&rdquo;，又充分覆盖&ldquo;最新前沿研究&rdquo;；引用来源以本领域权威期刊/会议和高被引论文为主，兼顾必要的跨学科文献，整体给人以&ldquo;文献基础扎实可靠&rdquo;的印象。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>参考文献数量与覆盖率：</b>
+                                          </p>
+                                          <p>
+                                            引用总量达到或略高于同类型论文在本领域的中上水平，对本研究主题相关的核心工作基本做到“该引用的都出现了”；综述中能看到对几个主要研究方向、代表性理论模型、常见方法路径的系统梳理，而不是只围绕一两篇文献展开；重要奠基性研究、关键里程碑成果都有明确引用，很少出现一眼就能发现的明显漏引现象。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>最新研究覆盖度:</b>
+                                          </p>
+                                          <p>
+                                            近几年（如近5年）发表的文献在参考文献中占有较高比例，且这些新文献与论文研究问题高度相关，能够体现“当前学界最新讨论、最新方法、最新结果”对本研究的直接影响；作者能将自己的工作清楚嵌入到最近的研究链条中，对最新进展的引用不是点缀，而是构成论证逻辑的重要部分，不会给人“停留在若干年前的老问题、老视角”的时滞感。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>引文多样性与权威性:</b>
+                                          </p>
+                                          <p>
+                                            参考文献来源多元，既有本领域的顶级或核心期刊、重要国际会议，也包含具有代表性的高被引论文和权威专著；引用不会过度集中于少数期刊、少数作者或单一机构，自引比例适度，不会形成“封闭文献圈”；在主题、方法和地域上，文献能体现一定的多样性和开放性，同时整体权威水平均在中上甚至更高层级，展现出良好的学术视野与坚实的知识基础。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> B级 （合格中等） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-blue"> 60-84分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>文献综述整体规范、基本全面，能够为研究搭建较清晰的理论与方法背景。参考文献数量达到一般期望水平，绝大多数与研究主题直接相关；对主要研究路线和代表性工作有较为明确的概括，但在少数关键方向、个别重要文献上存在轻微遗漏或覆盖不均衡。最新文献有一定比例，能够反映出部分前沿进展，但系统性和广度略弱于A级；引用来源中包含一定数量的权威期刊/会议论文，但同时也混杂了一些一般性或边缘性文献。整体属于&ldquo;基本过关且较好&rdquo;，仍有明显优化空间。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>参考文献数量与覆盖率：</b>
+                                          </p>
+                                          <p>
+                                            引用数量达到同类论文的常规水平，对主要相关研究问题和方法有一定覆盖；能看到对本主题几条核心路线的介绍，但在部分子方向、少数具有代表性的研究上仍存在“提得不够”“略写带过”甚至未涉及的情况；综述部分可以支撑论文立题的合理性，但从编辑和评审角度看，会认为“再多补几篇关键文献会更扎实”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>最新研究覆盖度:</b>
+                                          </p>
+                                          <p>
+                                            参考文献中包含一定比例的近年研究工作，特别是与本研究问题关系密切的一部分前沿成果；然而，最新文献的覆盖更多集中于少数主流期刊或某几个研究团队，对其他新近重要研究的关注略显不足；整体上，读者能意识到作者并非完全忽视最新进展，但很难称得上“紧贴前沿、系统反映最新动态”，更像是选取了部分代表性新工作作支撑。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>引文多样性与权威性:</b>
+                                          </p>
+                                          <p>
+                                            文献来源总体多样，但仍有一定程度的集中现象，例如对某一两个期刊或少数几个研究组引用偏多，自引略多但尚未到明显失衡程度；引用中包含部分高被引论文和核心期刊文章，可见作者有意识地对接权威成果，但也夹杂了一些发表载体和影响力较为一般的文献；从整体权威性看，可被视为“质量较均衡，有亮点但不突出”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> C级 （建议修改） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-yellow"> 41-59分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>文献综述和参考文献质量存在较明显短板。引用数量偏少或分布严重不均，主要集中于少数文献或单一视角，对本领域整体研究图景的呈现比较片面；不少重要流派、关键研究成果或代表性方法被遗漏，导致读者难以从中把握该领域的基本格局。最新研究覆盖度较低，更多依赖早期或较陈旧的文献；权威文献比例偏少，相当部分引用来源为一般性期刊、会议，甚至出现教科书类、非严格学术来源占比偏高的情况。整体上给人&ldquo;文献基础不足、综述不够到位&rdquo;的印象。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>参考文献数量与覆盖率：</b>
+                                          </p>
+                                          <p>
+                                            参考文献数量明显低于同类型研究的常见水平，或者虽然总量看似不算少，但高度集中在极少数文献上；对本研究主题仅给出零散的若干引用，缺乏系统梳理，不能很好地区分不同路径、不同观点；一些在领域内被广泛认可为“必提”的工作在文中完全缺位，同行读者会明显感到文献支持“有缺口”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>最新研究覆盖度:</b>
+                                          </p>
+                                          <p>
+                                            参考文献以较早年份的文献为主，新近发表的研究明显偏少，特别是近几年在该领域具有代表性的工作未被充分关注；作者讨论问题的方式多停留在数年前的研究框架内，对最新理论、方法或数据集的使用情况了解不足；整体容易给人“研究视角偏旧”“对当前前沿动态不敏感”的印象，降低论文的前沿性和说服力。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>引文多样性与权威性:</b>
+                                          </p>
+                                          <p>
+                                            引文来源较为单一，常表现为高度集中于某一刊物、某一作者群体或某一个学术圈，自引比例偏高；权威期刊/会议文章比例有限，高被引与公认重要研究在列表中所占比重偏低；部分引用来自二手文献（如综述、教科书）或影响力较弱的刊物，缺乏对一手、权威文献的直接追溯，整体权威性和多样性均不理想。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> D级 （高危不及格） </span>
+                                        </td>
+                                        <td rowspan="3" class="center">
+                                          <span class="color-red"> 0-40分 </span>
+                                        </td>
+                                        <td rowspan="3">
+                                          <p>
+                                            <p>文献综述与参考文献质量处于明显不合格状态，已经严重影响论文立题、论证和结论的可信度。文献数量极少，甚至只有零星几条引用，无法构成真正意义上的&ldquo;综述&rdquo;；对本领域已有研究几乎没有系统性认识，重要文献和主流观点大面积缺失；最新研究基本未被关注，严重滞后于当前学术进展；引用载体中权威期刊/会议极少，存在大量非学术或低质量来源，甚至出现随意引用网络资料的情况。这类文献部分很难通过编辑初筛。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>参考文献数量与覆盖率：</b>
+                                          </p>
+                                          <p>
+                                            参考文献数量处于明显偏低甚至“极少”的水平，远不能支撑一篇研究论文应有的背景与论证需要；现有引用多为个别书籍、综述或与研究主题关系有限的文献，对本领域核心研究、主要分支、关键方法几乎没有覆盖；从综述部分无法看出作者对已有工作的系统阅读和理解，立题缺乏应有的文献基础支撑。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>最新研究覆盖度:</b>
+                                          </p>
+                                          <p>
+                                            参考文献几乎全部为早期文献，或以教科书、老综述为主，近几年在该领域的代表性成果、重要争论和新方法完全未被体现；整体文献时间分布严重后移，给人的印象是研究问题“已经跟不上时代”，甚至怀疑作者并未开展针对性的新文献检索；在这种情况下，论文很难被视作在现有前沿基础上推进，而更像是基于陈旧知识的重复性工作。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>引文多样性与权威性:</b>
+                                          </p>
+                                          <p>
+                                            引用来源高度集中且质量堪忧：可能大部分来自非核心或不具学术公信力的刊物，甚至部分引自博客、非正式报告等；自引比例可能异常偏高，引用结构几乎围绕作者自己或极少数同行展开，形成封闭性的“文献岛”；缺乏对领域内公认权威期刊、旗舰会议、经典高被引论文的直接引用。整体上，文献部分既不能体现学术视野，也不能提供可信的知识基础，往往成为编辑和审稿人否决稿件的重要理由。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tbody></table></div><div class="table-container"><div style="color: #2f39ec; font-weight: bold; font-size: 16px;margin-bottom: 10px;">
+                                      语言表达与规范性
+                                  </div>
+                                  <table>
+                                    <thead>
+                                      <tr class="main-tr">
+                                        <th style = "width: 14%" class="center">综合等级</th>
+                                        <th style = "width: 12%" class="center">分数范围</th>
+                                        <th style = "width: 42%">评定标准</th>
+                                        <th>子指标及权重</th>
+                                      </tr>
+                                    </thead><tbody><tr class="odd-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-green"> A级 （优秀良好） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-green"> 85-100分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>语言表达整体达到规范、精炼、专业的高水平。全文几乎不存在明显的语法错误、拼写错误或基本标点错误；句式多样而不晦涩，长短句搭配得当，逻辑关系清楚，读起来流畅自然。用词准确、术语使用稳定一致，专业概念界定清晰，无口语化、随意化表达。整体文风符合学术写作的常规要求，格式严格遵循期刊或学术规范，参考文献、图表、编号等细节处理严谨。对编辑和审稿人而言，几乎不会因语言和格式问题影响对学术内容本身的判断。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>语法拼写正确率：</b>
+                                          </p>
+                                          <p>
+                                            全文中语法和拼写错误极为罕见，偶有个别轻微疏漏也多属于不影响理解的“打字级”问题；时态、主谓一致、名词单复数、介词搭配等常见错误几乎不出现；标点符号使用规范，段落分割合理，句子结构清晰，不存在需要读者“反复回读才能读懂”的病句。对比同领域平均水平，该稿件可以视为“几乎无需语言编辑”的状态。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>可读性与行文流畅度:</b>
+                                          </p>
+                                          <p>
+                                            行文逻辑顺畅，段落结构清楚，每一段都围绕一个明确的中心展开；句子长度控制得当，避免了过长的堆砌式句子，也没有大量过短导致支离破碎的句子；过渡自然、衔接平稳，专业术语与自然语言表达搭配合理，既保持学术严谨，又兼顾阅读友好性。整体阅读体验是“内容复杂但表述清晰”，不会因语言问题增加额外理解负担。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-blue"> B级 （合格中等） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-blue"> 60-84分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>语言表达整体规范、可理解、较为流畅，能够清晰传达研究内容，少量语言或格式问题不会对理解造成实质影响。全文可能存在少数语法或拼写错误，但多为局部、轻微，不影响整体印象；句式结构以常规学术句式为主，偶有冗长或略显生硬之处，但整体逻辑尚清楚。学术用语大体准确，个别术语使用略有重复或不完全统一。格式方面基本按规范执行，仅在个别细节上略有偏差。整体可视为&ldquo;语言和规范已处于出版可接受范围，但仍有提升空间&rdquo;。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>语法拼写正确率：</b>
+                                          </p>
+                                          <p>
+                                            文章中可见到一定数量的轻微语法或拼写错误，如偶发的单复数问题、介词使用不够精准、个别词语搭配不够地道等，但这些错误大多出现在局部，对阅读影响有限；结构性病句较少，绝大多数句子一读即可理解；整体错误密度明显低于普通未润色稿件，经过一次语言编辑即可达到较高水准。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>可读性与行文流畅度:</b>
+                                          </p>
+                                          <p>
+                                            大部分段落内部逻辑清楚，句子之间有一定的衔接，阅读时整体是顺畅的；但个别段落存在信息堆积过多、句子略长、层次感不够清晰的问题，需要读者稍加停顿整理才能完全消化；少量地方过渡略显突然，或者同一意思多次重复表述，影响了行文的紧凑度。整体可读性良好，属于“可以顺利读完，但不算特别优雅”的层次。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-yellow"> C级 （建议修改） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-yellow"> 41-59分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>语言表达与规范性存在较明显问题，虽不至于完全妨碍理解，但已经对阅读流畅度和学术印象造成较大负面影响。文本中语法和拼写错误较为频繁，句式使用单一或结构生硬，长句过多或分段不当导致理解难度增加。学术用语有时不准确，术语使用前后不一致。格式规范执行不到位，引用和参考文献格式混乱程度较高。整体给人的感觉是&ldquo;内容勉强能看懂，但语言和规范明显拖后腿&rdquo;。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>语法拼写正确率：</b>
+                                          </p>
+                                          <p>
+                                            文中较多出现拼写错误、基本语法错误和不恰当的标点使用，例如常见的主谓不一致、时态混用、句子缺主语或缺谓语等；病句和结构混乱的长句较常见，读者需要靠“猜”才能理解原意；整体错误密度明显偏高，即使不逐句严格审查，也会在普通阅读中频繁注意到语言问题。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="odd-row">
+                                        <td>
+                                          <p>
+                                            <b>可读性与行文流畅度:</b>
+                                          </p>
+                                          <p>
+                                            不少段落存在信息堆叠、逻辑跳跃、缺少清晰主题句等情况，整体结构松散；句子过长、从句嵌套多、修饰成分堆叠而缺乏清晰分割，导致阅读压力较大；部分段落之间缺少必要的承接，阅读时会感到“前一句还没完全消化，后一句已经转到另一个点”；整体可读性处于“需要较强耐心和背景知识才能顺利看完”的水平。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td rowspan="2" class="center">
+                                          <span class="color-red"> D级 （高危不及格） </span>
+                                        </td>
+                                        <td rowspan="2" class="center">
+                                          <span class="color-red"> 0-40分 </span>
+                                        </td>
+                                        <td rowspan="2">
+                                          <p>
+                                            <p>语言表达与规范性处于严重不合格状态，已经实质性阻碍对学术内容的理解。语法和拼写错误密集，句子结构混乱，许多段落难以读懂或容易产生歧义；大量口语化、随意化表达，缺乏基本的学术语体；格式和规范严重混乱，引用和参考文献标注缺失或错误严重，图表标识混乱。此类稿件通常在初筛阶段即因&ldquo;语言与规范问题过多，无法进入学术评价&rdquo;而被退稿。</p>
+                                          </p>
+                                        </td>
+                                        <td>
+                                          <p>
+                                            <b>语法拼写正确率：</b>
+                                          </p>
+                                          <p>
+                                            全文布满各种层次的错误：拼写错误、高频语法错误、句子残缺、结构断裂等现象密集出现；读者在阅读过程中不得不频繁停顿、回读，甚至无法确定作者真正想表达的含义；有些段落基本无法在不进行“翻译式重写”的情况下被准确理解。整体表现为“语言质量严重低于学术写作基本门槛”。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tr class="even-row">
+                                        <td>
+                                          <p>
+                                            <b>可读性与行文流畅度:</b>
+                                          </p>
+                                          <p>
+                                            文本缺乏基本的条理性和组织性，段落划分随意，句子之间缺少明确的逻辑关系；论述常常无明显起承转合，多个观点挤在同一句或同一段中，缺乏强调与层次；阅读时极易产生迷失感，需要读者结合标题、图表和上下文去猜测作者意图，严重影响对研究内容本身的理解和评价。
+                                          </p>
+                                          <p></p>
+                                        </td>
+                                      </tr><tbody></table></div>
+
+            </div>
+            <div class="section-area yaosu-level-box hidden"></div>
+            <!-- <div class="footer-area">
+              <div class="footer-tip">
+                免责声明:本报告为斟知智评系统大模型自动生成，仅供参考
+              </div>
+            </div> -->
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            addEvent();
+        };
+        function addEvent() {
+            const navBarList = document.querySelectorAll(
+                ".toggle-list .toggle-item"
+            );
+            const yaosuLevelBox = document.querySelectorAll(".yaosu-level-box");
+            for (let i = 0; i < navBarList.length; i++) {
+                navBarList[i].addEventListener("click", function () {
+                    for (let j = 0; j < navBarList.length; j++) {
+                        navBarList[j].classList.remove("active");
+                    }
+                    navBarList[i].classList.add("active");
+
+                    for (let j = 0; j < yaosuLevelBox.length; j++) {
+                        yaosuLevelBox[j].classList.add("hidden");
+                    }
+                    yaosuLevelBox[i].classList.remove("hidden");
+                });
+            }
+        }
+    </script>
+</body>
+</html>
