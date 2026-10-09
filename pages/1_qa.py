@@ -15,11 +15,11 @@ from core.session_store import (add_message, count_messages, create_session,
                                 delete_session, get_messages, get_session, get_summary,
                                 list_sessions, older_messages, set_session_kb,
                                 update_summary)
+from core import config
+from core.vectorstore import all_chunks
 from utils import log_utils
 from utils.theme import apply_theme
-from utils.ui import require_login, show_sidebar
-
-st.set_page_config(page_title="知识库问答", page_icon="💬", layout="wide")
+from utils.ui import require_login, show_sidebar, visible_kbs
 
 init_db()
 apply_theme()
@@ -38,7 +38,9 @@ def render_answer(text: str) -> str:
 
 
 def render_citations(citations: list | None):
-    """回答下方的引用来源展示:文件名/简号 · 命中方式 · 原文。"""
+    """回答下方的引用来源展示:文件名/简号 · 命中方式 · 原文(可一键复制)。
+
+    秦简条目额外显示简体对照行,方便不熟悉古文的读者阅读。"""
     if not citations:
         return
     traced = any(c.get("traced") for c in citations)
@@ -51,7 +53,16 @@ def render_citations(citations: list | None):
             if c.get("slip_no"):
                 head = f"📜 {head}"
             st.markdown(f"**{i}. {head}** · {route} · 分数 {c.get('score')}")
-            st.caption(c.get("text", "")[:600])
+            text = (c.get("text") or "")[:600]
+            st.code(text, language=None)  # 原文块:自带一键复制按钮
+            if c.get("slip_no") and text:
+                try:
+                    from core.qinjian import to_simplified
+                    simp = to_simplified(text)
+                    if simp != text:
+                        st.caption(f"🔍 简体对照:{simp[:300]}")
+                except Exception:  # noqa: BLE001
+                    pass
 
 
 def save_feedback(msg_id: int, rating: int):
@@ -115,9 +126,8 @@ with col_sessions:
 
 # ==================== 右列:聊天区 ====================
 with col_chat:
-    # ---- 知识库范围选择 ----
-    with get_db() as db:
-        kbs = db.query(KnowledgeBase).order_by(KnowledgeBase.id).all()
+    # ---- 知识库范围选择(按系统模式过滤可见库)----
+    kbs = visible_kbs()
     kb_names = [kb.name for kb in kbs]
     options = ["🌐 全部知识库"] + kb_names
     current = get_session(sess_id, user_id) if sess_id else None
@@ -129,6 +139,27 @@ with col_chat:
         set_session_kb(sess_id, user_id, kb_id)
         st.rerun()
 
+    # ---- 简号直达(秦简模式):输入简号,直接展示该简释文(不走大模型)----
+    if config.APP_MODE == "qinjian":
+        with st.expander("🔎 简号直达", expanded=False):
+            slip_query = st.text_input("输入简号(如 8-135 或 J1⑨984),回车直达该简释文",
+                                       key="slip_lookup").strip()
+            if slip_query:
+                hits = [t for t, m in all_chunks(kb_id) if (m.get("slip_no") or "") == slip_query]
+                if hits:
+                    for t in hits:
+                        st.markdown(f"📜 **简 {slip_query}**")
+                        st.code(t, language=None)
+                        try:
+                            from core.qinjian import to_simplified
+                            simp = to_simplified(t)
+                            if simp != t:
+                                st.caption(f"🔍 简体对照:{simp[:300]}")
+                        except Exception:  # noqa: BLE001
+                            pass
+                else:
+                    st.info("没有找到该简号的释文(请检查简号写法,或该简尚未入库)")
+
     st.divider()
 
     # ---- 历史消息渲染 ----
@@ -137,7 +168,7 @@ with col_chat:
     else:
         msgs = get_messages(sess_id, user_id)
         if not msgs:
-            st.caption("会话是空的。在下方输入框提问吧,例如:星耀X1的电池容量是多少?或:8-135 号简记载了什么?")
+            st.caption(f"会话是空的。在下方输入框提问吧,例如:{config.CURRENT_MODE['example_question']}")
         for m in msgs:
             with st.chat_message(m["role"]):
                 if m["role"] == "assistant":

@@ -28,7 +28,7 @@ def get_llm() -> ChatOpenAI:
             model=config.LLM_MODEL,
             api_key=config.DASHSCOPE_API_KEY,
             base_url=config.BASE_URL,
-            temperature=0.1,     # 事实问答要确定性,不要"自由发挥"
+            temperature=config.TEMPERATURE,  # 事实问答要确定性,不要"自由发挥"(页面可调)
             streaming=True,
             max_retries=3,
             timeout=120,

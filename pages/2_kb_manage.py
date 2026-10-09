@@ -14,9 +14,7 @@ from core.retriever import invalidate_bm25
 from core.vectorstore import delete_by_doc, delete_by_kb
 from utils import hash_utils, log_utils
 from utils.theme import apply_theme
-from utils.ui import require_admin, show_sidebar
-
-st.set_page_config(page_title="知识库管理", page_icon="📚", layout="wide")
+from utils.ui import require_admin, show_sidebar, visible_kbs
 
 init_db()
 apply_theme()
@@ -30,8 +28,7 @@ col_left, col_right = st.columns([1, 2])
 # ==================== 左列:知识库管理 ====================
 with col_left:
     st.subheader("🗂️ 知识库")
-    with get_db() as db:
-        kbs = db.query(KnowledgeBase).order_by(KnowledgeBase.id).all()
+    kbs = visible_kbs()
     kb_names = [kb.name for kb in kbs]
     sel_name = st.selectbox("当前管理哪个知识库?", kb_names, key="kb_sel")
     sel_kb = next((kb for kb in kbs if kb.name == sel_name), None)
@@ -84,6 +81,35 @@ with col_right:
     if not sel_kb:
         st.info("先在左侧新建或选择一个知识库,再上传文档")
     else:
+        # ---- 备份导出:把当前库全部文档原文件打包下载 ----
+        with st.expander("💾 备份导出(打包下载全部文档)", expanded=False):
+            import io
+            import zipfile
+
+            with get_db() as db:
+                docs_all = (db.query(Document)
+                            .filter(Document.kb_id == sel_kb.id, Document.status == "done")
+                            .all())
+            if not docs_all:
+                st.caption("本知识库还没有处理成功的文档")
+            else:
+                buf = io.BytesIO()
+                with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zf:
+                    for d in docs_all:
+                        p = Path(d.file_path)
+                        if p.exists():
+                            zf.write(p, arcname=d.file_name)
+                        else:
+                            zf.writestr(f"{d.file_name}.txt", f"(原文件已丢失) 文档ID:{d.id}")
+                buf.seek(0)
+                st.download_button(
+                    f"⬇️ 下载 {sel_kb.name} 备份({len(docs_all)} 个文档)",
+                    data=buf.getvalue(),
+                    file_name=f"{sel_kb.name}_备份.zip",
+                    mime="application/zip",
+                    use_container_width=True,
+                )
+                st.caption("备份包含该知识库的全部原始文档;向量数据可由文档重新生成")
         uploads = st.file_uploader(
             "上传文档(PDF / Word / TXT / Markdown / Excel / CSV / 秦简释文 JSONL)",
             type=["pdf", "docx", "txt", "md", "xlsx", "csv", "jsonl"],
@@ -157,3 +183,34 @@ with col_right:
                 st.rerun()
             if doc.status == "failed" and doc.error_msg:
                 st.caption(f"失败原因:{doc.error_msg}")
+
+# ==================== 系统设置(参数面板)====================
+with st.expander("⚙️ 系统设置(模型与检索参数)", expanded=False):
+    st.caption("修改后点击保存并重启应用生效(双击启动脚本重新打开即可)")
+    import json
+
+    cur = {}
+    if config.SETTINGS_FILE.exists():
+        try:
+            cur = json.loads(config.SETTINGS_FILE.read_text(encoding="utf-8"))
+        except Exception:  # noqa: BLE001
+            cur = {}
+    with st.form("settings_form"):
+        s_model = st.text_input("生成模型", value=cur.get("llm_model", config.LLM_MODEL),
+                                help="如 qwen-plus / qwen-turbo")
+        s_temp = st.slider("生成温度(越低越严谨)", min_value=0.0, max_value=1.0,
+                           value=float(cur.get("temperature", config.TEMPERATURE)), step=0.1)
+        s_topk = st.number_input("单次问答检索片段数", min_value=1, max_value=20,
+                                 value=int(cur.get("top_k", config.TOP_K)))
+        s_qtk = st.number_input("秦简库检索片段数", min_value=1, max_value=30,
+                                value=int(cur.get("qinjian_top_k", config.QINJIAN_TOP_K)))
+        saved = st.form_submit_button("💾 保存设置(需重启生效)", type="primary",
+                                      use_container_width=True)
+    if saved:
+        config.SETTINGS_FILE.write_text(
+            json.dumps({"llm_model": s_model.strip(), "temperature": s_temp,
+                        "top_k": int(s_topk), "qinjian_top_k": int(s_qtk)},
+                       ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        st.success("已保存!请重启应用使设置生效(关闭当前窗口,重新双击启动脚本)。")

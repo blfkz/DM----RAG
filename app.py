@@ -1,33 +1,40 @@
 """
 app.py
-系统入口页:负责登录、注册、修改密码。
-首次启动自动建数据库并创建管理员账号 admin / 123456;
-登录后,各功能在左侧边栏的页面菜单里(问答 / 知识库管理 / 统计面板)。
+系统入口页:负责登录、注册、修改密码与全局导航。
+- 未登录:显示登录/注册表单
+- 已登录:侧边栏中文分组导航(首页 / 知识库问答 / 知识库管理 / 统计面板)
 
-启动方式:streamlit run app.py
+一套代码、两个系统:双击"启动-湘西特产.bat"或"启动-里耶秦简.bat"分别启动不同模式
+(APP_MODE 环境变量控制品牌文案与可见知识库)。
 """
 import streamlit as st
 
+from core import config
 from core.auth import change_password, login_user, register_user
 from core.database import init_db
 from utils.theme import apply_theme
-from utils.ui import show_sidebar
+from utils.ui import logout
 
-st.set_page_config(page_title="知识库智能问答系统", page_icon="📜", layout="wide")
+st.set_page_config(
+    page_title=config.CURRENT_MODE["title"],
+    page_icon=config.CURRENT_MODE["icon"],
+    layout="wide",
+)
 
 init_db()  # 建表 + 首次启动自动建管理员(重复调用无害)
+apply_theme()
 
 # ==================== 未登录:登录 / 注册 ====================
 if "user_id" not in st.session_state:
-    apply_theme()
+    icon = config.CURRENT_MODE["icon"]
     st.markdown(
-        '<div style="text-align:center;padding:2.5em 0 0.8em 0;">'
-        '<div style="font-size:44px;">📜</div>'
-        '<div style="font-size:28px;font-weight:700;color:#0F2744;letter-spacing:2px;">'
-        '知识库智能问答系统</div>'
-        '<div style="color:#5A6B85;margin-top:0.4em;">湘西特产 · 里耶秦简 多知识库问答系统'
-        ' | 基于 LangChain + RAG</div>'
-        '</div>',
+        f'<div style="text-align:center;padding:2.5em 0 0.8em 0;">'
+        f'<div style="font-size:44px;">{icon}</div>'
+        f'<div style="font-size:28px;font-weight:700;color:#0F2744;letter-spacing:2px;">'
+        f'{config.CURRENT_MODE["title"]}</div>'
+        f'<div style="color:#5A6B85;margin-top:0.4em;">{config.CURRENT_MODE["subtitle"]}'
+        f' | 基于 LangChain + RAG</div>'
+        f'</div>',
         unsafe_allow_html=True,
     )
     st.markdown(
@@ -72,26 +79,27 @@ if "user_id" not in st.session_state:
 
     st.stop()  # 未登录到此为止
 
-# ==================== 已登录:欢迎页 + 修改密码 ====================
-apply_theme()
-show_sidebar()
+# ==================== 已登录:侧边栏中文导航 ====================
+# 用户信息 + 退出(显示在导航上方)
+with st.sidebar:
+    st.markdown(f"👤 **{st.session_state['username']}**")
+    role = st.session_state.get("role", "")
+    st.caption("🔑 管理员" if role == "admin" else "🙂 普通用户")
+    st.divider()
+    if st.button("🚪 退出登录", use_container_width=True):
+        logout()
 
-st.title(f"👋 {st.session_state['username']},欢迎回来!")
-st.caption("左侧边栏选择功能页面:💬 知识库问答 · 📚 知识库管理(管理员)· 📊 统计面板(管理员)")
-
-with st.expander("🔑 修改密码", expanded=False):
-    with st.form("change_pwd_form"):
-        old_pwd = st.text_input("旧密码", type="password")
-        new_pwd = st.text_input("新密码(至少 8 位,含字母和数字)", type="password")
-        confirm_pwd = st.text_input("确认新密码", type="password")
-        changed = st.form_submit_button("确认修改")
-    if changed:
-        ok, msg = change_password(st.session_state["user_id"], old_pwd, new_pwd, confirm_pwd)
-        if ok:
-            st.success(msg)
-            # 安全闭环:改密后清除登录状态,必须用新密码重新登录
-            for key in ("user_id", "username", "role"):
-                st.session_state.pop(key, None)
-            st.rerun()
-        else:
-            st.error(msg)
+nav = st.navigation(
+    {
+        "主导航": [
+            st.Page("pages/home.py", title="首页", icon="🏠", default=True),
+            st.Page("pages/1_qa.py", title="知识库问答", icon="💬"),
+        ],
+        "管理": [
+            st.Page("pages/2_kb_manage.py", title="知识库管理", icon="📚"),
+            st.Page("pages/3_stats.py", title="统计面板", icon="📊"),
+        ],
+    },
+    position="sidebar",
+)
+nav.run()

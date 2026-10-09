@@ -5,10 +5,13 @@ utils/theme.py
 - 统一中文字体(微软雅黑)
 - 深蓝侧边栏 + 白字、圆角按钮、卡片质感
 所有页面开头调用 apply_theme() 即可生效。
+品牌文案随 APP_MODE(xiangxi / qinjian)自动切换。
 """
 import streamlit as st
 
-_BRAND = "知识库智能问答系统"
+from core import config
+
+_BRAND = config.CURRENT_MODE["title"]
 
 _CSS = """
 <style>
@@ -82,14 +85,15 @@ sup {
 
 
 def apply_theme():
-    """每个页面开头调用:注入全局样式 + 深色侧边栏品牌头。"""
+    """每个页面开头调用:注入全局样式 + 深色侧边栏品牌头(文案随系统模式)。"""
     st.markdown(_CSS, unsafe_allow_html=True)
+    icon = config.CURRENT_MODE["icon"]
     with st.sidebar:
         st.markdown(
             f'<div style="text-align:center;padding:6px 0 2px 0;">'
-            f'<div style="font-size:26px;">📜</div>'
+            f'<div style="font-size:26px;">{icon}</div>'
             f'<div style="font-size:15px;font-weight:600;letter-spacing:1px;">{_BRAND}</div>'
-            f'<div style="font-size:11px;opacity:0.7;">湘西特产 · 里耶秦简</div>'
+            f'<div style="font-size:11px;opacity:0.7;">{config.CURRENT_MODE["subtitle"]}</div>'
             f'</div>',
             unsafe_allow_html=True,
         )

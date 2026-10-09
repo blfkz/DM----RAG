@@ -4,13 +4,27 @@ utils/ui.py
 - require_login():未登录一律拦下
 - require_admin():非管理员一律拦下
 - show_sidebar():侧边栏显示当前用户与退出按钮
+- visible_kbs():按系统模式(xiangxi/qinjian)过滤可见知识库
 
 原理:登录成功后用户信息存在 st.session_state 里(每个浏览器标签页独立一份),
 所以多个用户同时打开网页也不会互相串号。
 """
 import streamlit as st
 
+from core import config
+
 _LOGIN_KEYS = ("user_id", "username", "role")
+
+
+def visible_kbs():
+    """当前系统模式下用户可见的知识库列表。
+    湘西模式:隐藏"里耶秦简"库;秦简模式:只显示"里耶秦简"库。"""
+    from core.database import KnowledgeBase, get_db
+    with get_db() as db:
+        kbs = db.query(KnowledgeBase).order_by(KnowledgeBase.id).all()
+    if config.APP_MODE == "qinjian":
+        return [k for k in kbs if k.name == config.QINJIAN_KB_NAME]
+    return [k for k in kbs if k.name != config.QINJIAN_KB_NAME]
 
 
 def require_login():
