@@ -28,9 +28,9 @@ def visible_kbs():
 
 
 def require_login():
-    """登录检查。每个功能页开头调用。"""
+    """登录检查。每个功能页开头调用;未登录自动跳转首页登录。"""
     if "user_id" not in st.session_state:
-        st.error("请先登录后再使用本系统(回到首页登录)")
+        st.switch_page("pages/home.py")
         st.stop()
 
 

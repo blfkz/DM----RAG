@@ -18,13 +18,10 @@ from core.session_store import (add_message, count_messages, create_session,
 from core import config
 from core.vectorstore import all_chunks
 from utils import log_utils
-from utils.theme import apply_theme
-from utils.ui import require_login, show_sidebar, visible_kbs
+from utils.ui import require_login, visible_kbs
 
 init_db()
-apply_theme()
 require_login()
-show_sidebar()
 
 user_id = st.session_state["user_id"]
 

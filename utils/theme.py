@@ -85,8 +85,12 @@ sup {
 
 
 def apply_theme():
-    """每个页面开头调用:注入全局样式 + 深色侧边栏品牌头(文案随系统模式)。"""
+    """每个页面开头调用:只注入全局 CSS(品牌头由 sidebar_brand 单独画,避免重复)。"""
     st.markdown(_CSS, unsafe_allow_html=True)
+
+
+def sidebar_brand():
+    """侧边栏品牌头(只在 app.py 调用一次,文案随系统模式)。"""
     icon = config.CURRENT_MODE["icon"]
     with st.sidebar:
         st.markdown(

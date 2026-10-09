@@ -13,13 +13,10 @@ from core.ingest import start_ingest
 from core.retriever import invalidate_bm25
 from core.vectorstore import delete_by_doc, delete_by_kb
 from utils import hash_utils, log_utils
-from utils.theme import apply_theme
-from utils.ui import require_admin, show_sidebar, visible_kbs
+from utils.ui import require_admin, visible_kbs
 
 init_db()
-apply_theme()
 require_admin()  # 普通用户会被拦在这里
-show_sidebar()
 
 st.title("📚 知识库管理")
 
