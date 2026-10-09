@@ -36,3 +36,20 @@ def split_document(text: str, meta: dict) -> list[dict]:
         {"text": chunk, "meta": {**meta, "chunk_index": i, "chunk_count": total}}
         for i, chunk in enumerate(chunks)
     ]
+
+
+def split_by_slips(entries: list[dict]) -> list[dict]:
+    """按"简"分块(秦简释文专用):一条释文一个片段,不切字。
+    只做轻量清洗(去空白),保留 □ …… 等学术标记。
+    entries: loader 解析出的 [{"text": 繁体原文, "meta": {slip_no, layer, ...}}]
+    """
+    chunks = []
+    for e in entries:
+        meta = e.get("meta", {})
+        text = clean_text(e.get("text", ""))
+        if not text:
+            continue
+        from core.qinjian import render_slip_text
+        rendered = render_slip_text({**meta, "text_orig": text})
+        chunks.append({"text": rendered, "meta": dict(meta)})
+    return chunks

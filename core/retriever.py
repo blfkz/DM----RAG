@@ -13,6 +13,7 @@ from rank_bm25 import BM25Okapi
 from core import config
 from core.database import KnowledgeBase, get_db
 from core.embedding import embed_query
+from core.qinjian import is_qinjian_kb, tokenize as qj_tokenize
 from core.vectorstore import all_chunks, search as vector_search
 
 # BM25 索引缓存:{kb_id: (版本号, 索引, [(文本,元信息)...])}
@@ -21,10 +22,20 @@ _bm25_cache: dict = {}
 _cache_lock = threading.Lock()
 
 
+def _tok_for_kb(kb_id):
+    """按知识库选分词器:秦简库用古汉语分词,全局索引用混合分词(兼顾两库)。"""
+    if kb_id is None:
+        return lambda t: qj_tokenize(t, "classical")
+    if is_qinjian_kb(kb_id):
+        return lambda t: qj_tokenize(t, "classical")
+    return jieba.lcut
+
+
 def _get_bm25(kb_id):
     """取 BM25 索引;文档版本变了自动重建。
     全局索引(kb_id=None)不参与版本比较:构建一次后常驻,
     靠增删文档时 invalidate_bm25(None) 手动失效(修复:之前每次检索都误判过期重建)。"""
+    tok = _tok_for_kb(kb_id)
     if kb_id is None:
         version = 0  # 仅占位,命中判断单独放行
     else:
@@ -39,7 +50,7 @@ def _get_bm25(kb_id):
         if kb_id is None:
             version = len(items)  # 全局索引用总块数做版本
         texts = [t for t, _ in items]
-        index = BM25Okapi([jieba.lcut(t) for t in texts]) if texts else None
+        index = BM25Okapi([tok(t) for t in texts]) if texts else None
         _bm25_cache[kb_id] = (version, index, items)
         return index
 
@@ -55,7 +66,7 @@ def _bm25_search(query: str, kb_id, k: int) -> list[dict]:
     if not index:
         return []
     _, _, items = _bm25_cache[kb_id]
-    scores = index.get_scores(jieba.lcut(query))
+    scores = index.get_scores(_tok_for_kb(kb_id)(query))
     ranked = sorted(enumerate(scores), key=lambda x: -x[1])[:k]
     out = []
     for i, score in ranked:
@@ -92,7 +103,8 @@ def _rrf_fuse(list_a: list, list_b: list, top_n: int) -> list[dict]:
 
 def hybrid_search(query: str, kb_id, top_k=None) -> list[dict]:
     """混合检索入口:向量路 + BM25 路 → RRF 融合 → 取 top_k 条。"""
-    top_k = top_k or config.TOP_K
+    if top_k is None:
+        top_k = config.QINJIAN_TOP_K if is_qinjian_kb(kb_id) else config.TOP_K
     cand = config.SEARCH_CANDIDATES
     vec_hits = vector_search(embed_query(query), kb_id, cand)
     bm_hits = _bm25_search(query, kb_id, cand)

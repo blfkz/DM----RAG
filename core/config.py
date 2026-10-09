@@ -32,9 +32,18 @@ DATA_DIR = BASE_DIR / "data"
 UPLOAD_DIR = DATA_DIR / "uploads"          # 上传的原始文件
 CHROMA_DIR = DATA_DIR / "chroma_db"        # 向量库(知识片段的"指纹卡片柜")
 DB_PATH = DATA_DIR / "app.db"              # SQLite 业务数据库
+QINJIAN_RAW_DIR = DATA_DIR / "qinjian_raw"     # 秦简原始 PDF(备查,不入库)
+QINJIAN_WORK_DIR = DATA_DIR / "qinjian_work"   # 秦简提取中间产物
+QINJIAN_DOCS_DIR = DATA_DIR / "qinjian_docs"   # 秦简结构化释文(唯一入库源)
 
-for _d in (DATA_DIR, UPLOAD_DIR, CHROMA_DIR):
+for _d in (DATA_DIR, UPLOAD_DIR, CHROMA_DIR,
+           QINJIAN_RAW_DIR, QINJIAN_WORK_DIR, QINJIAN_DOCS_DIR):
     _d.mkdir(parents=True, exist_ok=True)
 
+# ---- 里耶秦简知识库 ----
+QINJIAN_KB_NAME = os.getenv("QINJIAN_KB_NAME", "里耶秦简")
+QINJIAN_TOP_K = int(os.getenv("QINJIAN_TOP_K", "10"))     # 释文短,多给几条上下文
+QINJIAN_DICT_PATH = DATA_DIR / "qinjian_dict.txt"         # jieba 自定义词典(缺失自动跳过)
+
 # 允许上传的文件后缀
-ALLOWED_EXTS = {".pdf", ".docx", ".txt", ".md", ".xlsx", ".csv"}
+ALLOWED_EXTS = {".pdf", ".docx", ".txt", ".md", ".xlsx", ".csv", ".jsonl"}

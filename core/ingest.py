@@ -26,11 +26,16 @@ def _process_document(doc_id: int):
             # 1. 解析成"文本 + 元信息"列表
             parsed = load_file(Path(doc.file_path))
             # 2. 清洗 + 分块(每页/每个表单独分,再统一编号,保证向量库 ID 不重复)
+            #    秦简释文(jsonl)走"按简分块";其余格式走原 500 字分块
             chunks = []
-            for p in parsed:
-                text = clean_text(p["text"])
-                if text:
-                    chunks.extend(split_document(text, p["meta"]))
+            if doc.file_type == "jsonl":
+                from core.splitter import split_by_slips
+                chunks = split_by_slips(parsed)
+            else:
+                for p in parsed:
+                    text = clean_text(p["text"])
+                    if text:
+                        chunks.extend(split_document(text, p["meta"]))
             if not chunks:
                 raise ValueError("文档没有可入库的内容")
             for i, c in enumerate(chunks):  # 全局重编号

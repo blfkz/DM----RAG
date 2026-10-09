@@ -13,7 +13,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 from core import config
-from core.prompts import CONDENSE_TEMPLATE, QA_SYSTEM_TEMPLATE
+from core.prompts import CONDENSE_TEMPLATE, QA_SYSTEM_TEMPLATE, QINJIAN_QA_SYSTEM_TEMPLATE
+from core.qinjian import is_qinjian_kb
 from core.retriever import hybrid_search
 from core.session_store import get_summary, recent_history
 
@@ -54,8 +55,13 @@ def build_context(docs: list[dict]) -> str:
     lines = []
     for i, d in enumerate(docs, start=1):
         meta = d.get("meta", {})
-        chunk_no = int(meta.get("chunk_index", 0) or 0) + 1
-        lines.append(f"[{i}] 来源文件: {meta.get('source', '未知')}(第 {chunk_no} 块)\n{d['text']}")
+        if meta.get("slip_no"):
+            # 秦简:行首标注简号与层位(学术引用需要)
+            layer = f"({meta['layer']})" if meta.get("layer") else ""
+            lines.append(f"[{i}] 简{meta['slip_no']}{layer}\n{d['text']}")
+        else:
+            chunk_no = int(meta.get("chunk_index", 0) or 0) + 1
+            lines.append(f"[{i}] 来源文件: {meta.get('source', '未知')}(第 {chunk_no} 块)\n{d['text']}")
     return "\n\n".join(lines)
 
 
@@ -69,12 +75,16 @@ def prepare_answer(question: str, kb_id, session_id: int):
 
 
 def answer_stream(question: str, docs: list[dict]):
-    """问答步骤2:组装提示词,流式生成回答(生成器,逐段产出)。"""
+    """问答步骤2:组装提示词,流式生成回答(生成器,逐段产出)。
+    秦简库使用学术化模板(照录繁体原文、标注简号),其余库用原商品模板。"""
     if not docs:
         yield "抱歉,知识库为空或没有找到与您问题相关的内容。"
         return
     context = build_context(docs)
-    prompt = ChatPromptTemplate.from_template(QA_SYSTEM_TEMPLATE)
+    kb_ids = {d.get("meta", {}).get("kb_id") for d in docs}
+    qinjian = any(is_qinjian_kb(k) for k in kb_ids if k is not None)
+    template = QINJIAN_QA_SYSTEM_TEMPLATE if qinjian else QA_SYSTEM_TEMPLATE
+    prompt = ChatPromptTemplate.from_template(template)
     chain = prompt | get_llm() | StrOutputParser()
     for piece in chain.stream({"context": context, "input": question}):
         yield piece
@@ -83,7 +93,7 @@ def answer_stream(question: str, docs: list[dict]):
 def compress_summary(messages: list[dict]) -> str:
     """把较早的对话压缩成一段摘要(长会话性能优化:控制上下文体积)。"""
     prompt = ChatPromptTemplate.from_template(
-        "请把下面这段对话压缩成简短的摘要,保留关键的商品信息、参数和结论,100 字以内:\n\n"
+        "请把下面这段对话压缩成简短的摘要,保留关键信息、参数和结论,100 字以内:\n\n"
         "{history}\n\n摘要:"
     )
     chain = prompt | get_llm() | StrOutputParser()

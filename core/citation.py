@@ -74,7 +74,18 @@ def _to_citation(d: dict) -> dict:
         "source": d.get("source", "vector"),  # vector 向量路 / bm25 关键词路
         "score": round(float(d.get("score", 0) or 0), 4),
         "traced": bool(d.get("traced")),       # True = 系统自动溯源
+        "slip_no": meta.get("slip_no"),        # 秦简:简号(湘西为 None)
+        "layer": meta.get("layer"),            # 秦简:层位(湘西为 None)
     }
+
+
+def format_citation_line(c: dict) -> str:
+    """把引用条目渲染成一行展示文字(问答页引用面板用,可单测)。"""
+    if c.get("slip_no"):
+        layer = f"({c['layer']})" if c.get("layer") else ""
+        return f"简 {c['slip_no']}{layer} · {c['source_file']} · 来源:{c['source']}"
+    return (f"来源文件:{c['source_file']} · 第 {c['chunk_index']} 块"
+            f" · 来源:{c['source']}")
 
 
 def finalize_citations(answer: str, docs: list[dict]) -> list[dict]:

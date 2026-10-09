@@ -10,16 +10,31 @@ import streamlit as st
 
 from core.auth import change_password, login_user, register_user
 from core.database import init_db
+from utils.theme import apply_theme
 from utils.ui import show_sidebar
 
-st.set_page_config(page_title="电商知识库智能问答系统", page_icon="🛒", layout="wide")
+st.set_page_config(page_title="知识库智能问答系统", page_icon="📜", layout="wide")
 
 init_db()  # 建表 + 首次启动自动建管理员(重复调用无害)
 
 # ==================== 未登录:登录 / 注册 ====================
 if "user_id" not in st.session_state:
-    st.title("🛒 电商知识库智能问答系统")
-    st.caption("基于 LangChain + RAG 的企业级知识库问答系统")
+    apply_theme()
+    st.markdown(
+        '<div style="text-align:center;padding:2.5em 0 0.8em 0;">'
+        '<div style="font-size:44px;">📜</div>'
+        '<div style="font-size:28px;font-weight:700;color:#0F2744;letter-spacing:2px;">'
+        '知识库智能问答系统</div>'
+        '<div style="color:#5A6B85;margin-top:0.4em;">湘西特产 · 里耶秦简 多知识库问答系统'
+        ' | 基于 LangChain + RAG</div>'
+        '</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<div style="height:2px;background:linear-gradient(90deg,#0E6EFD,#66B1FF);'
+        'width:160px;margin:0 auto 1.5em auto;"></div>',
+        unsafe_allow_html=True,
+    )
 
     tab_login, tab_register = st.tabs(["🔑 登录", "📝 注册"])
 
@@ -58,6 +73,7 @@ if "user_id" not in st.session_state:
     st.stop()  # 未登录到此为止
 
 # ==================== 已登录:欢迎页 + 修改密码 ====================
+apply_theme()
 show_sidebar()
 
 st.title(f"👋 {st.session_state['username']},欢迎回来!")

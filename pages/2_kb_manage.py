@@ -13,11 +13,13 @@ from core.ingest import start_ingest
 from core.retriever import invalidate_bm25
 from core.vectorstore import delete_by_doc, delete_by_kb
 from utils import hash_utils, log_utils
+from utils.theme import apply_theme
 from utils.ui import require_admin, show_sidebar
 
 st.set_page_config(page_title="知识库管理", page_icon="📚", layout="wide")
 
 init_db()
+apply_theme()
 require_admin()  # 普通用户会被拦在这里
 show_sidebar()
 
@@ -83,8 +85,8 @@ with col_right:
         st.info("先在左侧新建或选择一个知识库,再上传文档")
     else:
         uploads = st.file_uploader(
-            "上传文档(PDF / Word / TXT / Markdown / Excel / CSV)",
-            type=["pdf", "docx", "txt", "md", "xlsx", "csv"],
+            "上传文档(PDF / Word / TXT / Markdown / Excel / CSV / 秦简释文 JSONL)",
+            type=["pdf", "docx", "txt", "md", "xlsx", "csv", "jsonl"],
             accept_multiple_files=True,
         )
         if uploads:

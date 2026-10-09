@@ -14,11 +14,13 @@ import streamlit as st
 
 from core.database import (Document, Feedback, KnowledgeBase, Message,
                            OperationLog, User, get_db, init_db)
+from utils.theme import apply_theme
 from utils.ui import require_admin, show_sidebar
 
 st.set_page_config(page_title="统计面板", page_icon="📊", layout="wide")
 
 init_db()
+apply_theme()
 require_admin()
 show_sidebar()
 

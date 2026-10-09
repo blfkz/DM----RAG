@@ -105,6 +105,43 @@ def _load_table(path: Path):
     return [{"text": "\n".join(lines), "meta": {}}]
 
 
+def _load_qinjian_jsonl(path: Path):
+    """秦简释文 JSONL:每行一条 {"slip_no","layer","source_doc","page",
+    "text_orig","text_simp","notes","status"}。
+    坏行/缺必填字段直接报错并带行号(不静默丢数据,零虚构保障)。"""
+    import json
+
+    entries = []
+    with open(path, encoding="utf-8") as f:
+        for i, line in enumerate(f, 1):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+            except json.JSONDecodeError as e:
+                raise ValueError(f"{path.name} 第 {i} 行 JSON 解析失败: {e}") from e
+            if row.get("status") != "verified":
+                continue  # 只收人工核对过的释文
+            slip_no = (row.get("slip_no") or "").strip()
+            text_orig = (row.get("text_orig") or "").strip()
+            if not slip_no or not text_orig:
+                raise ValueError(f"{path.name} 第 {i} 行缺少 slip_no 或 text_orig")
+            entries.append({
+                "text": text_orig,
+                "meta": {
+                    "slip_no": slip_no,
+                    "layer": (row.get("layer") or "").strip(),
+                    "source_doc": (row.get("source_doc") or path.name),
+                    "page": row.get("page", ""),
+                    "notes": (row.get("notes") or "").strip(),
+                },
+            })
+    if not entries:
+        raise ValueError("JSONL 中没有 status=verified 的释文(请先人工核对)")
+    return entries
+
+
 def load_file(path: Path):
     """按文件后缀分发到对应的解析器。"""
     ext = path.suffix.lower()
@@ -116,4 +153,6 @@ def load_file(path: Path):
         return _load_txt_md(path)
     if ext in (".xlsx", ".csv"):
         return _load_table(path)
+    if ext == ".jsonl":
+        return _load_qinjian_jsonl(path)
     raise ValueError(f"不支持的文件格式:{ext}")

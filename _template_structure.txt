@@ -1,0 +1,173 @@
+段落数: 195, 表格数: 1
+============================================================
+[0] 各位作者请注意：
+[1] 此文仅为论文模板，非完整的刊发文章。投稿请登录《软件导刊》官网http://www.rjdk.org.cn。投稿论文可不按以下具体格式（分栏、字体、字号等），但公式、图形必须按照规范要求。
+[2] 收稿日期：XXXX-XX-XX
+[3] 基金项目：国家自然科学基金项目（201361235636）；湖北省科技支撑计划软科学项目（2013AKB12）
+[4] 作者简介：张三（1991-），男，武汉大学计算机学院硕士研究生，研究方向为自动推理与符号计算；李某四（1968-），男，博士，北京科技大学计算机与通信工程学院教授、博士生导师，研究方向为自动推理与符号计算、程序验证。本文
+[5] 注：若作者为CCF会员，请在作者简介中注明会员类别：CCF学生会员、CCF专业会员、CCF高级会员、CCF杰出会员或CCF会士。
+[6] 专利名称（编号：XXXXXXXXX）；软件著作权名称（编号XXXXXX）。	
+[8] 中文标题（20个字以内）
+[9]  张  三1，李某四2 （每个作者需标注相应单位）
+[10] （1. 武汉大学 计算机学院，湖北 武汉 430072；
+[11] 2．北京科技大学 计算机与通信工程学院，北京（除直辖市外的城市前加省名） 100083）
+[12] 摘  要：论文摘要一般为300~350字为宜，综述类文章除外。（1）论文采用报道式摘要，按“目的、方法、结果、结论”的范式撰写，结果结论要明确。（2）以第三人称客观陈述论文的主要研究内容和相关结论，不宜使用“本文”、“我
+[13] 关键词：关键词1；关键词2；关键词3；关键词4；关键词5（建议5个~8个，为文中出现过的专业术语）
+[14] DOI:                 
+[15] 中图分类号：TP3      文献标识码: A      文章编号：1672—7800（2021）001-0001-06
+[17] English Title
+[19] ZHANG San1 ,  LI Mousi2
+[20] （作者姓全部大写，名的首字母大写）
+[21] (1. School of Computer Science, Wuhan University, Wuhan 430072, China; 
+[22] 2.School of Computer & Communication Engineering, University of Science & Technology Beijing , Beijing 100083,
+[23] Abstract: 英文摘要应与中文摘要相互对应，为了符合国际交流，英文摘要采用第三人称为主语，以一般现在时进行叙述，不宜用“We、I”等第一人称做主语。
+[24] Key words: Keyword 1；Keyword 2；Keyword 3；Keyword 4；Keyword 5.（与中文关键词对应）
+[25] 正文内容注意事项：
+[26] 符号公式：函数名、变量等用斜体；英文缩写、运算符号、括号等用正体；向量、矢量、矩阵为斜体加粗。定义、定理、公式、推论、算法、步骤等须从按（1）、（2）全文编号，在文中引用时用：由式（1）所示。特别注意：不接受图片格式的符
+[27] 插图：必须具备图序、图题和各分图题等，按图1、图2全文编号；有分图时，分图序号用（a）、（b）标出。中英文图名齐备，英文在上，中文在下；文前图后，图应紧跟在正文描述后面。
+[28] 特别注意：每张图片应提供独立的图文件，最好为矢量图。曲线图或流程图请使用ORIGIN或VISIO专业作图软件制作，将原图直接插入Word（切勿保存为图像格式后插入Word）；图像类图分辨率要求为600dpi以上（具体要求
+[29] 表格：要有表序、表题，使用三线表。中英文表名齐备（英文在上，中文在下）；表中数字采用小数点对齐式，量需给出单位。表格不允许以图片或文本框形式插入。
+[30] 正文缩写：专业术语有英文缩写的，在正文中第一次出现时需写全中文名称、英文及缩写，如：面向服务的体系架构（Services Oriented Architecture,SOA）。
+[31] 参考文献引用：所有参考文献全部按照顺序引用, 引用文献序号用上标表示;“文献[1-2]介绍了……”用这种形式说明文献内容时，为非上标格式。
+[33] 0  引言 
+[34]  随着面向服务的体系架构（Services Oriented Architecture,SOA）的发展，Web服务已经逐渐成为在提高分布式应用程序的灵活性和可扩展性等方面的有效解决方案，被广泛地应用在各个领域，并将成为下
+[35] 1  相关工作
+[36]  对功能属性相同的服务，传统的服务选择方案是针对QoS各属性值分别赋予不同的权重，进行简单相加，最后将分数最高的服务返回给用户。为加强对服务运行风险因素的评估，人际网络中的信任概念被引入计算机系统。国内外已有部分学者对此
+[38] 以上方法都未在**方面……本文通过**方法，进行了**研究，改进了/弥补了……。
+[39] 2  词语相似度
+[40] 2.1   基于语义资源的词语相似度算法
+[41] 算法X  算法名称
+[42] 输入：… …
+[43] 输出：… …
+[44] 1. ... ...
+[45] 2. ... ...
+[46] 3. ... ...
+[47] 例：
+[48] 算法1 社区划分算法
+[49] 输入：网络拓扑图G
+[50] 输出：划分好的社区结构
+[51] 1. FOR每个节点DO
+[52] 2.     用式(3-7)计算特征向量中心性，并用式(3-8)进行标准化
+[53] 3. END
+[54] 4. 降序排列特征向量中心性值
+[55] 5. 选取前k个特征向量中心性值作为初始社区
+[56] 6. FOR每个初始社区DO
+[57] 7.     用式(3-10)计算兴趣距离和社交距离的拟合
+[58] 8.     用式(3-9)计算标签传播值
+[59] 9. END
+[60] 10. FOR每个当前社区DO
+[61] 11.     IF两个初始社区相邻THEN
+[62] 12.     合并两个社区
+[63] 13. END
+[64] 14. IF社区内的节点数小于阈值lim THEN
+[65] 15.     用式(3-7)计算邻居节点的标签传播值
+[66] 16. ELSE
+[67] 17.     该社区划分完成
+[68] 18. END
+[69] 19. END
+[71] 算法2 测试用例生成方法
+[72] 输入: AST 种子集(AS), 训练得到的前馈神经网络模型(model), 采样温度(T), 生成切片的最大数量(max)
+[73] 输出: 新的测试用例
+[74] 1. function TestCaseGeneration
+[75] 2.     seed←SelectSeed(AS) 
+[76] 3.     node←seed.root(·) 
+[77] 4.     partialTree, prunedType←PruneSeed(seed) 
+[78] 5.     count←0 
+[79] 6.     WHILE count<max DO
+[80] 7.         weights←PredictNextFrag(model, partialTree, prunedType) 
+[81] 8.         newFrag←Sampling(weights,T) 
+[82] 9.         AppendFrag(node, newFrag) 
+[83] 10.         IF genFinished(·) THEN
+[84] 11.             BREAK
+[85] 12.         END IF
+[86] 13.         partialTree.append(newFrag) 
+[87] 14.         cound←count+1 
+[88] 15.     END WHILE
+[89] 16.     RETURN node
+[90] 17. END function 
+[92] 2.2   基于统计的语义相似度算法
+[93] 定义1 有三条边、三个顶点的多边形叫作三角形。
+[94] 定理1 三角形的内角和等于180度。
+[95] 2.3  基于混合技术的语义相似度算法
+[96] 3  应用实验
+[97] 3.1  基于向量空间模型的句子相似度算法
+[98] 3.2  实验方法
+[99]                                          （1）
+[100]                                  （2）
+[101] IoU和GIoU的计算公式由式（1）-式（2）表示其中，为预测框，为真实框，是包含、的最小框(包含与的最小凸闭合框)。
+[102] 3.3  实验结果
+[103] 本文选择的测试问句如表1所示，并分别返回前5、10、20个答案作为该算法返回的结果。
+[104] Table 1 Test questions
+[105] 表1   测试问句
+[107] Fig.1 MHBSE value of the two random signal under different embedding dimensions
+[108] 图1两种随机信号在嵌入维数下MHBSE的值 
+[110] (a) The interval of K is 5                   （b）The interval of K is 1
+[111] (a) K间隔为5                           (b) K间隔为1
+[112] Fig.2  Influence of K on results in M2 dataset
+[113] 图2  M2数据集中潜在特征个数K对结果的影响
+[114] 4  结语
+[116] 参考文献
+[117] 注：据实使用，不低于25条；中文文献进行中、英双语标注（英文在上，中文在下);尽可能查全、查新，涵盖国内文献和国外文献：
+[118] 期刊
+[119] 作者. 论文题目[J]. 刊名，年，卷（期）：起始页码-终止页码.
+[120] [1] ZHANG J S，YANG L X，WANG H R，et al. Posture recognition algorithm based on neural network[J]. Software Guid
+[121] 张剑书，杨炼鑫，王浩然，等. 基于神经网络的姿态识别算法[J]. 软件导刊, 2020, 19(11): 33-36.
+[122] [2]TURNEY P D. Similarity of semantic relations [J]. Computational Linguistics Journal, 2010, 32(3): 379-416.
+[123] 会议论文
+[124]    作者. 论文题目[C]//地点：会议名，年份.             或
+[125]    作者. 论文题目[C]//文集/会议名，年份：起始页码-终止页码.
+[126] [3] LU X, SU F, LIU H Z, et al. A unified OLAP/OLTP big data processing framework in telecom industry[C]//Qing
+[127] [4] WANG H M. From MOOC to MOOP[C]// Beijing: China University Computer Education MOOC Alliance Summit,2018.
+[128] 王怀民. 从MOOC到MOOP[C]// 北京： 中国高校计算机教育MOOC联盟峰会，2018.
+[129] [5] RUSH A M, CHOPRA S, WESTON J. A neural attention model for abstractive sentence summarization[C]// Confere
+[130] 学位论文
+[131]     作者. 论文题目[D]. 学位授予单位所在城市:学位授予单位,年.
+[132] [6] XIONG T. EMD-based hybrid modeling techniques for time series forecasting and their applications[D].Wuhan:
+[133] 熊涛. 基于 EMD 的时间序列预测混合建模技术及其应用研究［D］. 武汉：华中科技大学，2014.
+[134] 专著
+[135]    作者. 书名[M]. 出版地：出版社，出版年.
+[136] [7] YANG F B. Infrared physics and technology[M]. Beijing:Publishing House of Electronics Industry,2014.
+[137]     杨凤暴. 红外物理与技术[M]. 北京：电子工业出版社，2014.
+[138] [8] LOSHIN D．Big Data Analytics [M]．San Francisco: Morgan Kaufmann Publishers, 2013.
+[140] 译著
+[141]    作者. 书名[M]. 译者,译. 出版地：出版社，出版年.
+[142] [9] LIU B, Web data mining[M]. Translated by Yu Yong. Beijing: Tsinghua University Press,2012. 
+[143] 刘兵.Web数据挖掘[M].余勇，译.北京：清华大学出版社，2012.
+[145] 技术标准
+[146]    起草责任者，技术标准代号顺序号—发布年. 技术标准名称[S]. 出版地：出版社，出版年.     或
+[147]    技术标准代号顺序号—发布年. 技术标准名称[S].
+[148] [10] Institute of Information Classification and Coding, National Bureau of Standards.GB／T2659-1986. Name code
+[149] 国家标准局信息分类编码研究所．GB／T2659-1986.世界各国和地区名称代码[S].北京:中国标准出版社，1988.
+[150] 专利
+[151]    申请者. 专利名[P]. 国名,专利号，发布日期.
+[152] [11] LIU J L. Multifunctional disposable tongue depressor[P]. China,92214985．2,1993-04-14．
+[153] 刘加林．多功能一次性压舌板[P].中国，92214985．2,1993-04-14．
+[154] 科技报告
+[155] 作者.文题[R].报告题名，报告代码及编号，年份.    或
+[156] 作者.文题[R].地名：责任单位，报告代码及编号，年份.
+[157] [12] BOZEMAN B. Knowledge value collectives: the proof of science in the putting [R].Contractor Report, AIAA-9
+[159] 报纸文章
+[160]     作者. 文题[N]. 报纸名，出版日期（版次）.
+[161] [13] ZHANG T Q. Building a network power country must pay attention to corporate information security[N]. Comp
+[162] 张田勤．建设网络强国须关注企业信息安全[N]．电脑报，2014-03-26(2)．
+[164] 电子文献
+[165]      作者. 文题[EB/OL]. http://…….
+[166]  [14] CISCO. VNI forecast report of Cisco mobile industry[EB/OL]. https://www. cisco.com/c/zh_cn/about/press/c
+[167] CISCO. 思 科 移 动 产 业 VNI 预 测 报 告［EB/OL］. https://www. cisco.com/c/zh_cn/about/press/china/2016.html. 
+[169] 数据库文献
+[170]     作者. 文题[DB/OL].数据库网址.
+[171] [15] GLUSHKOVSKY A. AI discovering a coordinate system of chemical elements: dual representation by variationa
+[173] 网络优先出版文献
+[174] 作者. 文题[J/OL].刊名,网络出版时间.网络出版地址.
+[175] [16] MA Y X, ZHANG Q X,TAN Y A,et al. Survey on method for behavior-prediction of intelligent attack[J/OL]. Jo
+[176]    马钰锡, 张全新 , 谭毓安,等.面向智能攻击的行为预测技术[J/OL].软件学报，2020-12-02. http://www.jos.org.cn/jos/ch/ journal_id=jos.
+[179] （注意：投稿请认准软件导刊官方网站http://www.rjdk.org.cn，谨防假冒）
+[182] 图形规范要求
+[183] 论文中所有图形尽可能为可编辑的源图，以确保图形清晰、美观。注意我刊为黑白印刷，纸刊无法显示颜色，为保证印刷后文章的可读性，正文部分对图的描述不宜涉及颜色；为保证图中字迹清晰可见，不宜在图中添加背景底色或阴影（特殊含义除外
+[184] 1、流程图、程序图
+[185] 绘制流程图、程序图时应确保图形可编辑。推荐采用“VISIO软件”进行绘制，绘制完成后直接将VISIO源图直接插入论文Word中，切勿另存为图片格式（如PNG、JPEG等）再插入Word中。
+[188] 2、矩形图、坐标图
+[189] 为了保证图形美观，不宜在矩形图中填充大量颜色。坐标图要保证图中的坐标、线条及标注清晰可见，建议使用Origin、MATLAB、Adobe Illustrato等软件制图后，直接复制图片粘贴于论文Word中，切勿在软件中以
+[191] 3、图像
+[192] 对于该类图像允许以图片形式插入论文中，但为了保证图片的清晰度，需要作者提供分辨率为600Dpi-1200Dpi的图片（具体视实际情况而定）。
+[194] （请保留所有图的源文件，若图片不清晰时，编辑部可能会向作者索要图的源文件）

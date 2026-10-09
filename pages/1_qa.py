@@ -8,7 +8,7 @@ import re
 
 import streamlit as st
 
-from core.citation import finalize_citations
+from core.citation import finalize_citations, format_citation_line
 from core.database import Feedback, KnowledgeBase, get_db, init_db
 from core.rag_chain import answer_stream, compress_summary, prepare_answer
 from core.session_store import (add_message, count_messages, create_session,
@@ -16,11 +16,13 @@ from core.session_store import (add_message, count_messages, create_session,
                                 list_sessions, older_messages, set_session_kb,
                                 update_summary)
 from utils import log_utils
+from utils.theme import apply_theme
 from utils.ui import require_login, show_sidebar
 
 st.set_page_config(page_title="知识库问答", page_icon="💬", layout="wide")
 
 init_db()
+apply_theme()
 require_login()
 show_sidebar()
 
@@ -36,7 +38,7 @@ def render_answer(text: str) -> str:
 
 
 def render_citations(citations: list | None):
-    """回答下方的引用来源展示:文件名 · 第几块 · 命中方式 · 原文。"""
+    """回答下方的引用来源展示:文件名/简号 · 命中方式 · 原文。"""
     if not citations:
         return
     traced = any(c.get("traced") for c in citations)
@@ -45,7 +47,10 @@ def render_citations(citations: list | None):
     with st.expander(label):
         for i, c in enumerate(citations, start=1):
             route = "🔤 关键词命中" if c.get("source") == "bm25" else "🧠 语义匹配"
-            st.markdown(f"**{i}. {c.get('source_file')} · 第 {c.get('chunk_index')} 块** · {route} · 分数 {c.get('score')}")
+            head = format_citation_line(c)
+            if c.get("slip_no"):
+                head = f"📜 {head}"
+            st.markdown(f"**{i}. {head}** · {route} · 分数 {c.get('score')}")
             st.caption(c.get("text", "")[:600])
 
 
@@ -132,7 +137,7 @@ with col_chat:
     else:
         msgs = get_messages(sess_id, user_id)
         if not msgs:
-            st.caption("会话是空的。在下方输入框提问吧,例如:星耀X1的电池容量是多少?")
+            st.caption("会话是空的。在下方输入框提问吧,例如:星耀X1的电池容量是多少?或:8-135 号简记载了什么?")
         for m in msgs:
             with st.chat_message(m["role"]):
                 if m["role"] == "assistant":

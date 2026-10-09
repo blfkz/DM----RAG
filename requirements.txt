@@ -17,6 +17,8 @@ pandas>=2.2
 # ===== 中文分词与关键词检索 =====
 jieba>=0.42
 rank-bm25>=0.2.2
+# ===== 繁简转换(秦简释文索引归一)=====
+opencc-python-reimplemented>=1.0
 # ===== 工具 =====
 python-dotenv>=1.0
 tenacity>=8.3
