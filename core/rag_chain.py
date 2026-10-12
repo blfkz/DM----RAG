@@ -8,12 +8,17 @@ core/rag_chain.py
 
 LangChain 在这里负责"编排":提示词模板 + 链组装 + 流式输出。
 """
+import json
+import re
+
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 from core import config
-from core.prompts import CONDENSE_TEMPLATE, QA_SYSTEM_TEMPLATE, QINJIAN_QA_SYSTEM_TEMPLATE
+from core.prompts import (CONDENSE_TEMPLATE, QA_SYSTEM_TEMPLATE,
+                          QINJIAN_QA_SYSTEM_TEMPLATE, REFUSAL_TEXT,
+                          RETRIEVAL_EVAL_TEMPLATE)
 from core.qinjian import is_qinjian_kb
 from core.retriever import hybrid_search
 from core.session_store import get_summary, recent_history
@@ -74,11 +79,57 @@ def prepare_answer(question: str, kb_id, session_id: int):
     return docs, condensed
 
 
+def parse_eval_result(text: str) -> bool:
+    """解析评估器的 JSON 输出;解析失败时保守返回 False(宁可拒答不硬答)。"""
+    if not text:
+        return False
+    m = re.search(r"\{[^{}]*\}", text)
+    if not m:
+        return False
+    try:
+        data = json.loads(m.group(0))
+    except json.JSONDecodeError:
+        return False
+    return bool(data.get("sufficient")) and str(data.get("sufficient")).lower() != "false"
+
+
+def _eval_llm() -> ChatOpenAI:
+    """评估器专用轻量模型客户端(独立于生成模型)。"""
+    return ChatOpenAI(
+        model=config.RETRIEVAL_EVAL_MODEL,
+        api_key=config.DASHSCOPE_API_KEY,
+        base_url=config.BASE_URL,
+        temperature=0,          # 判定任务要确定性
+        max_retries=2,
+        timeout=60,
+    )
+
+
+def evaluate_retrieval(question: str, docs: list[dict]) -> bool:
+    """CRAG 式检索置信度评估:检索结果能否充分回答该问题。
+
+    True=充分(继续生成);False=不充分(拒答,不给模型自由发挥的机会)。
+    评估器用轻量模型,返回纯 JSON 判定。
+    """
+    context = build_context(docs)
+    prompt = ChatPromptTemplate.from_template(RETRIEVAL_EVAL_TEMPLATE)
+    chain = prompt | _eval_llm() | StrOutputParser()
+    try:
+        result = chain.invoke({"input": question, "context": context})
+    except Exception:  # noqa: BLE001
+        return True  # 评估器故障时退回正常生成(可用性优先,不因评估器宕机而拒答一切)
+    return parse_eval_result(result)
+
+
 def answer_stream(question: str, docs: list[dict]):
     """问答步骤2:组装提示词,流式生成回答(生成器,逐段产出)。
-    秦简库使用学术化模板(照录繁体原文、标注简号),其余库用原商品模板。"""
+    秦简库使用学术化模板(照录繁体原文、标注简号),其余库用原商品模板。
+    开启检索置信度评估时,先判定检索是否充分,不充分直接拒答(校正式 RAG)。"""
     if not docs:
-        yield "抱歉,知识库为空或没有找到与您问题相关的内容。"
+        yield REFUSAL_TEXT
+        return
+    if config.ENABLE_RETRIEVAL_EVAL and not evaluate_retrieval(question, docs):
+        yield REFUSAL_TEXT
         return
     context = build_context(docs)
     kb_ids = {d.get("meta", {}).get("kb_id") for d in docs}

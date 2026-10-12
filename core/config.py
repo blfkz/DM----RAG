@@ -28,6 +28,10 @@ TOP_K = int(os.getenv("TOP_K", "6"))                      # 最终交给大模�
 SEARCH_CANDIDATES = int(os.getenv("SEARCH_CANDIDATES", "20"))  # 每条检索路取多少候选
 TEMPERATURE = float(os.getenv("TEMPERATURE", "0.1"))      # 生成温度(越低越"老实")
 
+# ---- 校正式检索(CRAG 式评估器)----
+ENABLE_RETRIEVAL_EVAL = os.getenv("ENABLE_RETRIEVAL_EVAL", "1") == "1"  # 检索置信度评估开关
+RETRIEVAL_EVAL_MODEL = os.getenv("RETRIEVAL_EVAL_MODEL", "qwen-turbo")  # 评估器用轻量模型,省时省钱
+
 # ---- 数据目录(运行时自动创建)----
 DATA_DIR = BASE_DIR / "data"
 UPLOAD_DIR = DATA_DIR / "uploads"          # 上传的原始文件
