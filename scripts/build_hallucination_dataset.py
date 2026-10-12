@@ -185,7 +185,7 @@ def main():
             w.writerow(["✓", r["id"], r["question"], r["qtype"], r["source_doc"]])
     print(f"[输出] 抽核表: {OUT_CSV.name}")
     print("下一步:用 Excel 打开抽核表,逐条判断题目合理性")
-    print("  - 保留列填 '✓'(合格)/ '✗'(剔除);每类至少抽核 20~30 题")
+    print("  - 保留列填 OK(合格)/ X(剔除);每类至少抽核 20~30 题")
 
 
 if __name__ == "__main__":
