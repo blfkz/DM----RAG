@@ -40,12 +40,20 @@ OCR_TEMPLATE = """你是一位简牍释文转写助手。请把图片中的文�
 
 
 def pdf_page_images(pdf_path: Path):
-    """逐页提取嵌入图片,返回 [(页码, PIL图片)]。"""
+    """逐页提取嵌入图片,返回 [(页码, PIL图片)];损坏图片/提取失败整页跳过。"""
     reader = PdfReader(str(pdf_path))
     out = []
     for i, page in enumerate(reader.pages, start=1):
-        for img in page.images:
-            out.append((i, img.image))
+        try:
+            imgs = list(page.images)  # 迭代本身会触发解码,必须整体包 try
+        except Exception:  # noqa: BLE001
+            print(f"[跳过] 第 {i} 页图片提取失败")
+            continue
+        for img in imgs:
+            try:
+                out.append((i, img.image))
+            except Exception:  # noqa: BLE001
+                print(f"[跳过] 第 {i} 页图片损坏")
     return out
 
 
@@ -103,10 +111,22 @@ def main():
         ])
         return llm.invoke([msg]).content.strip()
 
+    def ocr_with_retry(pil_img) -> str:
+        """审核误判时降采样重试两次,仍失败则返回空串(该页进人工处置)。"""
+        for attempt in range(3):
+            try:
+                return ocr_one(pil_img)
+            except Exception as e:  # noqa: BLE001
+                if "inappropriate" in str(e) and attempt < 2:
+                    w, h = pil_img.size
+                    pil_img = pil_img.resize((int(w * 0.7), int(h * 0.7)))
+                    continue
+                raise
+
     rows = []
     for n, (page_no, pil_img) in enumerate(images, 1):
         try:
-            text = ocr_one(pil_img)
+            text = ocr_with_retry(pil_img)
             rows.append({"source_doc": f"{args.pdf}.pdf", "page": page_no,
                          "text": text, "flag": "模型转写"})
             print(f"[{n}/{len(images)}] 第 {page_no} 页: {len(text)} 字 | {text[:40]}")
