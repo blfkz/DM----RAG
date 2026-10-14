@@ -31,6 +31,7 @@ TEMPERATURE = float(os.getenv("TEMPERATURE", "0.1"))      # 生成温度(越低�
 # ---- 校正式检索(CRAG 式评估器)----
 ENABLE_RETRIEVAL_EVAL = os.getenv("ENABLE_RETRIEVAL_EVAL", "1") == "1"  # 检索置信度评估开关
 RETRIEVAL_EVAL_MODEL = os.getenv("RETRIEVAL_EVAL_MODEL", "qwen-turbo")  # 评估器用轻量模型,省时省钱
+OCR_MODEL = os.getenv("OCR_MODEL", "qwen3-vl-plus")  # 简牍图版转写(多模态)
 
 # ---- 数据目录(运行时自动创建)----
 DATA_DIR = BASE_DIR / "data"
