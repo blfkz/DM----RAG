@@ -151,7 +151,9 @@ def main():
                 "refusal": round(corr / n_out * 100, 2) if n_out else 0}
 
     print("\n========== 秦简三组对照汇总 ==========")
-    for name, key in (("A 纯大模型", "A"), ("B 基础RAG", "B"), ("C 我们的方法", "C")):
+    groups = [("C 我们的方法(锚点版)", "C")] if args.conly else [
+        ("A 纯大模型", "A"), ("B 基础RAG", "B"), ("C 我们的方法", "C")]
+    for name, key in groups:
         s = stats(results, key)
         print(f"{name}: 幻觉失败率 {s['hallucination']}% | 库外拒答正确率 {s['refusal']}%")
 

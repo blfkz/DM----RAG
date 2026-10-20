@@ -180,8 +180,6 @@ def answer_stream(question: str, docs: list[dict]):
 
     for i in range(0, len(answer), 24):  # 按小段输出,保留打字机观感
         yield answer[i:i + 24]
-    for piece in chain.stream({"context": context, "input": question}):
-        yield piece
 
 
 def compress_summary(messages: list[dict]) -> str:
