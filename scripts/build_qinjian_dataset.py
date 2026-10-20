@@ -63,20 +63,30 @@ def slips_brief(slips, limit=120):
     return "\n".join(lines)
 
 
-def gen_in_lib(slips):
+ANGLES = [
+    "某简记载了什么/某个词的上下文/某層有哪些相关记录",
+    "纪年与职官:某年某月有哪些简/某职官出现在哪些简/纪年格式",
+    "文书类型与内容:涉及粮食(粟/米/稟)的简有哪些/涉及钱财的简/涉及徭役戍卒的简",
+]
+
+
+def gen_in_lib(slips, max_batches=6, angle_idx=0):
     tpl = """以下是里耶秦简的部分释文清单(简号: 释文内容):
 {slips}
 
 请生成 {n} 个关于这些释文的测试问题。要求:
 1. 答案必须明确能在上面的释文中找到
-2. 问题类型多样:某简记载了什么/某層有哪些相关记录/某种内容出现在哪些简/某个词的上下文
+2. 本次的问题类型限定为:{angle}
 3. 问题简短(30字内),每行一个,不要编号不要解释"""
+    angle = ANGLES[angle_idx]
     out, batch = [], 0
     for start in range(0, len(slips), 120):
         batch_slips = slips[start:start + 120]
+        if not batch_slips:
+            break
         n = 12
         try:
-            raw = ask(tpl, slips=slips_brief(batch_slips), n=n)
+            raw = ask(tpl, slips=slips_brief(batch_slips), n=n, angle=angle)
         except Exception as e:  # noqa: BLE001
             print(f"[库内] 批次失败: {e}")
             continue
@@ -86,9 +96,9 @@ def gen_in_lib(slips):
                 out.append({"id": f"qj_in_{len(out) + 1}", "question": q,
                             "qtype": "in_lib", "source": ""})
         batch += 1
-        if batch >= 6:  # 先跑6批(~180题候选),按需扩
+        if batch >= max_batches:
             break
-    print(f"[库内题] 生成 {len(out)} 题")
+    print(f"[库内题·角度{angle_idx + 1}] 生成 {len(out)} 题")
     return out
 
 
@@ -136,31 +146,45 @@ def gen_boundary():
 
 
 def main():
+    extend = "--extend" in sys.argv
     slips = load_slips()
     if not slips:
         print("没有可用的释文数据")
         return
-    print(f"基于 {len(slips)} 条释文生成测试集…")
+    print(f"基于 {len(slips)} 条释文{'扩容' if extend else '生成'}测试集…")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    rows = gen_in_lib(slips) + gen_out_lib() + gen_boundary()
-    # 问题去重
-    seen, dedup = set(), []
+    old = []
+    if extend and OUT_JSONL.exists():
+        old = [json.loads(l) for l in OUT_JSONL.read_text(encoding="utf-8").splitlines()
+               if l.strip()]
+        print(f"[扩容] 已有 {len(old)} 题,继续生成…")
+
+    if extend:
+        # 扩容:库内换角度 2 和 3 各跑一轮(同释文不同问法),库外/边界各加一批
+        rows = (gen_in_lib(slips, max_batches=6, angle_idx=1)
+                + gen_in_lib(slips, max_batches=6, angle_idx=2)
+                + gen_out_lib() + gen_boundary())
+    else:
+        rows = gen_in_lib(slips) + gen_out_lib() + gen_boundary()
+
+    # 合并去重
+    seen, merged = {r["question"] for r in old}, list(old)
     for r in rows:
         if r["question"] in seen:
             continue
         seen.add(r["question"])
-        dedup.append(r)
+        merged.append(r)
 
-    OUT_JSONL.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in dedup),
+    OUT_JSONL.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in merged),
                          encoding="utf-8")
     with open(OUT_CSV, "w", newline="", encoding="utf-8-sig") as f:
         w = csv.writer(f)
         w.writerow(["保留", "id", "question", "qtype"])
-        for r in dedup:
+        for r in merged:
             w.writerow(["OK", r["id"], r["question"], r["qtype"]])
-    print(f"[输出] qinjian_dataset.jsonl: {len(dedup)} 题 + 抽核表 CSV")
-    print("下一步:人工抽核(每类看20-30题),再跑 eval_hallucination 实验")
+    print(f"[输出] qinjian_dataset.jsonl: {len(merged)} 题 + 抽核表 CSV")
+    print("下一步:人工抽核(每类看20-30题),再跑实验")
 
 
 if __name__ == "__main__":
