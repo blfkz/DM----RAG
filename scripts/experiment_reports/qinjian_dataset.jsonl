@@ -58,7 +58,6 @@
 {"id": "qj_in_58", "question": "简989记载的年份和月份是什么？", "qtype": "in_lib", "source": ""}
 {"id": "qj_in_59", "question": "简1023中“粟＝十一石八”后的文字是什么？", "qtype": "in_lib", "source": ""}
 {"id": "qj_in_60", "question": "简1076开头的编号序列是什么？", "qtype": "in_lib", "source": ""}
-{"id": "qj_out_1", "question": "号简是否记载了洞庭郡水灾？", "qtype": "out_lib", "source": ""}
 {"id": "qj_out_2", "question": "里耶秦简中是否存在“郡监御史”职官？", "qtype": "out_lib", "source": ""}
 {"id": "qj_out_3", "question": "始皇三十三年简文是否提及南越战事？", "qtype": "out_lib", "source": ""}
 {"id": "qj_out_4", "question": "简8-461与简8-1297对迁陵仓禀记载是否矛盾？", "qtype": "out_lib", "source": ""}
