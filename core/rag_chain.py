@@ -16,9 +16,10 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_openai import ChatOpenAI
 
 from core import config
-from core.prompts import (CONDENSE_TEMPLATE, QA_SYSTEM_TEMPLATE,
-                          QINJIAN_QA_SYSTEM_TEMPLATE, REFUSAL_TEXT,
-                          RETRIEVAL_EVAL_TEMPLATE)
+from core.anchors import rewrite_with_anchors, verify_slip_nos
+from core.prompts import (CONDENSE_TEMPLATE, CONSERVATIVE_TEMPLATE,
+                          QA_SYSTEM_TEMPLATE, QINJIAN_QA_SYSTEM_TEMPLATE,
+                          REFUSAL_TEXT, RETRIEVAL_EVAL_TEMPLATE)
 from core.qinjian import is_qinjian_kb
 from core.retriever import hybrid_search
 from core.session_store import get_summary, recent_history
@@ -79,18 +80,25 @@ def prepare_answer(question: str, kb_id, session_id: int):
     return docs, condensed
 
 
-def parse_eval_result(text: str) -> bool:
-    """解析评估器的 JSON 输出;解析失败时保守返回 False(宁可拒答不硬答)。"""
+def parse_eval_level(text: str) -> str:
+    """解析评估器的三级 JSON 输出;解析失败默认 sufficient(可用性优先,退回正常生成)。"""
     if not text:
-        return False
+        return "sufficient"
     m = re.search(r"\{[^{}]*\}", text)
     if not m:
-        return False
+        return "sufficient"
     try:
         data = json.loads(m.group(0))
     except json.JSONDecodeError:
-        return False
-    return bool(data.get("sufficient")) and str(data.get("sufficient")).lower() != "false"
+        return "sufficient"
+    level = str(data.get("level", data.get("sufficient", "sufficient"))).lower()
+    if level in ("sufficient", "partial", "insufficient"):
+        return level
+    if level in ("true", "1", "yes"):
+        return "sufficient"
+    if level in ("false", "0", "no"):
+        return "insufficient"
+    return "sufficient"
 
 
 def _eval_llm() -> ChatOpenAI:
@@ -105,38 +113,73 @@ def _eval_llm() -> ChatOpenAI:
     )
 
 
-def evaluate_retrieval(question: str, docs: list[dict]) -> bool:
-    """CRAG 式检索置信度评估:检索结果能否充分回答该问题。
-
-    True=充分(继续生成);False=不充分(拒答,不给模型自由发挥的机会)。
-    评估器用轻量模型,返回纯 JSON 判定。
-    """
+def evaluate_retrieval(question: str, docs: list[dict]) -> str:
+    """检索置信度评估(三级):sufficient / partial / insufficient。
+    评估器故障时退回 sufficient(可用性优先)。"""
     context = build_context(docs)
     prompt = ChatPromptTemplate.from_template(RETRIEVAL_EVAL_TEMPLATE)
     chain = prompt | _eval_llm() | StrOutputParser()
     try:
         result = chain.invoke({"input": question, "context": context})
     except Exception:  # noqa: BLE001
-        return True  # 评估器故障时退回正常生成(可用性优先,不因评估器宕机而拒答一切)
-    return parse_eval_result(result)
+        return "sufficient"
+    return parse_eval_level(result)
+
+
+def _generate(template: str, question: str, docs: list[dict]) -> str:
+    context = build_context(docs)
+    prompt = ChatPromptTemplate.from_template(template)
+    chain = prompt | get_llm() | StrOutputParser()
+    return chain.invoke({"context": context, "input": question}).strip()
 
 
 def answer_stream(question: str, docs: list[dict]):
-    """问答步骤2:组装提示词,流式生成回答(生成器,逐段产出)。
-    秦简库使用学术化模板(照录繁体原文、标注简号),其余库用原商品模板。
-    开启检索置信度评估时,先判定检索是否充分,不充分直接拒答(校正式 RAG)。"""
+    """锚点引导的校正式问答(生成器,逐段产出):
+    1. 检索置信度三级评估:sufficient 正常生成 / partial 保守复述 / insufficient 拒答
+    2. insufficient 且为秦简库:先做锚点定向二次检索(简号/纪年/层位/领域词),仍不足才拒答
+    3. 秦简库生成后做简号硬校验:编造简号 → 保守模板重生成一次 → 仍编造则拒答
+    """
     if not docs:
         yield REFUSAL_TEXT
         return
-    if config.ENABLE_RETRIEVAL_EVAL and not evaluate_retrieval(question, docs):
-        yield REFUSAL_TEXT
-        return
-    context = build_context(docs)
     kb_ids = {d.get("meta", {}).get("kb_id") for d in docs}
     qinjian = any(is_qinjian_kb(k) for k in kb_ids if k is not None)
+
+    level = "sufficient"
+    if config.ENABLE_RETRIEVAL_EVAL:
+        level = evaluate_retrieval(question, docs)
+        if level == "insufficient" and qinjian:
+            # 锚点定向二次检索(领域离线纠正,替代网络回退)
+            anchor_q = rewrite_with_anchors(question)
+            kb_id = docs[0].get("meta", {}).get("kb_id")
+            if anchor_q:
+                new_docs = hybrid_search(anchor_q, kb_id)
+                if new_docs and any(
+                        (d.get("meta", {}).get("slip_no") or d.get("text", ""))
+                        not in {(x.get("meta", {}).get("slip_no") or x.get("text", ""))
+                                for x in docs} for d in new_docs):
+                    docs = new_docs
+                    level = evaluate_retrieval(question, new_docs)
+        if level == "insufficient":
+            yield REFUSAL_TEXT
+            return
+
     template = QINJIAN_QA_SYSTEM_TEMPLATE if qinjian else QA_SYSTEM_TEMPLATE
-    prompt = ChatPromptTemplate.from_template(template)
-    chain = prompt | get_llm() | StrOutputParser()
+    if level == "partial":
+        template = CONSERVATIVE_TEMPLATE
+    answer = _generate(template, question, docs)
+
+    # 简号硬校验(仅秦简):回答中的简号必须真实存在于检索片段
+    if qinjian:
+        _, bad = verify_slip_nos(answer, docs)
+        if bad:
+            answer = _generate(CONSERVATIVE_TEMPLATE, question, docs)
+            _, bad2 = verify_slip_nos(answer, docs)
+            if bad2:
+                answer = REFUSAL_TEXT
+
+    for i in range(0, len(answer), 24):  # 按小段输出,保留打字机观感
+        yield answer[i:i + 24]
     for piece in chain.stream({"context": context, "input": question}):
         yield piece
 

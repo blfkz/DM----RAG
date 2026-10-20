@@ -79,6 +79,7 @@ def judge(answer: str, context: str) -> tuple[int, int]:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--conly", action="store_true", help="只跑 C 组(锚点版),与第一版 A/B 数据对比")
     args = ap.parse_args()
 
     init_db()
@@ -105,20 +106,22 @@ def main():
         context = build_context(docs) if docs else "(无检索结果)"
         entry = {"id": row["id"], "question": q, "qtype": qtype}
 
-        # A 纯直答
+        if not args.conly:
+            # A 纯直答
+            t0 = time.time()
+            a = run(A_TEMPLATE, model="qwen-plus", input=q)
+            at, asup = judge(a, context)
+            entry["A"] = {"answer": a, "total": at, "supported": asup}
+            print(f"  A 幻觉率 {(at - asup) / at * 100:.1f}%")
+
+            # B 基础 RAG
+            b = run(B_TEMPLATE, model="qwen-plus", input=q, context=context)
+            bt, bsup = judge(b, context)
+            entry["B"] = {"answer": b, "total": bt, "supported": bsup}
+            print(f"  B 幻觉率 {(bt - bsup) / bt * 100:.1f}%")
+
+        # C 我们的方法(锚点引导校正版)
         t0 = time.time()
-        a = run(A_TEMPLATE, model="qwen-plus", input=q)
-        at, asup = judge(a, context)
-        entry["A"] = {"answer": a, "total": at, "supported": asup}
-        print(f"  A 幻觉率 {(at - asup) / at * 100:.1f}%")
-
-        # B 基础 RAG
-        b = run(B_TEMPLATE, model="qwen-plus", input=q, context=context)
-        bt, bsup = judge(b, context)
-        entry["B"] = {"answer": b, "total": bt, "supported": bsup}
-        print(f"  B 幻觉率 {(bt - bsup) / bt * 100:.1f}%")
-
-        # C 我们的方法
         c = "".join(answer_stream(q, docs))
         cited = len(finalize_citations(c, docs)) if docs else 0
         if "没有找到" in c or c.startswith("抱歉"):
