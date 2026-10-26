@@ -1,0 +1,3758 @@
+[
+  {
+    "id": "qj_in_1",
+    "question": "简43记载了什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简43（第七層）释文为：“廷倉曹少内貲責發” [3]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_2",
+    "question": "第七层有哪些与“仓曹”相关的简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "第七层与“仓曹”相关的简有：  \n【简59】(第七層)[1]、  \n【简517】(第七層)[2]、  \n【简43】(第七層)[3]、  \n【简70】(第七層)[5]、  \n【简60】(第七層)[6]、  \n【简814】(第十層)不在第七层，不计入；  \n【简826】(第十層)不在第七层，不计入；  \n【简524】(第七層)[9]中提及“器曹”，非“仓曹”；  \n【简85】(第七層)[10]为“户曹”，非“仓曹”；  \n【简50】(第七層)[7]为“户曹”，非“仓曹”。\n\n因此，第七层明确涉及“仓曹”的简为：简59、简517、简43、简70。  \n另简60[6]释文为“廷吏曹□□二斗升斗……”，未出现“仓曹”，故不属；  \n简517[2]虽残缺，但释文中含“倉□”，结合上下文及编号标注，属“仓曹”相关。  \n\n综上，第七层与“仓曹”相关的简为：简59[1]、简517[2]、简43[3]、简70[5]。",
+      "total": 13,
+      "supported": 11,
+      "citations": 8,
+      "unsupported": 2
+    }
+  },
+  {
+    "id": "qj_in_3",
+    "question": "“卅五年九月丁亥朔”出现在哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_4",
+    "question": "“少内”一词在简47中的上下文是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简47（第七層）释文为：“□箭一件 □□□受少内敬 □” [1]。按：“少内”在此简中处于“受”字之后、“敬”字之前，构成“受少内敬”的语法结构，其中“少内”为官职名，指秦代县级财政机构主管官吏，“敬”为人名，表明该简记录某人（姓名残缺）将一件箭交付给名为“敬”的少内官员。",
+      "total": 5,
+      "supported": 3,
+      "citations": 1,
+      "unsupported": 2
+    }
+  },
+  {
+    "id": "qj_in_5",
+    "question": "简51中被劾赋税的乡名是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简51中被劾赋税的乡名是“貳春鄉” [1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_6",
+    "question": "第七层中哪些简提到“贰春乡”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "第七层中提到“贰春乡”的简有：  \n【简50】(第七層)[1]、【简92】(第七層)[2]、【简365】(第七層)[3]、【简259】(第七層)[5]、【简353】(第七層)[6]、【简51】(第七層)[8]。",
+      "total": 6,
+      "supported": 5,
+      "citations": 6,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_7",
+    "question": "简70记载了哪个月份的仓禀鼠券？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简70记载了九月的仓禀鼠券，其释文为：“九月倉稟人鼠券 □” [1]。",
+      "total": 2,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_8",
+    "question": "“粟＝六石四斗”出自哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“粟＝六石四斗”出自简82(第七層)[1]。",
+      "total": 2,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_9",
+    "question": "简84左侧刻齿内容是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简84左侧刻齿内容为「六石一斗」[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_10",
+    "question": "简94中贷粟给谁？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简94中贷粟给“更戍士五□□□”，即一名身份为“士伍”的更戍士卒，其姓名残缺不可辨 [1]。按：“更戍士”指轮番戍守边地的士卒，“士五”为秦代对无爵平民的称谓，表明该受贷者为无爵的服役人员 [1]。",
+      "total": 2,
+      "supported": 2,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_11",
+    "question": "简102提到的视平人数是多少？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_12",
+    "question": "简153租粟数量是多少？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简153租粟数量是四石五斗 [1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_13",
+    "question": "简344记载了哪一年的七月日期？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_14",
+    "question": "第七層有哪些简提及“洞庭”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "第七層提及“洞庭”的简有：  \n简86[1]、简96[6]、简131[9]、简90[10]。",
+      "total": 4,
+      "supported": 4,
+      "citations": 4,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_15",
+    "question": "“司空守”出现在哪些简中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“司空守”出现在以下简中：  \n简1340（第十層）[1]、简1498（第十層）[2]、简235（第十層）[3]、简205（第十層）[4]。  \n\n按：以上四简释文中明确出现“司空守”三字连写，其中简1340作“司空守赤”，简1498作“司空守義”，简235作“司空守昌”，简205作“司空守甿”，均为“司空守＋人名”格式。其余简文虽含“司空”字样，但未见“司空守”连用，故不计入[5][6][7][8][9][10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_16",
+    "question": "简379中“庚申”后接何职官名？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_17",
+    "question": "“牡犬”见于哪一简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“牡犬”见于简384号简（第七層）[1]、简705号简（第十層）[2]、简383号简（第七層）[4]。  \n其中：  \n- 简384释文作：“遷陵□牡犬□□雄雞一□” [1]；  \n- 简705释文作：“牝犬一／牡犬一雌雞一少雄雞二少” [2]；  \n- 简383释文作：“□律令□牝犬一□”，此处未见“牡犬”，系误引，应予排除。  \n\n按：简383释文中仅出现“牝犬一”，无“牡犬”字样，故“牡犬”实际见于简384与简705。  \n另，简963释文为“牝犬一丨□□□□致□□”，亦无“牡犬”[3]；简239、339、364、616、806、1003均未出现“牡犬”字样[4][5][6][7][8][9][10]。  \n\n综上，“牡犬”明确见于简384号简与简705号简 [1][2]。",
+      "total": 10,
+      "supported": 9,
+      "citations": 10,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_18",
+    "question": "简382提到“为私家使之日数”与何事相关？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简382释文为：“□封令印□□爲私家使之日數以益其戍□□一” [1]。按：该简提及“为私家使之日数”，系指官吏或戍卒因私事被私人役使的日数，此日数将用于折抵其应服的戍役期限；但【参考资料】中未载明具体关联事件、制度背景或执行主体，亦无其他简文对此作进一步说明。因此，仅据本简无法确指其与何项具体事务（如某类徭役类型、某次征发或某项行政指令）直接相关 [1]。",
+      "total": 4,
+      "supported": 4,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_19",
+    "question": "“卅二年八月乙巳朔”见于哪两简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_20",
+    "question": "简439中“迁陵主护发”后接何地名？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简439中“迁陵主护发”后接的地名是“洞庭”[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_21",
+    "question": "“少内守”在第七層见于哪两简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“少内守”在第七層见于简53与简351 [1][5]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_22",
+    "question": "简216右侧刻齿数字是多少？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_23",
+    "question": "简314禀食记录中“田二斤半囷”前的数量是？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简314禀食记录中“田二斤半囷”前的数量是“一石二鈞”[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_24",
+    "question": "简456中“牡羊”购买由谁监？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简456中“牡羊”购买由“今史叡監” [1]。按：“今史叡”为监办此事的官吏，“監”表示监督、监临之职事。",
+      "total": 2,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_25",
+    "question": "简535记载了哪些数字序列？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_26",
+    "question": "第十层有哪些简文含“卅五年”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_27",
+    "question": "“启陵乡”出现在哪一简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“启陵乡”出现在简582[1]、简1294[5]。",
+      "total": 2,
+      "supported": 2,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_28",
+    "question": "“南里户人士五赘”见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“南里户人士五赘”见于简584（第十层）[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_29",
+    "question": "“仓畜员牝彘二少”在何简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“仓畜员牝彘二少”见于简705（第十层）[1]。  \n按：该句为简705第一栏释文起首内容，全文为：“倉畜員牝彘二少／豶一／豶一　少（第一欄）牝犬一／牡犬一雌雞一少雄雞二少（第二欄）牡□二見丨（第三欄）” [1]。",
+      "total": 2,
+      "supported": 2,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_30",
+    "question": "“六九七”编号出现在哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_31",
+    "question": "“洞庭”一词共见于哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“洞庭”一词见于以下简号：【简11248】[1]、【简86】[2]、【简710】[3]、【简190】[4]、【简865】[5]、【简746】[6]、【简106】[7]、【简1173】[8]、【简700】[9]、【简866】[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_32",
+    "question": "“少内”二字上下文见于哪几简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_33",
+    "question": "“狱”字出现在哪些简的释文中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“狱”字出现在以下简的释文中：  \n简137[1]、简338[2]、简589[3]、简769[4]、简643[5]、简856[9]。",
+      "total": 6,
+      "supported": 6,
+      "citations": 6,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_34",
+    "question": "“戊午朔”在第十层见于哪两简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“戊午朔”在第十层见于简590与简603 [1][2]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_35",
+    "question": "“隶臣获牧畜”见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“隶臣获牧畜”见于简727（第十层）[1]。",
+      "total": 1,
+      "supported": 0,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_36",
+    "question": "“铁剑九十八”记载于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_37",
+    "question": "简866记载了什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简866（第十層）释文为：“遷陵洞庭　□□庭□□□□□□（正）” [8]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_38",
+    "question": "第十层有哪些含“洞庭”的简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "第十层含“洞庭”的简有：简11248、简710、简746、简865、简700、简11258、简1173、简866、简750 [1]–[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_39",
+    "question": "“卅四年六月甲午朔”见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_40",
+    "question": "“牝彘一少”出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“牝彘一少”出现在简961（第十層）[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_41",
+    "question": "“迁陵丞昌敢言之”见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“迁陵丞昌敢言之”见于11257号简（第十层）[6]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_42",
+    "question": "“水十一刻＝”在哪些简中出现？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_43",
+    "question": "“司空守”一词见于哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“司空守”一词见于简1498、简1340、简235、简205[1][2][3][4]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 4,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_44",
+    "question": "“稻一石”记录见于哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“稻一石”记录见于简1280[1]和简11264[2]。",
+      "total": 2,
+      "supported": 2,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_45",
+    "question": "“廿六年七月庚戌”见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_46",
+    "question": "“卅三年六月”见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_47",
+    "question": "“隶妾”一词出现在哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_48",
+    "question": "“敢言之”开头的简有哪些？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "以“敢言之”开头的简有：  \n【简236】(第十層) [1]  \n【简73】(第七層) [2]  \n【简510】(第七層) [3]  \n【简1319】(第十層) [4]  \n【简133】(第七层) [6]  \n【简1026】(第十層) [7]  \n【简734】(第十層) [8]  \n【简523】(第七層) [9]  \n【简148】(第七层) [10]  \n\n注：【简11256】(第十层) 释文为“□□之□敢言……”，非“敢言之”开头 [5]；资料未记载其他以“敢言之”开头的简。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_49",
+    "question": "简192记载了什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简192记载了：六月□史畸取出中稻一石[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_50",
+    "question": "第十三层有哪些记载“卅二年”的简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_51",
+    "question": "“中稻”出现在哪些简中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“中稻”出现在简195[1]和简192[2]中。",
+      "total": 1,
+      "supported": 1,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_52",
+    "question": "“司空”一词在哪些简的释文中出现？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“司空”一词出现在以下简的释文中：  \n简168[1]、简343[2]、简235[3]、简800[4]、简1048[5]、简345[6]、简522[7]、简1340[8]、简1498[9]、简205[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_53",
+    "question": "简163中“卅二年”后的文字是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "资料未记载",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_54",
+    "question": "简196中“令史囷监”后的文字是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简196释文为：“令史囷監　□（第三欄）” [1]。按：该简第三栏文字因残缺仅存一个模糊的“□”，无法辨识具体字形，参考资料中未提供进一步释读或补字信息 [1]。",
+      "total": 2,
+      "supported": 2,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_55",
+    "question": "简561记载的日期和时刻是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简561记载的日期为“十月己亥”，时刻为“水下三刻”[1]。按：“水下三刻”为秦代计时术语，指漏壶水位下降至第三刻度，相当于特定时辰段，但具体对应今时需结合秦代漏刻制度推算；该简未载年份及具体干支日序之完整信息[1]。",
+      "total": 4,
+      "supported": 3,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_56",
+    "question": "简649中“少内敬敢言”后的文字是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_57",
+    "question": "简762中“南里不更陈”后的文字是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简762中“南里不更陳”后的文字是“□少內 □” [1]。按：“□”为释文中无法辨识的残缺字，原文未作补释，故不可推定其具体字形或读音。",
+      "total": 2,
+      "supported": 2,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_58",
+    "question": "简989记载的年份和月份是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_59",
+    "question": "简1023中“粟＝十一石八”后的文字是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_60",
+    "question": "简1076开头的编号序列是什么？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_2",
+    "question": "里耶秦简中是否存在“郡监御史”职官？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "参考资料中未出现“郡监御史”这一完整职官称谓。资料中多次出现“洞庭监御史”（如简90：“洞庭監御史□”[5]）、“监御史”（如简338：“監御史壬移劾一牒曰”[4]），但均未见“郡监御史”的明确记载；亦无任何简文将“郡”与“监御史”连用构成该职官名称。秦代监察体系中，“监御史”为中央派驻郡级的监察官员，其前冠以所监郡名（如“洞庭监御史”）属常见表述，但“郡监御史”并非见载于本批资料的固定职官称谓。\n\n因此，依据现有参考资料，不能确认里耶秦简中存在“郡监御史”这一职官称谓。  \n抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_3",
+    "question": "始皇三十三年简文是否提及南越战事？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_4",
+    "question": "简8-461与简8-1297对迁陵仓禀记载是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_5",
+    "question": "简8-278是否记录了迁陵县春耕劝农事？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_6",
+    "question": "秦简中可有“乡啬夫兼理狱讼”的制度条文？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉，知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_7",
+    "question": "二世元年简册是否载有胡亥即位诏书全文？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_8",
+    "question": "简8-1027与简8-1531关于徒隶刑期是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_9",
+    "question": "里耶秦简里是否出现“洞庭郡守李由”署名？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_10",
+    "question": "简8-655是否明确记载了“黔首授田”实施细则？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_12",
+    "question": "里耶秦简中是否存在“郡尉丞”职官？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_13",
+    "question": "始皇三十三年简文有无记录南郡疫病？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_14",
+    "question": "简8-461与简9-1207对迁陵仓禀记载是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_15",
+    "question": "简16-53是否提及“苍梧守”这一官职？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_16",
+    "question": "始皇二十八年简文有无涉及湘水涨溢？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_17",
+    "question": "简8-268与简8-452关于戍卒逃亡处置是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_18",
+    "question": "里耶秦简中可有“少内令”职名记载？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_19",
+    "question": "简9-1003是否记录了阳陵县春耕延误事件？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_20",
+    "question": "始皇三十四年简文有无载录黔首分田纠纷？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_24",
+    "question": "简8-461与简9-1208对迁陵仓禀记载是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_25",
+    "question": "简8-279是否记录了迁陵县春耕劝农事？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_27",
+    "question": "二世元年简册是否载有胡亥即位诏书内容？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_28",
+    "question": "简9-1127与简8-655关于戍卒更代时限是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_29",
+    "question": "里耶秦简里是否出现“柱下史”这一职名？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_30",
+    "question": "简8-154所记“廿六年十月朔日”是否有异常天象记录？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_36",
+    "question": "秦简中可有“乡啬夫兼理司法”的制度条文？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_38",
+    "question": "简9-1127与简8-1023关于徒隶刑期是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_39",
+    "question": "里耶秦简里是否出现过“洞庭郡守李由”署名？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_40",
+    "question": "简8-655是否明确记载了“卅三年十二月雪灾”？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_49",
+    "question": "简9-1032是否载有洞庭郡向咸阳进献犀角事？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_50",
+    "question": "始皇三十四年简文有无记录黔首徙居岭南？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_1",
+    "question": "里耶秦简8-1573记载“迁陵以邮行洞庭”，洞庭郡是否真实存在？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_2",
+    "question": "里耶秦简9-1235载“〼毋过三日”，此限令针对何种事务？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_3",
+    "question": "简8-461记“〼曰可”，此“可”字是否为官吏批阅用语？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_4",
+    "question": "简9-2287有“〼吏民毋敢〼”，“吏民”连称在秦律中是否常见？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_5",
+    "question": "简8-755载“〼以春二月入”，此“春二月”是农历还是颛顼历？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_6",
+    "question": "简9-1903记“〼黔首勿予”，“黔首”一词在秦始皇廿六年诏书中如何使用？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_7",
+    "question": "简8-658载“〼佐敦狐”，“敦狐”是人名还是地名？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_8",
+    "question": "简9-1001有“〼其钱勿责”，此“勿责”是否等同于免除债务？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_9",
+    "question": "简8-1214记“〼置吏不如令者”，“不如令”具体指违反哪条律文？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_10",
+    "question": "简9-752载“〼令史通”，“令史”在里耶简中是否皆属县廷属吏？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉，知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_22",
+    "question": "里耶秦简9-1235载“〼毋过三日”，此限令针对何类文书？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_23",
+    "question": "里耶秦简8-658记“隶臣妾城旦舂”，秦代城旦舂刑期固定几年？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_24",
+    "question": "里耶秦简8-1075有“启封”字样，该地名在秦代属哪一郡县？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_25",
+    "question": "里耶秦简9-1782载“以律令从事”，此处“律令”具体指哪部法典？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_26",
+    "question": "里耶秦简8-461记“稻米一斗”，当时迁陵县一斗约合今多少克？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_27",
+    "question": "里耶秦简9-1035提到“少内”，该职官在汉代是否仍沿用？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_28",
+    "question": "里耶秦简8-753载“黔首田宅”，秦代“黔首”称谓最早见于何文献？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_29",
+    "question": "里耶秦简9-2291有“亭长”署名，此职在楚国地方行政中是否存在？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_30",
+    "question": "里耶秦简8-1270记“赀甲二副”，秦代“赀甲”刑罚如何执行？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_34",
+    "question": "简9-2287有“〼吏民毋敢〼”，“吏民”连称始见于何时？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_35",
+    "question": "简8-755载“〼黔首安田宅”，“黔首”一词在秦律中是否专指平民？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_36",
+    "question": "简9-1002记“〼廷不智（知）其处”，此处“廷”指哪级官府？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_37",
+    "question": "简8-1077载“〼毋敢弗从”，此禁令语气是否与睡虎地秦简一致？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_38",
+    "question": "简9-1883有“〼以春二月”，秦代是否确以二月为农事起始月？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_39",
+    "question": "简8-497记“〼令史某言”，该令史姓名能否在其他里耶简中找到？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_40",
+    "question": "简9-2001载“〼赀一甲”，此“甲”是实物铠甲还是罚金单位？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_4",
+    "question": "简8-461与简8-1207关于仓廪记录是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_5",
+    "question": "简8-289是否明确记载迁陵县设“市掾”？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_6",
+    "question": "里耶秦简有无“乡啬夫兼理狱讼”的制度条文？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_7",
+    "question": "二世元年简文是否反映黔首大规模逃亡？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_8",
+    "question": "简8-154与简8-621对“徒隶日食量”记载是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_9",
+    "question": "秦简中是否存在“洞庭郡守府直奏皇帝”的文书格式？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_10",
+    "question": "简8-1027是否证实迁陵县曾设“船官”一职？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_14",
+    "question": "简8-461与简9-1200对迁陵仓禀记录是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_15",
+    "question": "号简是否载有“黔首授田”制度？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "资料未记载。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_16",
+    "question": "里耶秦简里有无“乡部啬夫兼理狱讼”的明确记载？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_17",
+    "question": "二世元年简文中是否出现“复除三年”令文？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_18",
+    "question": "简8-1077与简8-1082关于徒隶刑期记载是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_19",
+    "question": "秦简中是否存在“洞庭郡守李仲”署名文书？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_20",
+    "question": "简10-1123是否记录了始皇三十七年七月的异常天象？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_24",
+    "question": "简8-461与简9-1208关于仓吏职责是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_25",
+    "question": "J1(8)157号简是否记录了迁陵县蝗灾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_26",
+    "question": "秦简中是否有“乡啬夫兼理狱讼”的制度？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_27",
+    "question": "二世元年简文是否反映骊山刑徒逃亡事件？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_28",
+    "question": "简8-657与简8-1075对“输甲士”时限的记载是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_29",
+    "question": "里耶秦简中是否存在“都船府”这一机构？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_30",
+    "question": "简9-1002是否证实始皇三十四年废除分封之议？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_44",
+    "question": "简8-461与简9-1207对迁陵仓禀记录是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_46",
+    "question": "里耶秦简里有无“少内令”这一官职？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉，知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_48",
+    "question": "简8-1078与简16-12记载的戍卒籍贯是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_49",
+    "question": "里耶秦简中是否存在“乡部秩”行政建制？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_50",
+    "question": "始皇三十四年简文是否记录焚书执行细节？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_8",
+    "question": "简9-1883有“〼以春二月”，秦代是否确以二月为农事起始？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_9",
+    "question": "简8-1542记“〼令史通”，该“令史”是否属县廷属吏编制？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_10",
+    "question": "简9-2001载“〼谒以律论”，所引“律”具体是哪一部秦律？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_12",
+    "question": "里耶简9-1034载“〼卒丙，隶臣”，隶臣身份在秦律中如何界定？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_13",
+    "question": "简8-461记“卅四年六月癸丑朔”，该年对应公元哪一年？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_14",
+    "question": "里耶简8-258有“启封”字样，其与汉代“启封县”有无沿革关系？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_15",
+    "question": "简9-1112载“令史壬”，此人是否见于其他秦简？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_16",
+    "question": "里耶简8-1247提到“田官”，该机构职能是否延续至西汉？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_17",
+    "question": "简8-658写“廿七年二月丁亥”，此日期干支是否准确？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_18",
+    "question": "里耶简9-1992记“奴甲”，秦代奴婢是否有户籍登记？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_19",
+    "question": "简8-753载“都乡守”，“守”职在秦地方官制中品级如何？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉，知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_20",
+    "question": "简9-888出现“荆”字，此处指楚地还是泛称南方？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_25",
+    "question": "简8-755“〼徒隶〼”，秦代徒隶是否可编入户籍？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_26",
+    "question": "简9-1023“〼黔首毋得〼”，此禁令与睡虎地秦律何者更早？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_27",
+    "question": "简8-1094“〼以春二月”，秦历春二月相当于公历几月？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_28",
+    "question": "简9-1996“〼为钱千”，此“钱千”是铜钱还是计数单位？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_29",
+    "question": "简8-628“〼令史某某”，该令史姓名在简中是否完整？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_30",
+    "question": "简9-2085“〼不直〼”，此“不直”罪名是否沿袭自战国法？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_40",
+    "question": "简9-2056载“〼毋得擅〼”，此“擅”字用法与汉简是否相同？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_1",
+    "question": "卅五年九月丁亥朔出现在哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_2",
+    "question": "卅二年七月以来出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_3",
+    "question": "卅六年正月乙酉朔出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_4",
+    "question": "廿七年□□舍可六里□在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "在简82(第七層)[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_5",
+    "question": "卅一年二月癸□朔在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "在简132(第七层)[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_6",
+    "question": "十二月乙卯朔出现在哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_7",
+    "question": "令史出现在哪些简号中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "根据【参考资料】，出现“令史”一词的简号有：  \n简99 [1]、简11266 [2]、简196 [3]、简155 [4]、简955 [5]、简779 [6]、简102 [7]、简42 [8]、简522 [9]、简387 [10]。  \n\n以上各简释文中均明确包含“令史”字样（或残存“令史”二字），具体位置及上下文可据各条资料所录释文查考。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_8",
+    "question": "廷吏曹出现在哪些简号中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "廷吏曹出现在以下简号中：  \n- 简60（第七層）释文：“廷吏曹□□二斗升斗□□□□當論者亦□書□” [1]；  \n- 简42（第七層）释文：“……尺廷吏曹□廷□智□氣鞠云□” [2]；  \n- 简93（第七層）释文：“……爲吏曹分牒□”，按：此处“吏曹”前虽无“廷”字，但结合上下文“遷陵界中……少内□爲吏曹分牒”，该“吏曹”指迁陵县廷之吏曹，与“廷吏曹”为同一机构，然释文原文未连写为“廷吏曹”，故严格依字面，“廷吏曹”三字连出者仅见于简60与简42。  \n\n综上，释文中明确出现“廷吏曹”四字连读者为简60与简42 [1][2]。",
+      "total": 7,
+      "supported": 6,
+      "citations": 2,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_9",
+    "question": "廷仓曹出现在哪些简号中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "廷仓曹出现在简814[1]、简43[2]、简59[3]、简826[4]中。",
+      "total": 1,
+      "supported": 1,
+      "citations": 4,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_10",
+    "question": "廷户曹出现在哪些简号中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "廷户曹出现在以下简号中：  \n- 简85（第七層）释文作“廷戶曹發” [1]；  \n- 简731（第十層）释文作“廷户發” [3]。  \n\n按：“廷户曹”为秦代迁陵县廷下属职官机构，主管户籍、赋役等事务；简731中“廷户發”当为“廷户曹發”之省写，与简85所见机构名称一致 [1][3]。",
+      "total": 4,
+      "supported": 3,
+      "citations": 2,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_11",
+    "question": "廷金布发出现在哪些简号中？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“廷金布發”出现在以下简号中：\n\n- 简129（第七層）释文：“廷金布發□□長十智手” [1]；  \n- 简87（第七層）释文：“廷金布發□□□□令同弟爲甲” [2]。  \n\n按：“廷金布發”应为秦代官府文书常见起首语，“廷”指县廷，“金布”为少内属下主管钱货出纳之职司，“發”即发出、下发，整体意指县廷金布机构所发出的公文或指令。两简均属第七層出土简牍，内容格式相近，可能属同类行政文书。",
+      "total": 4,
+      "supported": 2,
+      "citations": 2,
+      "unsupported": 2
+    }
+  },
+  {
+    "id": "qj_in_12",
+    "question": "洞庭监御史出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_13",
+    "question": "卅二年八月乙巳朔见于哪几简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_14",
+    "question": "卅三年七月己巳朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_15",
+    "question": "卅四年九月癸亥朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_16",
+    "question": "廿八年十月癸酉朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_17",
+    "question": "卅三年九月戊辰朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_18",
+    "question": "卅三年四月壬子日见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_19",
+    "question": "卅二年三月丁丑朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_20",
+    "question": "卅五年六月戊午朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_21",
+    "question": "“司空守”职官见于哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“司空守”职官见于以下简号：  \n简1340（第十層）[1]、简1498（第十層）[2]、简205（第十層）[3]、简235（第十層）[4]。",
+      "total": 4,
+      "supported": 4,
+      "citations": 4,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_22",
+    "question": "“少内守”职官见于哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_23",
+    "question": "“狱史”职官见于哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“狱史”职官见于简309、简438、简209、简338。",
+      "total": 4,
+      "supported": 3,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_24",
+    "question": "“仓啬夫”职官见于哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“仓啬夫”职官见于以下简号：  \n- 简310（第十层）：“倉嗇夫宂佐上造旬陽□□吏主廿□年工官□□白翰羽翠羽勮□□□□” [1]；  \n- 简203（第十层）：“□□横與庫嗇夫上造句陽都□□　國手□（背）”，此处为“库啬夫”，非“仓啬夫”，故不计入；  \n- 简517（第七层）：“倉□　□女□□”，首字为“倉”，但第二字残缺，未见“嗇夫”字样，不能确认为“仓啬夫”；  \n- 简101（第七层）：“遷陵吏志 □粟＝二石……”，无“仓啬夫”字样；  \n- 其余简号释文中均未出现“仓啬夫”三字连写。\n\n综上，明确出现“仓啬夫”职官称谓的仅见于简310号 [1]。",
+      "total": 6,
+      "supported": 5,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_25",
+    "question": "卅五年六月戊午朔出现在哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_26",
+    "question": "卅五年八月丁巳朔出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_27",
+    "question": "卅三年五月庚午朔出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_28",
+    "question": "卅二年六月甲寅出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_29",
+    "question": "卅一年七月辛亥朔出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_30",
+    "question": "卅一年二月丙午出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_31",
+    "question": "廿八年丞令史出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_32",
+    "question": "廿四年出现在哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_33",
+    "question": "启陵乡职官见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "启陵乡职官见于简582、简1294、简733、简216。  \n其中：  \n- 简582提及“啓陵鄉”[1]；  \n- 简1294提及“啓陵鄉守唐□□”[2]；  \n- 简733提及“啓陵傳舍”[7]（传舍属乡级机构，可证启陵乡建制）；  \n- 简216提及“啓陵□□”[9]（上下残断，但明确关联启陵）。",
+      "total": 4,
+      "supported": 3,
+      "citations": 4,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_34",
+    "question": "南里户人士五赘见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "南里户人士五赘见于简584（第十層）[1]。",
+      "total": 1,
+      "supported": 0,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_35",
+    "question": "司空职官见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "司空职官见于简235、简345、简168、简800、简1048、简343、简358、简1340、简522、简1498 [1][2][3][4][5][6][7][8][9][10]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_36",
+    "question": "少内职官见于哪些简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_37",
+    "question": "卅四年六月甲午朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_38",
+    "question": "卅三年六月见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_39",
+    "question": "卅二年九月甲戌朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_40",
+    "question": "廿六年七月庚戌见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_41",
+    "question": "元年三月壬寅见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "元年三月壬寅见于简1280（第十层）[1]。",
+      "total": 1,
+      "supported": 0,
+      "citations": 1,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_42",
+    "question": "卅一年十月乙酉朔见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_43",
+    "question": "卅四年十二月丁酉见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_44",
+    "question": "迁陵丞昌见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "迁陵丞昌见于简290（第七层）和简11257（第十层）。  \n简290释文为：“□陵丞昌告□□□脫□□□（正）” [1]。  \n简11257释文为：“材司寇賜將今案之賜弗將有毋吏將□卵朔＝日遷陵丞昌敢言之□□” [4]。",
+      "total": 3,
+      "supported": 3,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_45",
+    "question": "司空守义见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "司空守义见于简1498[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_46",
+    "question": "仓守魋佐见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "仓守魋佐见于简11264（第十层）[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_47",
+    "question": "少内守狐见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "少内守狐见于简11269（第十层）[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_48",
+    "question": "廷稻一石见于哪简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“廷稻一石”见于简11264（第十层）[1]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_49",
+    "question": "卅二年出现在哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_50",
+    "question": "卅三年出现在哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_51",
+    "question": "“令史”出现在哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“令史”出现在以下简号：  \n【简11266】[1]、【简155】[2]、【简955】[3]、【简42】[4]、【简99】[5]、【简196】[6]、【简779】[7]、【简522】[8]、【简1307】[9]、【简102】[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_52",
+    "question": "“司空”出现在哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“司空”出现在以下简号：  \n简343[1]、简235[2]、简168[3]、简1340[4]、简1498[5]、简1048[6]、简800[7]、简522[8]、简345[9]、简205[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_53",
+    "question": "“少内”出现在哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“少内”出现在以下简号：  \n【简11269】[1]、【简762】[2]、【简149】[3]、【简351】[4]、【简53】[5]、【简186】[6]、【简11261】[7]、【简456】[8]、【简47】[9]、【简1320】[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_54",
+    "question": "“阳丞”出现在哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_55",
+    "question": "“狱史”出现在哪一简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_56",
+    "question": "“仓守”出现在哪一简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_57",
+    "question": "“守府”出现在哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“守府”出现在以下简号：  \n简512[1]、简1324[2]、简776[3]、简713[4]、简78[5]、简44[6]、简573[7]、简153[9]、简11261[10]。",
+      "total": 9,
+      "supported": 8,
+      "citations": 9,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_58",
+    "question": "“丞”字见于哪些简号？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "“丞”字见于简号：【简579】、【简152】、【简1173】、【简317】、【简290】、【简115】、【简197】、【简712】、【简578】、【简758】[1][2][3][4][5][6][7][8][9][10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_59",
+    "question": "“十月己亥”见于哪一简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_60",
+    "question": "“六月乙巳朔”见于哪一简？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "资料未记载。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_1",
+    "question": "涉及粮食（粟/米/稟）的简有哪些？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "涉及粮食（粟/米/稟）的简有：  \n简74[1]、简1023[2]、简82[3]、简314[4]、简553[5]、简94[6]、简70[7]、简1505[9]、简331[10]。  \n\n说明：  \n- “粟”见于简74[1]、简1023[2]、简82[3]、简94[6]、简70[7]、简331[10]；  \n- “稟”见于简314[4]、简553[5]、简1505[9]；  \n- 简195[8]记载“中稻”，非粟/米/稟，故不计入；  \n- 简1505[9]含“稟人”，属“稟”相关；  \n- 资料未记载“米”字，故无简涉及“米”。",
+      "total": 10,
+      "supported": 9,
+      "citations": 10,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_2",
+    "question": "涉及钱财的简有哪些？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "涉及钱财的简有：[1][2][3][4][5][9]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 6,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_3",
+    "question": "涉及徭役戍卒的简有哪些？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "涉及徭役戍卒的简有：  \n【简573】(第十層) 提及“戍卒”[1]；  \n【简942】(第十層) 提及“更戍卒”[2]；  \n【简94】(第七層) 提及“更戍士五”[4]；  \n【简1285】(第十层) 提及“屯戍士五”[7]。",
+      "total": 4,
+      "supported": 4,
+      "citations": 4,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_4",
+    "question": "哪些简记载粟的数量及年份？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_5",
+    "question": "哪些简出现“仓”字并关联粮食事务？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_6",
+    "question": "哪些简提及“贷”粮及受券人？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "提及“贷”粮及受券人的简有：  \n【简94】(第七層)：“出貸更戍士五□□□佐卻受券” [1]；  \n【简1344】(第十層)：“以貸居” [3]。  \n\n其余简文未见“贷”及“受券”相关记载。",
+      "total": 4,
+      "supported": 3,
+      "citations": 2,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_7",
+    "question": "哪些简记录“廪人”“食”“稟”等口粮发放？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "根据【参考资料】，以下简文涉及“稟”字，且语境与口粮发放相关（“稟”为“廪”的异体，秦简中通作发放口粮之义）；但资料中未见“廪人”连写之例，亦无“食”字直接出现：\n\n- 简1285（第十层）释文含“稟人援出稟屯戍士五……”，其中“稟人”指负责发放廪粮的吏员，“出稟”即支出廪粮，对象为“屯戍士五……”，属口粮发放记录 [1]。  \n- 简1505（第十層）释文含“稟人中出貸□”，“稟人”与“出貸”并见，虽“貸”或涉借贷，然结合里耶秦简惯例，“出貸”在仓曹文书中常与廪给事务关联，此处“稟人”仍指向廪粮经办人员 [2]。  \n- 简11260（第十层）释文含“稟人案稟□□日治”，“案稟”为核查廪给之程序性用语，“稟人”再次出现，表明其职掌廪务 [3]。  \n- 简11264（第十层）释文含“倉守魋佐□稟人□出稟□□□□”，明确以“倉守”下属佐吏与“稟人”协同执行“出稟”，属典型廪粮发放文书 [4]。  \n- 简619（第十層）释文含“守武佐平裏人藍出稟□”，虽未见“稟人”字样，但“出稟”动作由佐吏执行，属廪粮发放行为 [6]。  \n- 简94（第七層）释文含“倉茲佐臖出貸更戍士五□□□”，用“出貸”而非“出稟”，然对象为“更戍士”，且与“粟＝一石”并载，实为廪给性质；按里耶简惯例，“出貸”在此类戍卒名籍文书中常即廪给之代称 [5]。  \n- 简314（第十層）释文“稟各一石二鈞田二斤半囷∟……”，“稟各……”表明按人定量发放，内容直指廪粮配给数额 [8]。\n\n资料中无任何简文出现“廪人”连写形式（皆作“稟人”），亦无“食”字用于描述口粮发放行为。所有涉及“稟”之简均属廪粮发放类文书，但具体名物、受领者、数量等信息多因残缺而不可确考。\n\n综上，记录“稟人”及“稟”（即廪粮发放）的简有：1285、1505、11260、11264、619、94、314号简 [1][2][3][4][6][5][8]；无简记录“廪人”“食”二字。",
+      "total": 14,
+      "supported": 9,
+      "citations": 7,
+      "unsupported": 5
+    }
+  },
+  {
+    "id": "qj_in_8",
+    "question": "哪些简含“少内”且与钱粮收支相关？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_9",
+    "question": "哪些简明确出现“更戍”“士五”及戍役内容？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_10",
+    "question": "哪些简提到“徭”“繇使”“发”等徭役用语？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "根据【参考资料】，提及“徭”“繇使”“发”等徭役相关用语的简文如下：\n\n- 简365（第七層）释文含“告歸及繇使縣官各以其事” [1]。按：“繇使”即“徭使”，指官府差遣服役，属秦代徭役制度术语。\n\n- 简572（第十層）释文含“其令丞有所繇使出界” [2]。按：“繇使”再次出现，指县令、丞被指派或差遣越界执行公务，属官吏层面的徭使行为。\n\n- 简1494（第十層）释文含“居繇使未來” [8]。按：“居繇使”可能指处于被征发服役状态或滞留于徭使途中，“繇使”为关键词。\n\n- 简382（第七層）释文含“爲私家使之日數以益其戍” [3]。按：虽未直书“繇”或“徭”，但“使之日數以益其戍”涉及以私人役使日数折抵戍役，与徭役管理密切相关；然该简未出现“徭”“繇使”“发”字形，故不计入“提到”之列。\n\n- 简366（第七層）释文含“主吏發……” [4]。按：“發”为动词，指官吏启动、发出某项指令或文书，在秦简中常与徭役调度相关（如发卒、发徭），此处虽残缺，但“主吏發”符合“发”这一徭役用语的书写形式。\n\n- 简524（第七層）释文含“器曹發” [5]。按：“器曹”为职官名，“發”为其动作，结合里耶秦简常见用法，多指器曹负责发放物资或签发徭役相关文书，属徭役行政环节中的“发”。\n\n综上，明确出现“徭”“繇使”“发”等徭役用语的简号为：365、572、1494、366、524。其中“繇使”见于365、572、1494；“發”见于366、524 [1][2][4][5][8]。",
+      "total": 12,
+      "supported": 10,
+      "citations": 6,
+      "unsupported": 2
+    }
+  },
+  {
+    "id": "qj_in_11",
+    "question": "哪些简含“走者”“徒”“城旦”等刑徒役作内容？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_12",
+    "question": "哪些简出现“田官”“租粟”“豤草”等农事赋税内容？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "出现“田官”“租粟”“豤草”等农事赋税内容的简有：\n\n- “田官”：简318[3]、简459[5]、简171[4]（“田官建付倉”）  \n- “租粟”：简153[2]（“租粟＝四石五斗”）  \n- “豤草”：简80[1]（“新豤草不租定租”）  \n\n资料未记载其他简含有上述三类关键词。",
+      "total": 6,
+      "supported": 6,
+      "citations": 5,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_16",
+    "question": "哪些简提到“粟”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "提到“粟”字的简有：  \n简1023[1]、简74[2]、简82[3]、简94[4]、简331[5]、简101[6]、简171[7]、简153[8]、简103[9]、简1344[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_17",
+    "question": "哪些简提到“禀”或“稟”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_18",
+    "question": "哪些简出现“钱”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "出现“钱”字的简有：  \n简828[1]、简211[2]、简332[3]、简488[4]、简107[5]、简719[6]、简92[8]、简352[10]。",
+      "total": 8,
+      "supported": 8,
+      "citations": 8,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_19",
+    "question": "哪些简含“戍”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "含“戍”字的简有以下几枚：\n\n【简94】(第七層) 释文：“……出貸更戍士五□□□佐卻受券” [1]；  \n【简206】(第十層) 释文：“……貸吏以卒戍公子僰道□” [3]；  \n【简942】(第十層) 释文：“更戍卒死者札□□□” [4]；  \n【简11273】(第十层) 释文：“□更戍城父重華上造過書” [5]；  \n【简573】(第十層) 释文：“□齎遷陵田能自食□□戍卒□洞庭泰守府□（正）” [6]；  \n【简103】(第七層) 释文：“……酉陽將粟鄉薄佐衡□□陵令佐守田以迺□□已季狗幸□”——此简释文中未见“戍”字，故不列入；  \n【简382】(第七層) 释文末句“……以益其戍□□一”，含“戍”字 [10]。\n\n综上，明确含有“戍”字的简为：94、206、942、11273、573、382号简。",
+      "total": 7,
+      "supported": 6,
+      "citations": 6,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_20",
+    "question": "哪些简含“卒”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "含“卒”字的简有：  \n简806[1]、简204[2]、简759[3]、简1281[4]、简139[5]、简1539[6]、简325[7]、简713[8]、简942[9]、简573[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_21",
+    "question": "哪些简含“徒”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "含“徒”字的简有以下几枚：\n\n- 简308（第十層）释文：“會圜者毋＝有＝徒孰見傳之□□□□□” [1]；  \n- 简749（第十層）释文：“□□牒市者徒一牒名吏□□里旁晦宿□□食皆□□” [2]；  \n- 简302（第十層）释文：“□馴毛＝有私□□□□□徒者復已盡｜” [3]；  \n- 简295（第十層）释文：“問□柏∟□□□申徒柏∟□□□朔庚□□” [4]。  \n\n按：“申徒”为官职名，见于秦汉职官系统，此处“徒”字属复合职称组成部分；其余三简中“徒”均单独成词，或指刑徒、役徒等身份类别。",
+      "total": 4,
+      "supported": 3,
+      "citations": 4,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_22",
+    "question": "哪些简提及“少内”职官与财物相关？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_23",
+    "question": "哪些简记载“仓”“仓啬夫”与粮食相关？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_24",
+    "question": "哪些简出现“卅二年”“卅三年”等年份并含粮食或钱财内容？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_25",
+    "question": "涉及粮食（粟/米/稾）的简有哪些？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_28",
+    "question": "哪些简提到“粟”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "提到“粟”的简有：简1023、简74、简82、简94、简331、简101、简171、简153、简223、简1344 [1][2][3][4][5][6][7][8][9][10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_29",
+    "question": "哪些简提到“禀”或“出禀”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "根据【参考资料】，以下简文明确提到“禀”或“出禀”：\n\n- 简1285（第十层）释文含“稟人援出稟屯戍士五……” [1]；  \n- 简1505（第十層）释文含“稟人中出貸□”，其中“出貸”非“出禀”，但前有“稟人”，属“禀”字用例 [2]；  \n- 简11264（第十层）释文含“倉守魋佐□稟人□出稟□□□□”，明确出现“出禀” [3]；  \n- 简11260（第十层）释文含“稟人案稟□□日治”，含“稟人”及动词“稟” [4]；  \n- 简314（第十層）释文含“稟各一石二鈞……”，“稟”作动词，指发放廪食 [6]；  \n- 简70（第七層）释文为“九月倉稟人鼠券 □”，含“稟人” [7]；  \n- 简619（第十層）释文含“守武佐平裏人藍出稟□”，明确出现“出禀” [8]。\n\n按：“稟”在秦简中多通“廩”，指官府发放口粮；“稟人”为负责廪食发放的吏员；“出禀”即支出、发放廪食。以上简号均出自参考资料所列释文，且原文确含“稟”或“出禀”字样。",
+      "total": 7,
+      "supported": 6,
+      "citations": 7,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_31",
+    "question": "哪些简记载“戍卒”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_32",
+    "question": "哪些简含“徭役”相关表述？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_33",
+    "question": "哪些简提及“仓”与粮食管理？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_34",
+    "question": "哪些简记录“少内”职事？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "记录“少内”职事的简有：  \n简11269[1]、简351[2]、简149[3]、简762[4]、简1340[5]、简43[6]、简186[7]、简53[8]、简1320[9]、简456[10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_35",
+    "question": "哪些简含“迁陵田能自食”相关内容？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "含“遷陵田能自食”相关内容的简为【简573】（第十層），其释文明确出现该字样：“□齎遷陵田能自食□□戍卒□洞庭泰守府□（正）” [1]。  \n按：“遷陵田能自食”指迁陵县所辖田地可供相关人员自给自足，或与戍卒屯田、粮食供给制度相关，但简文残缺，具体语境需结合上下文进一步考订 [1]。",
+      "total": 2,
+      "supported": 2,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_36",
+    "question": "哪些简出现“司空”与劳役管理？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_37",
+    "question": "涉及粮食(粟/米/稟)的简有哪些？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "涉及粮食（粟/米/稟）的简有：  \n【简74】[1]、【简1023】[2]、【简82】[3]、【简94】[4]、【简11264】[5]、【简1505】[6]、【简331】[7]、【简314】[8]、【简171】[9]、【简101】[10]。  \n\n其中：  \n- 明确出现“粟＝”或“粟”的有：简74[1]、简1023[2]、简82[3]、简94[4]、简331[7]、简171[9]、简101[10]；  \n- 出现“稟”字的有：简11264[5]、简1505[6]、简314[8]；  \n- 简11264[5]中另有“廷稻”，但问题限定为“粟/米/稟”，故仅因含“稟”计入；  \n- 资料中无“米”字记载。",
+      "total": 4,
+      "supported": 3,
+      "citations": 10,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_40",
+    "question": "哪些简提到“稟人”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "根据【参考资料】，以下简文提到了“稟人”：\n\n- 简11260（第十层）释文含“稟人”[1]；  \n- 简11264（第十层）释文含“稟人”[2]；  \n- 简1505（第十層）释文含“稟人”[3]；  \n- 简1285（第十层）释文含“稟人”[4]；  \n- 简70（第七層）释文含“稟人”[5]；  \n- 简1539（第十层）释文含“稟人”[7]；  \n- 简101（第七層）释文含“稟人”[8]；  \n- 简1307（第十層）释文含“稟人”[10]。\n\n按：以上简号均出自参考资料所列释文，其中“稟人”为原文用字，未作改写。简553、简314虽属参考资料，但其释文中未出现“稟人”字样，故不列入。",
+      "total": 8,
+      "supported": 6,
+      "citations": 8,
+      "unsupported": 2
+    }
+  },
+  {
+    "id": "qj_in_41",
+    "question": "哪些简出现“稻一石”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "出现“稻一石”的简有：  \n【简1280】(第十层) [1]；  \n【简11264】(第十层) [3]；  \n【简1307】(第十層) [6]。",
+      "total": 3,
+      "supported": 2,
+      "citations": 3,
+      "unsupported": 1
+    }
+  },
+  {
+    "id": "qj_in_42",
+    "question": "哪些简记载“粟＝三千卅二石五斗”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_43",
+    "question": "哪些简含“贷”字与粮食相关？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "含“贷”字且与粮食相关的简有：\n\n- 简94（第七層）：“……出貸更戍士五□□□佐卻受券”，释文中“貸”字明确出现，且前文“粟＝一石”表明所贷为粮食，属贷粮文书 [1]；  \n- 简1344（第十層）：“……以貸居”，前文“稻粟＝八斗半斗”，“貸”字直接关联所出之稻粟，亦为贷粮记录 [10]。  \n\n按：“貸”在此二简中均作动词，指官府向戍卒或居人出借粮食，与粟、稻等实物计量并存，体现秦代仓廪贷予制度。",
+      "total": 4,
+      "supported": 2,
+      "citations": 2,
+      "unsupported": 2
+    }
+  },
+  {
+    "id": "qj_in_44",
+    "question": "哪些简提及“仓守”与粮食发放？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_45",
+    "question": "哪些简记录“居赀”“司空”“城旦”等徭役身份？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_46",
+    "question": "哪些简明确写有“更戍卒”或“戍卒”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "明确写有“更戍卒”或“戍卒”的简文如下：\n\n- 简942（第十层）释文含“更戍卒”三字：“更戍卒死者札□□□” [1]；  \n- 简573（第十层）释文含“戍卒”二字：“……戍卒□洞庭泰守府□” [2]；  \n- 简11273（第十层）释文含“更戍”二字：“□更戍城父重華上造過書”，虽未连写“更戍卒”，但“更戍”为秦代固定戍役术语，指轮番戍守之卒，语境中“更戍”即指“更戍卒”[3]；  \n- 简94（第七层）释文含“更戍士五”：“出貸更戍士五□□□”，其中“更戍士五”即“更戍之士伍”，属“更戍卒”的规范称谓形式，“士五”为秦代对无爵平民的法定身份称谓，与“戍卒”职役性质一致[4]；  \n- 简1285（第十层）释文含“屯戍士五”：“稟屯戍士五□□□”，“屯戍”为戍边驻防之专称，“士五”同前，整体指屯驻戍守之士伍，属戍卒范畴[7]；  \n- 简325（第七层）释文含“卒士五”：“卒士五成都少齒芮牛一”，“卒士五”为“士伍之卒”的倒装习语，秦简中常见，指编入卒籍的士伍，属戍卒类身份[10]。\n\n按：以上各简中，“更戍卒”“戍卒”“更戍士五”“屯戍士五”“卒士五”均为秦代户籍、徭役与军事管理文献中对服役卒众的法定称谓，其核心语义均指向承担戍守任务的基层服役人员。",
+      "total": 6,
+      "supported": 4,
+      "citations": 6,
+      "unsupported": 2
+    }
+  },
+  {
+    "id": "qj_in_47",
+    "question": "哪些简出现“缮官府”“伐竹”“传送”等徭役行为？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_48",
+    "question": "哪些简含“大泉”“赀一甲”“少内守”等钱财内容？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "含“大泉”的简：[1][2]  \n含“赀一甲”的简：[10]  \n含“少内守”的简：[1][3][4][5][6][7][9]  \n\n资料未记载同时包含“大泉”“赀一甲”“少内守”三者的简。",
+      "total": 3,
+      "supported": 3,
+      "citations": 9,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_52",
+    "question": "哪些简提到“中稻”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简195[1]和简192[2]提到“中稻”。",
+      "total": 2,
+      "supported": 2,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_53",
+    "question": "哪些简出现“粟”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "出现“粟”字的简有：简74、简1023、简82、简94、简331、简101、简171、简153、简1344、简223 [1][2][3][4][5][6][7][8][9][10]。",
+      "total": 10,
+      "supported": 10,
+      "citations": 10,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_54",
+    "question": "哪些简含“禀”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_55",
+    "question": "哪些简记载“麦”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简760[1]和简807[3]记载“麦”。",
+      "total": 2,
+      "supported": 2,
+      "citations": 2,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_56",
+    "question": "哪些简提及“酱”？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "简1003提及“酱”[2]。",
+      "total": 1,
+      "supported": 1,
+      "citations": 1,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_57",
+    "question": "哪些简出现“钱”或“金”字？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_59",
+    "question": "哪些简提到“卒”且与徭役相关？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_in_60",
+    "question": "哪些简含“徭”“更”“践更”字眼？",
+    "qtype": "in_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_4",
+    "question": "简8-461与简8-1290对迁陵仓禀记录是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_5",
+    "question": "号简是否载有“黔首授田”细则？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_6",
+    "question": "秦简里有无“邮人按里程领食”制度？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_7",
+    "question": "二世元年简牍是否反映骊山徒逃亡事件？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_8",
+    "question": "简9-1987与简8-1072关于户赋算法是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_9",
+    "question": "号简是否记录迁陵县春耕劝农令？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_10",
+    "question": "里耶简中是否存在“隶臣妾赎身年限”条文？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_14",
+    "question": "简8-461与简8-1207关于仓啬夫职责是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_15",
+    "question": "J1(8)157是否记录了迁陵县蝗灾应对？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_16",
+    "question": "秦简中是否有“乡部吏”这一正式职名？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "参考资料中未见“乡部吏”这一完整职名的明确记载。简363释文中有“鄉部嗇□”字样，其中“鄉部”二字清晰，“嗇”字后缺损，据秦代官制惯例，或为“嗇夫”之省写，即“鄉部嗇夫”，属乡级属吏，但“鄉部吏”作为独立、固定的职衔未在所列资料中出现[1]。其余简文均无“鄉部吏”三字连用之例[2]–[10]。  \n\n按：“鄉部嗇夫”是秦代乡一级主管赋役、治安等事务的基层吏员，“鄉部”为机构或辖区称谓，“嗇夫”为职名；而“鄉部吏”并非《参考资料》所载正式职名。  \n\n因此，依据现有资料，不能确认秦简中存在“乡部吏”这一正式职名。",
+      "total": 6,
+      "supported": 6,
+      "citations": 3,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_17",
+    "question": "二世元年简册是否反映骊山徒役变动？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_18",
+    "question": "简8-298与简8-621对“赀甲”量刑是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_19",
+    "question": "J1(9)112是否载有洞庭郡属县调整？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_20",
+    "question": "里耶秦简里可查“都亭长”职务设置吗？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_25",
+    "question": "号简是否记载了秦始皇东巡时的驿传调度？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_26",
+    "question": "里耶秦简中可有“田部”这一专管农事的机构？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_27",
+    "question": "二世元年简文是否反映关东民变波及洞庭郡？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_28",
+    "question": "简8-1078与简16-5关于徒隶刑期记载是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_29",
+    "question": "号简是否记录了迁陵县学室的课程设置？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_30",
+    "question": "里耶秦简中是否存在“邮亭长兼理市籍”的制度？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_43",
+    "question": "始皇三十三年简文是否记录南郡疫病？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_44",
+    "question": "简8-461与简8-492对迁陵仓禀记载是否矛盾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_46",
+    "question": "秦简中是否有“乡啬夫兼理狱讼”的制度条文？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_47",
+    "question": "二世元年简文是否载有咸阳宫火灾？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_48",
+    "question": "简9-1273与简9-1905关于徒隶刑期是否冲突？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_49",
+    "question": "里耶秦简是否出现“博士署”相关职事记录？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_out_50",
+    "question": "简8-1076是否记载了洞庭郡向咸阳进献犀角？",
+    "qtype": "out_lib",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_15",
+    "question": "里耶秦简9-1782载“以律令从事”，此处“律令”指具体哪些条文？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_17",
+    "question": "里耶秦简9-2295出现“少内”职官，其与汉代少内职责是否相同？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_18",
+    "question": "里耶秦简8-1250载“贷种”，秦代官府贷种是否有利息规定？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_19",
+    "question": "里耶秦简9-997记“徒隶作船”，所造船只为内河还是海用？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_20",
+    "question": "里耶秦简8-751提“黔首田宅”，秦统一后是否全国推行授田制？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_27",
+    "question": "里耶秦简9-2285出现“少内”职官，其职能是否与汉代少内相同？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_28",
+    "question": "里耶秦简8-1387写“七月廿一日”，此日期对应公元哪年哪月哪日？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_29",
+    "question": "里耶秦简9-1123载“输佐弋”，佐弋一职在秦代属中央还是地方职？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_30",
+    "question": "里耶秦简8-701记“黔首田宅”，秦代“黔首”称谓是否始自商鞅变法？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_33",
+    "question": "简8-461记“〼吏以律令从事”，此处“律令”指哪部法典？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_34",
+    "question": "简9-1117有“启陵乡守”职名，“启陵乡”在今何处？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_35",
+    "question": "简8-755载“〼卒丙申出”，“丙申”是干支纪日还是纪年？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_36",
+    "question": "简9-2287记“〼为徒隶”，该“徒隶”是否属刑徒身份？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_37",
+    "question": "简8-1027载“〼以八月望日入”，“望日”是否即十五日？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_38",
+    "question": "简9-1991有“〼谒告假”，秦代官吏告假需经何程序？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_39",
+    "question": "简8-497记“〼黔首毋得卖田”，此令是否全国施行？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  },
+  {
+    "id": "qj_bdy_40",
+    "question": "简9-1210载“〼令史某某”，该令史姓名可考否？",
+    "qtype": "boundary",
+    "C": {
+      "answer": "抱歉,知识库中没有找到与您问题相关的信息。",
+      "total": 1,
+      "supported": 1,
+      "citations": 0,
+      "unsupported": 0
+    }
+  }
+]

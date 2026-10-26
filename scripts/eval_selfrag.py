@@ -77,7 +77,7 @@ def main():
                         input=q)
         except Exception:  # noqa: BLE001
             final = first
-        if "没有找到" in final or final.startswith("抱歉"):
+        if ("没有找到" in final or final.startswith("抱歉") or "资料未记载" in final or final.startswith("未见")):
             total, unsup = 1, 0
         else:
             total, unsup = judge(final, context)

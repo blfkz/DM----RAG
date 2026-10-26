@@ -57,7 +57,7 @@ def main():
         context = build_context(docs) if docs else "(无检索结果)"
         for key in ("A", "B"):
             ans = r[key]["answer"]
-            if "没有找到" in ans or ans.startswith("抱歉"):
+            if ("没有找到" in ans or ans.startswith("抱歉") or "资料未记载" in ans or ans.startswith("未见")):
                 total, unsup = 1, 0
             else:
                 total, unsup = judge(ans, context)

@@ -63,6 +63,13 @@ def run(prompt_text: str, model="qwen-plus", **kwargs) -> str:
     return chain.invoke(kwargs).strip()
 
 
+def is_refusal(ans: str) -> bool:
+    """拒答表述识别(含"资料未记载""未见"等变体)。"""
+    return (("没有找到" in ans or ans.startswith("抱歉") or "资料未记载" in ans or ans.startswith("未见"))
+            or "资料未记载" in ans or "資料未記載" in ans
+            or ans.startswith("未见") or ans.startswith("未見"))
+
+
 def judge(answer: str, context: str) -> tuple[int, int]:
     try:
         raw = run(JUDGE_TEMPLATE, model="qwen-plus",
@@ -80,6 +87,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--conly", action="store_true", help="只跑 C 组(锚点版),与第一版 A/B 数据对比")
+    ap.add_argument("--graph", action="store_true", help="C 组启用图谱证据(AG-CRAG+图谱,C-3组)")
     args = ap.parse_args()
 
     init_db()
@@ -120,11 +128,11 @@ def main():
             entry["B"] = {"answer": b, "total": bt, "supported": bsup}
             print(f"  B 幻觉率 {(bt - bsup) / bt * 100:.1f}%")
 
-        # C 我们的方法(锚点引导校正版)
+        # C 我们的方法(锚点引导校正版;--graph 时启用图谱证据 = C-3 组)
         t0 = time.time()
-        c = "".join(answer_stream(q, docs))
+        c = "".join(answer_stream(q, docs, use_graph=args.graph))
         cited = len(finalize_citations(c, docs)) if docs else 0
-        if "没有找到" in c or c.startswith("抱歉"):
+        if ("没有找到" in c or c.startswith("抱歉") or "资料未记载" in c or c.startswith("未见")):
             ct, csup = 1, 1
         else:
             ct, csup = judge(c, context)

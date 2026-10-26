@@ -17,6 +17,7 @@ from langchain_openai import ChatOpenAI
 
 from core import config
 from core.anchors import rewrite_with_anchors, verify_slip_nos
+from core.graph_retriever import graph_search
 from core.prompts import (CONDENSE_TEMPLATE, CONSERVATIVE_TEMPLATE,
                           QA_SYSTEM_TEMPLATE, QINJIAN_QA_SYSTEM_TEMPLATE,
                           REFUSAL_TEXT, RETRIEVAL_EVAL_TEMPLATE)
@@ -126,18 +127,21 @@ def evaluate_retrieval(question: str, docs: list[dict]) -> str:
     return parse_eval_level(result)
 
 
-def _generate(template: str, question: str, docs: list[dict]) -> str:
+def _generate(template: str, question: str, docs: list[dict], graph_evidence: str = "") -> str:
     context = build_context(docs)
+    if graph_evidence:
+        context = graph_evidence + "\n\n" + context
     prompt = ChatPromptTemplate.from_template(template)
     chain = prompt | get_llm() | StrOutputParser()
     return chain.invoke({"context": context, "input": question}).strip()
 
 
-def answer_stream(question: str, docs: list[dict]):
+def answer_stream(question: str, docs: list[dict], use_graph: bool = False):
     """锚点引导的校正式问答(生成器,逐段产出):
     1. 检索置信度三级评估:sufficient 正常生成 / partial 保守复述 / insufficient 拒答
-    2. insufficient 且为秦简库:先做锚点定向二次检索(简号/纪年/层位/领域词),仍不足才拒答
-    3. 秦简库生成后做简号硬校验:编造简号 → 保守模板重生成一次 → 仍编造则拒答
+    2. insufficient 且为秦简库:先做锚点定向二次检索,仍不足才拒答
+    3. use_graph=True(AG-CRAG+图谱):评估非充分时,查询图谱共现证据注入上下文
+    4. 秦简库生成后做简号硬校验:编造简号 → 保守模板重生成一次 → 仍编造则拒答
     """
     if not docs:
         yield REFUSAL_TEXT
@@ -146,6 +150,7 @@ def answer_stream(question: str, docs: list[dict]):
     qinjian = any(is_qinjian_kb(k) for k in kb_ids if k is not None)
 
     level = "sufficient"
+    graph_evidence = ""
     if config.ENABLE_RETRIEVAL_EVAL:
         level = evaluate_retrieval(question, docs)
         if level == "insufficient" and qinjian:
@@ -160,6 +165,12 @@ def answer_stream(question: str, docs: list[dict]):
                                 for x in docs} for d in new_docs):
                     docs = new_docs
                     level = evaluate_retrieval(question, new_docs)
+        # 图谱证据(AG-CRAG+图谱):评估非充分时,注入共现关系路径
+        if use_graph and qinjian and level != "sufficient":
+            hits = graph_search(question)
+            if hits:
+                graph_evidence = "【图谱证据】" + ";".join(h["evidence"] for h in hits)
+                level = "partial" if level == "insufficient" else level
         if level == "insufficient":
             yield REFUSAL_TEXT
             return
@@ -167,13 +178,13 @@ def answer_stream(question: str, docs: list[dict]):
     template = QINJIAN_QA_SYSTEM_TEMPLATE if qinjian else QA_SYSTEM_TEMPLATE
     if level == "partial":
         template = CONSERVATIVE_TEMPLATE
-    answer = _generate(template, question, docs)
+    answer = _generate(template, question, docs, graph_evidence)
 
     # 简号硬校验(仅秦简):回答中的简号必须真实存在于检索片段
     if qinjian:
         _, bad = verify_slip_nos(answer, docs)
         if bad:
-            answer = _generate(CONSERVATIVE_TEMPLATE, question, docs)
+            answer = _generate(CONSERVATIVE_TEMPLATE, question, docs, graph_evidence)
             _, bad2 = verify_slip_nos(answer, docs)
             if bad2:
                 answer = REFUSAL_TEXT
