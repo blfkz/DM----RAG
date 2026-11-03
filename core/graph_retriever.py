@@ -89,3 +89,18 @@ def graph_search(question: str, layer: str = "") -> list[dict]:
                     })
     # 限制证据条数,避免上下文过载
     return hits[:5]
+
+
+def fetch_slip_chunks(slip_nos: list[str], kb_id) -> list[dict]:
+    """按简号从向量库取该简的完整释文片段(图谱证据落地到可引用原文)。
+
+    返回 [{"text", "meta"}],与检索结果同构,可直接并入生成上下文。
+    """
+    from core.vectorstore import all_chunks
+    want = {str(s).replace(" ", "") for s in slip_nos}
+    out = []
+    for text, meta in all_chunks(kb_id):
+        sn = str(meta.get("slip_no", "")).replace(" ", "")
+        if sn in want:
+            out.append({"text": text, "meta": meta, "source": "graph"})
+    return out

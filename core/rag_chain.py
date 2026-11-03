@@ -17,7 +17,7 @@ from langchain_openai import ChatOpenAI
 
 from core import config
 from core.anchors import rewrite_with_anchors, verify_slip_nos
-from core.graph_retriever import graph_search
+from core.graph_retriever import fetch_slip_chunks, graph_search
 from core.prompts import (CONDENSE_TEMPLATE, CONSERVATIVE_TEMPLATE,
                           QA_SYSTEM_TEMPLATE, QINJIAN_QA_SYSTEM_TEMPLATE,
                           REFUSAL_TEXT, RETRIEVAL_EVAL_TEMPLATE)
@@ -165,12 +165,26 @@ def answer_stream(question: str, docs: list[dict], use_graph: bool = False):
                                 for x in docs} for d in new_docs):
                     docs = new_docs
                     level = evaluate_retrieval(question, new_docs)
-        # 图谱证据(AG-CRAG+图谱):评估非充分时,注入共现关系路径
+        # 图谱证据(AG-CRAG+图谱):评估非充分时,把共现简的完整释文片段并入检索上下文
         if use_graph and qinjian and level != "sufficient":
             hits = graph_search(question)
             if hits:
-                graph_evidence = "【图谱证据】" + ";".join(h["evidence"] for h in hits)
-                level = "partial" if level == "insufficient" else level
+                slip_nos = []
+                for h in hits:
+                    slip_nos.extend(h["slip_nos"])
+                    graph_evidence += (";" if graph_evidence else "【图谱证据】") + h["evidence"]
+                kb_id = docs[0].get("meta", {}).get("kb_id")
+                extra = fetch_slip_chunks(slip_nos, kb_id)
+                known = {(d.get("meta", {}).get("slip_no") or d.get("text", ""))
+                         for d in docs}
+                new_extra = [d for d in extra
+                             if (d.get("meta", {}).get("slip_no") or d.get("text", ""))
+                             not in known]
+                if new_extra:
+                    docs = docs + new_extra
+                    level = evaluate_retrieval(question, docs)
+                    if level == "insufficient":
+                        level = "partial"  # 图谱补了证据仍不足则保守作答
         if level == "insufficient":
             yield REFUSAL_TEXT
             return
