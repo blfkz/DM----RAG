@@ -32,7 +32,8 @@ def main():
     rows = []
     with open(CSV_PATH, encoding="utf-8-sig") as f:
         for r in csv.DictReader(f):
-            if (r.get("保留") or "").strip() != "OK":
+            mark = (r.get("保留") or "").strip()
+            if mark in ("X", "x", "✗", "否", "剔除"):
                 continue
             rows.append(r)
     print(f"跨域验证(湘西特产库 id={kb_id}): {len(rows)} 题\n")
