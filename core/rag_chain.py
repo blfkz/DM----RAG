@@ -136,12 +136,15 @@ def _generate(template: str, question: str, docs: list[dict], graph_evidence: st
     return chain.invoke({"context": context, "input": question}).strip()
 
 
-def answer_stream(question: str, docs: list[dict], use_graph: bool = False):
-    """锚点引导的校正式问答(生成器,逐段产出):
-    1. 检索置信度三级评估:sufficient 正常生成 / partial 保守复述 / insufficient 拒答
-    2. insufficient 且为秦简库:先做锚点定向二次检索,仍不足才拒答
-    3. use_graph=True(AG-CRAG+图谱):评估非充分时,查询图谱共现证据注入上下文
-    4. 秦简库生成后做简号硬校验:编造简号 → 保守模板重生成一次 → 仍编造则拒答
+def answer_stream(question: str, docs: list[dict], use_graph: bool = False,
+                  ablate: str = ""):
+    """锚点引导的校正式问答(生成器,逐段产出)。
+
+    ablate 消融开关(论文消融实验用):
+      "anchors"   关闭锚点定向二次检索
+      "graph"     关闭图谱证据(等价 use_graph=False)
+      "hardcheck" 关闭简号硬校验
+      "conservative" 关闭保守分级(partial 也正常生成)
     """
     if not docs:
         yield REFUSAL_TEXT
@@ -153,7 +156,7 @@ def answer_stream(question: str, docs: list[dict], use_graph: bool = False):
     graph_evidence = ""
     if config.ENABLE_RETRIEVAL_EVAL:
         level = evaluate_retrieval(question, docs)
-        if level == "insufficient" and qinjian:
+        if level == "insufficient" and qinjian and ablate != "anchors":
             # 锚点定向二次检索(领域离线纠正,替代网络回退)
             anchor_q = rewrite_with_anchors(question)
             kb_id = docs[0].get("meta", {}).get("kb_id")
@@ -166,7 +169,7 @@ def answer_stream(question: str, docs: list[dict], use_graph: bool = False):
                     docs = new_docs
                     level = evaluate_retrieval(question, new_docs)
         # 图谱证据(AG-CRAG+图谱):评估非充分时,把共现简的完整释文片段并入检索上下文
-        if use_graph and qinjian and level != "sufficient":
+        if use_graph and ablate != "graph" and qinjian and level != "sufficient":
             hits = graph_search(question)
             if hits:
                 slip_nos = []
@@ -190,12 +193,12 @@ def answer_stream(question: str, docs: list[dict], use_graph: bool = False):
             return
 
     template = QINJIAN_QA_SYSTEM_TEMPLATE if qinjian else QA_SYSTEM_TEMPLATE
-    if level == "partial":
+    if level == "partial" and ablate != "conservative":
         template = CONSERVATIVE_TEMPLATE
     answer = _generate(template, question, docs, graph_evidence)
 
     # 简号硬校验(仅秦简):回答中的简号必须真实存在于检索片段
-    if qinjian:
+    if qinjian and ablate != "hardcheck":
         _, bad = verify_slip_nos(answer, docs)
         if bad:
             answer = _generate(CONSERVATIVE_TEMPLATE, question, docs, graph_evidence)
