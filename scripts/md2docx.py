@@ -67,7 +67,7 @@ def main():
         elif is_formula(line):
             # 公式行:居中加粗,编号右对齐(学术论文标准排版)
             m = _FORMULA_RE.match(line)
-            body, number = m.group(1).strip(), m.group(2)
+            body, number = m.group(1).strip(), m.group(3)
             p = doc.add_paragraph()
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
             # 制表位:公式主体居中,编号靠右
