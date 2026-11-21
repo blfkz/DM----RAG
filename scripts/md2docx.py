@@ -23,8 +23,11 @@ _FORMULA_RE = re.compile(r"^(.*?)(\s*\((\d{1,2})\))\s*$")
 
 
 def is_formula(line: str) -> bool:
-    """判断是否为公式行:短行、含数学符号(或等号)、行尾带 (n) 编号。"""
+    """判断是否为公式行:短行、含数学符号(或等号)、行尾带 (n) 编号。
+    排除算法伪代码行(行首"数字. "或含 ▷ 注释符)。"""
     if len(line) > 90:
+        return False
+    if re.match(r"^\d+\.\s", line) or "▷" in line:
         return False
     m = _FORMULA_RE.match(line)
     if not m:
@@ -65,21 +68,21 @@ def main():
             r = p.add_run(line[2:])
             _cn(r, "黑体", 16, bold=True, color=DARK)
         elif is_formula(line):
-            # 公式行:居中加粗,编号右对齐(学术论文标准排版)
+            # 公式行:顶刊式排版——独立段落、居中、加粗、编号右对齐、段前段后留白
             m = _FORMULA_RE.match(line)
             body, number = m.group(1).strip(), m.group(3)
             p = doc.add_paragraph()
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            # 制表位:公式主体居中,编号靠右
             from docx.enum.text import WD_TAB_ALIGNMENT as TA
-            p.paragraph_format.tab_stops.add_tab_stop(
-                Pt(230), TA.CENTER)
-            p.paragraph_format.tab_stops.add_tab_stop(
-                Pt(460), TA.RIGHT)
-            r = p.add_run(f"{body}\t({number})")
-            _cn(r, "Times New Roman", 11, bold=True)
-            r._element.rPr.rFonts.set(qn("w:eastAsia"), "宋体")
+            p.paragraph_format.tab_stops.add_tab_stop(Pt(230), TA.CENTER)
+            p.paragraph_format.tab_stops.add_tab_stop(Pt(460), TA.RIGHT)
+            p.paragraph_format.space_before = Pt(6)
+            p.paragraph_format.space_after = Pt(6)
+            p.paragraph_format.line_spacing = 1.2
             p.paragraph_format.first_line_indent = Pt(0)
+            r = p.add_run(f"{body}\t({number})")
+            _cn(r, "Times New Roman", 12, bold=True)
+            r._element.rPr.rFonts.set(qn("w:eastAsia"), "宋体")
         elif line.startswith("- "):
             p = doc.add_paragraph(style="List Bullet")
             r = p.add_run(re.sub(r"\*\*(.+?)\*\*", r"\1", line[2:]))
